@@ -55,7 +55,7 @@ body{min-height:100vh;background:#000;display:flex;align-items:center;justify-co
 }
 html,body{height:100%;width:100%;overflow:hidden;font-family:'SF Pro Display','SF Pro Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#000;color:var(--tx);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 
-.app{width:100%;height:100vh;height:100dvh;position:relative;overflow:hidden;background:var(--bg)}
+.app{width:100%;height:100vh;height:100dvh;position:relative;overflow:hidden;background:var(--bg);--safe-top:54px;--safe-bot:30px}
 
 /* Animations */
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -72,7 +72,8 @@ html,body{height:100%;width:100%;overflow:hidden;font-family:'SF Pro Display','S
 @keyframes textEntry{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes inputEntry{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 
-.screen{position:absolute;inset:0;display:flex;flex-direction:column;background:var(--bg)}
+.screen{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;background:var(--bg);padding-top:var(--safe-top);padding-bottom:var(--safe-bot)}
+.screen-full{padding-top:0;padding-bottom:0}
 .screen-fade{animation:fadeIn .4s cubic-bezier(.32,.72,0,1)}
 .screen-slide{animation:slideIn .4s cubic-bezier(.32,.72,0,1)}
 .screen-back{animation:slideBack .35s cubic-bezier(.32,.72,0,1)}
@@ -103,9 +104,9 @@ html,body{height:100%;width:100%;overflow:hidden;font-family:'SF Pro Display','S
 .btn-text{background:none;color:var(--accent);font-weight:600;padding:8px 0;border:none;cursor:pointer;font-family:inherit;font-size:14px}
 
 /* Header */
-.hdr{padding:0 16px;height:56px;display:flex;align-items:center;gap:16px;flex-shrink:0;background:rgba(0,0,0,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);z-index:10;box-shadow:0 .5px 0 var(--sep)}
-.hdr h1{font-size:20px;font-weight:700;letter-spacing:-.01em}
-.hdr-b{background:none;border:none;color:var(--accent);cursor:pointer;padding:8px;display:flex;border-radius:12px;transition:all .15s;margin:-8px;-webkit-tap-highlight-color:transparent}
+.hdr{padding:0 16px;height:52px;display:flex;align-items:center;gap:12px;flex-shrink:0;background:rgba(0,0,0,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);z-index:10;box-shadow:0 .5px 0 var(--sep)}
+.hdr h1{font-size:18px;font-weight:700;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.hdr-b{background:none;border:none;color:var(--accent);cursor:pointer;padding:6px;display:flex;border-radius:10px;transition:all .15s;flex-shrink:0;-webkit-tap-highlight-color:transparent}
 .hdr-b:active{transform:scale(.9);background:var(--accent-soft)}
 .hdr-b svg{width:20px;height:20px}
 
@@ -147,7 +148,7 @@ html,body{height:100%;width:100%;overflow:hidden;font-family:'SF Pro Display','S
 .send-btn svg{width:16px;height:16px}
 
 /* Tab bar */
-.tb{display:flex;flex-shrink:0;background:rgba(0,0,0,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);box-shadow:0 -.5px 0 var(--sep);padding-bottom:env(safe-area-inset-bottom,0)}
+.tb{display:flex;flex-shrink:0;background:rgba(0,0,0,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);box-shadow:0 -.5px 0 var(--sep)}
 .ti{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:8px 0 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;font-weight:500;color:var(--tx3);transition:all .2s;-webkit-tap-highlight-color:transparent}
 .ti svg{width:24px;height:24px;transition:transform .2s}
 .ti.on{color:var(--accent);font-weight:600}
@@ -435,8 +436,8 @@ function addMyStory(){const t=prompt('Write your story:');if(!t?.trim())return;c
 function openStory(i){storyV={on:true,ui:i,si:0,prog:0,tmr:null};renderStoryV()}
 function renderStoryV(){
   if(!storyV.on)return;const other=stories.filter(s=>s.uid!==S.user?.id);const sd=other[storyV.ui];if(!sd){closeStory();return}const st=sd.items[storyV.si];if(!st){closeStory();return}const u=db.u[sd.uid];
-  document.getElementById('app').innerHTML=`&lt;div class=&quot;screen screen-modal&quot; style=&quot;background:#000&quot;>&lt;div style=&quot;position:absolute;inset:0;display:flex;flex-direction:column;background:${st.bg}&quot;>
-    &lt;div style=&quot;display:flex;gap:3px;padding:12px 12px 0;z-index:2&quot;>${sd.items.map((_,i)=>`&lt;div style=&quot;flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.2);overflow:hidden&quot;>&lt;div style=&quot;height:100%;background:#fff;border-radius:2px;width:${i&lt;storyV.si?100:i===storyV.si?storyV.prog:0}%;transition:width .1s linear&quot;>&lt;/div>&lt;/div>`).join('')}&lt;/div>
+  document.getElementById('app').innerHTML=`&lt;div class=&quot;screen screen-modal screen-full&quot; style=&quot;background:#000&quot;>&lt;div style=&quot;position:absolute;inset:0;display:flex;flex-direction:column;background:${st.bg}&quot;>
+    &lt;div style=&quot;display:flex;gap:3px;padding:58px 12px 0;z-index:2&quot;>${sd.items.map((_,i)=>`&lt;div style=&quot;flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.2);overflow:hidden&quot;>&lt;div style=&quot;height:100%;background:#fff;border-radius:2px;width:${i&lt;storyV.si?100:i===storyV.si?storyV.prog:0}%;transition:width .1s linear&quot;>&lt;/div>&lt;/div>`).join('')}&lt;/div>
     &lt;div style=&quot;display:flex;align-items:center;gap:12px;padding:12px 16px;z-index:2&quot;>${avHTML(u?.name,'av-xs')}&lt;div style=&quot;flex:1&quot;>&lt;div style=&quot;font-weight:600;font-size:14px;color:#fff&quot;>${esc(u?.name||'')}&lt;/div>&lt;div style=&quot;font-size:12px;color:rgba(255,255,255,.5);font-weight:500&quot;>${ago(st.ts)}&lt;/div>&lt;/div>&lt;button class=&quot;hdr-b&quot; onclick=&quot;closeStory()&quot; style=&quot;color:#fff&quot;>${ic.x}&lt;/button>&lt;/div>
     &lt;div style=&quot;flex:1;display:flex;align-items:center;justify-content:center;padding:40px;z-index:1&quot; onclick=&quot;tapStory(event)&quot;>&lt;p style=&quot;font-size:26px;font-weight:700;color:#fff;text-align:center;line-height:1.4;text-shadow:0 2px 12px rgba(0,0,0,.3);letter-spacing:-.01em&quot;>${esc(st.text)}&lt;/p>&lt;/div>
   &lt;/div>&lt;/div>`;
@@ -450,8 +451,8 @@ function closeStory(){if(storyV.tmr)clearInterval(storyV.tmr);storyV={on:false,u
 function startCall(type){if(!S.chatWith)return;call={on:true,type,user:S.chatWith,muted:false,speaker:false,sec:0,tmr:null};renderCall();setTimeout(()=>{call.tmr=setInterval(()=>{call.sec++;updCT()},1000);renderCall()},2000)}
 function renderCall(){
   const u=call.user;if(!u)return;const c=call.tmr!==null;
-  document.getElementById('app').innerHTML=`&lt;div class=&quot;screen screen-modal&quot; style=&quot;background:#000&quot;>
-    &lt;div style=&quot;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px&quot;>
+  document.getElementById('app').innerHTML=`&lt;div class=&quot;screen screen-modal screen-full&quot; style=&quot;background:#000&quot;>
+    &lt;div style=&quot;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding-top:var(--safe-top)&quot;>
       &lt;div style=&quot;width:96px;height:96px;border-radius:48px;background:${avGrad(u.name)};display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:700;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.2);${!c?'animation:pulse 2s infinite':''}&quot;>${(u.name||'?')[0].toUpperCase()}&lt;/div>
       &lt;h2 style=&quot;font-size:22px;font-weight:700;margin-top:8px;letter-spacing:-.01em&quot;>${esc(u.name)}&lt;/h2>
       &lt;p style=&quot;color:var(--tx3);font-size:14px;font-weight:500&quot;>@${esc((u.name||'').toLowerCase().replace(/\s/g,''))}&lt;/p>
@@ -507,7 +508,7 @@ function rChat(){
       &lt;button class=&quot;hdr-b&quot; onclick=&quot;S.chatWith=null;chatInp='';navAnim='screen-back';R()&quot;>${ic.back}&lt;/button>
       ${avHTML(o.name,'av-s')}
       &lt;div style=&quot;flex:1;min-width:0&quot;>
-        &lt;div style=&quot;font-weight:600;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:-.01em&quot;>${esc(o.name)}&lt;/div>
+        &lt;div style=&quot;font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis&quot;>${esc(o.name)}&lt;/div>
         &lt;div style=&quot;font-size:12px;color:${o.on?'var(--green)':'var(--tx3)'};font-weight:500&quot;>${o.on?'Active now':'Offline'}&lt;/div>
       &lt;/div>
       &lt;button class=&quot;hdr-b&quot; onclick=&quot;startCall('audio')&quot; style=&quot;color:var(--accent)&quot;>${ic.phone}&lt;/button>
