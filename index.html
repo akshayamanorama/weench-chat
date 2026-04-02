@@ -3,31 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weench — iPhone 16 Pro</title>
+<title>Weench</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{min-height:100vh;background:#000;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;padding:20px;overflow:auto}
-.wrap{display:flex;flex-direction:column;align-items:center;gap:20px}
-.title{color:#E7E9EA;font-size:18px;font-weight:800;text-align:center}
-.sub{color:#71767B;font-size:12px;margin-top:4px;text-align:center}
-.phone{width:402px;height:874px;border-radius:55px;background:linear-gradient(145deg,#2A2A2E,#1A1A1E,#2A2A2E);padding:10px;position:relative;box-shadow:0 0 0 1.5px rgba(255,255,255,.06),inset 0 0 0 1px rgba(255,255,255,.03),0 30px 80px rgba(0,0,0,.7)}
+body{min-height:100vh;background:#000;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;padding:20px;overflow:auto}
+.wrap{display:flex;flex-direction:column;align-items:center;gap:16px}
+.title{color:#F5F5F7;font-size:17px;font-weight:600;text-align:center;letter-spacing:-0.01em}
+.sub{color:#636366;font-size:11px;margin-top:2px;text-align:center;font-weight:500;letter-spacing:0.02em}
+.phone{width:402px;height:874px;border-radius:55px;background:linear-gradient(145deg,#2A2A2E,#1A1A1E,#2A2A2E);padding:10px;position:relative;box-shadow:0 0 0 1.5px rgba(255,255,255,.06),inset 0 0 0 1px rgba(255,255,255,.03),0 40px 100px rgba(0,0,0,.8),0 0 60px rgba(10,132,255,.04)}
 .phone::before{content:'';position:absolute;inset:0;border-radius:55px;background:linear-gradient(180deg,rgba(255,255,255,.04) 0%,transparent 30%,transparent 70%,rgba(255,255,255,.02) 100%);pointer-events:none}
 .island{position:absolute;top:16px;left:50%;transform:translateX(-50%);width:126px;height:37px;background:#000;border-radius:20px;z-index:100}
 .scr{width:100%;height:100%;border-radius:46px;overflow:hidden;background:#000;position:relative;z-index:1}
 .scr iframe{width:100%;height:100%;border:none;border-radius:46px}
-.sb{position:absolute;background:linear-gradient(180deg,#3A3A3E,#2A2A2E);border-radius:2px}
+.sb-hw{position:absolute;background:linear-gradient(180deg,#3A3A3E,#2A2A2E);border-radius:2px}
 .sb-pwr{width:3px;height:84px;right:-3px;top:190px;border-radius:0 3px 3px 0}
 .sb-vu{width:3px;height:38px;left:-3px;top:165px;border-radius:3px 0 0 3px}
 .sb-vd{width:3px;height:38px;left:-3px;top:216px;border-radius:3px 0 0 3px}
 .sb-act{width:3px;height:26px;left:-3px;top:125px;border-radius:3px 0 0 3px}
 .home{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);width:130px;height:5px;background:rgba(255,255,255,.1);border-radius:3px;z-index:101;pointer-events:none}
-.label{color:#536471;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
 </style>
 </head>
 <body>
 <div class="wrap">
-<div><div class="title">Weench</div><div class="sub">iPhone 16 Pro — 402 x 874</div></div>
-<div class="phone"><div class="island"></div><div class="sb sb-pwr"></div><div class="sb sb-vu"></div><div class="sb sb-vd"></div><div class="sb sb-act"></div>
+<div><div class="title">Weench</div><div class="sub">iPhone 16 Pro</div></div>
+<div class="phone"><div class="island"></div><div class="sb-hw sb-pwr"></div><div class="sb-hw sb-vu"></div><div class="sb-hw sb-vd"></div><div class="sb-hw sb-act"></div>
 <div class="scr"><iframe srcdoc="<!DOCTYPE html>
 <html lang=&quot;en&quot;>
 <head>
@@ -37,128 +36,168 @@ body{min-height:100vh;background:#000;display:flex;align-items:center;justify-co
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --x:#1D9BF0;
-  --x2:#1A8CD8;
-  --xL:#E8F5FE;
+  --accent:#0A84FF;
+  --accent2:#5E5CE6;
+  --accent-soft:rgba(10,132,255,.12);
   --bg:#000;
-  --bg2:#16181C;
-  --bg3:#1D1F23;
-  --bg4:#2F3336;
-  --card:#16181C;
-  --tx:#E7E9EA;
-  --tx2:#71767B;
-  --tx3:#536471;
-  --border:#2F3336;
-  --green:#00BA7C;
-  --red:#F4212E;
-  --white:#E7E9EA;
+  --bg1:#1C1C1E;
+  --bg2:#2C2C2E;
+  --bg3:#3A3A3C;
+  --bg4:#48484A;
+  --tx:#F5F5F7;
+  --tx2:#98989D;
+  --tx3:#636366;
+  --sep:rgba(84,84,88,.36);
+  --sep2:#38383A;
+  --green:#30D158;
+  --red:#FF453A;
+  --orange:#FF9F0A;
 }
-html,body{height:100%;width:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#000;color:var(--tx);-webkit-font-smoothing:antialiased}
+html,body{height:100%;width:100%;overflow:hidden;font-family:'SF Pro Display','SF Pro Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#000;color:var(--tx);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 
-.app{width:100%;max-width:430px;height:100vh;height:100dvh;position:relative;overflow:hidden;margin:0 auto;background:var(--bg)}
-@media(min-width:431px){.app{height:92vh;max-height:860px;border-radius:16px;margin-top:4vh;box-shadow:0 0 40px rgba(0,0,0,.5);border:1px solid var(--border)}}
+.app{width:100%;height:100vh;height:100dvh;position:relative;overflow:hidden;background:var(--bg)}
 
-.screen{position:absolute;inset:0;display:flex;flex-direction:column;background:var(--bg);animation:fi .15s ease}
-@keyframes fi{from{opacity:0}to{opacity:1}}
+/* Animations */
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideIn{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideBack{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+@keyframes modalUp{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(10,132,255,.25)}50%{box-shadow:0 0 0 12px rgba(10,132,255,0)}}
+@keyframes dotBounce{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(-5px);opacity:1}}
+@keyframes storyProg{from{width:0}to{width:100%}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(10,132,255,.3)}50%{box-shadow:0 0 0 24px rgba(10,132,255,0)}}
+@keyframes logoEntry{0%{opacity:0;transform:scale(.6) rotate(-8deg)}60%{transform:scale(1.05) rotate(1deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes textEntry{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes inputEntry{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;background:var(--bg)}
+.screen-fade{animation:fadeIn .4s cubic-bezier(.32,.72,0,1)}
+.screen-slide{animation:slideIn .4s cubic-bezier(.32,.72,0,1)}
+.screen-back{animation:slideBack .35s cubic-bezier(.32,.72,0,1)}
+.screen-scale{animation:scaleIn .35s cubic-bezier(.32,.72,0,1)}
+.screen-modal{animation:modalUp .45s cubic-bezier(.32,.72,0,1)}
+
+/* Typography */
+.t-display{font-size:32px;font-weight:700;letter-spacing:-.02em;color:var(--tx)}
+.t-title{font-size:20px;font-weight:600;letter-spacing:-.01em;color:var(--tx)}
+.t-headline{font-size:17px;font-weight:600;color:var(--tx)}
+.t-body{font-size:15px;font-weight:400;line-height:1.45;color:var(--tx)}
+.t-caption{font-size:13px;font-weight:500;color:var(--tx2)}
+.t-micro{font-size:11px;font-weight:600;letter-spacing:.02em;color:var(--tx3)}
 
 /* Inputs */
-.inp{width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:9999px;font-size:15px;font-family:inherit;color:var(--tx);outline:none;transition:all .2s}
+.inp{width:100%;padding:14px 18px;background:var(--bg1);border:1.5px solid transparent;border-radius:14px;font-size:16px;font-family:inherit;color:var(--tx);outline:none;transition:all .25s cubic-bezier(.32,.72,0,1)}
 .inp::placeholder{color:var(--tx3)}
-.inp:focus{border-color:var(--x);box-shadow:0 0 0 1px var(--x)}
-.inp-dark{background:var(--bg2);border-color:transparent}
-.inp-dark:focus{background:var(--bg);border-color:var(--x)}
+.inp:focus{border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);background:var(--bg)}
 
 /* Buttons */
-.btn{padding:12px 0;width:100%;border-radius:9999px;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:all .15s}
-.btn-x{background:var(--white);color:#000}
-.btn-x:hover:not(:disabled){background:#D7DBDC}
-.btn-x:active:not(:disabled){background:#CDD1D3}
-.btn-x:disabled{opacity:.5;cursor:not-allowed}
-.btn-dark{background:var(--bg3);color:var(--tx)}
-.btn-dark:hover{background:var(--bg4)}
-.btn-text{background:none;color:var(--x);font-weight:700;padding:8px 0;border:none;cursor:pointer;font-family:inherit;font-size:14px}
+.btn{padding:14px 0;width:100%;border-radius:14px;font-size:16px;font-weight:600;border:none;cursor:pointer;font-family:inherit;transition:all .15s cubic-bezier(.32,.72,0,1);-webkit-tap-highlight-color:transparent}
+.btn:active:not(:disabled){transform:scale(.97)}
+.btn-accent{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 4px 16px rgba(10,132,255,.25)}
+.btn-accent:hover:not(:disabled){box-shadow:0 6px 24px rgba(10,132,255,.35)}
+.btn-accent:disabled{opacity:.4;cursor:not-allowed;box-shadow:none}
+.btn-secondary{background:var(--bg1);color:var(--tx)}
+.btn-secondary:hover{background:var(--bg2)}
+.btn-text{background:none;color:var(--accent);font-weight:600;padding:8px 0;border:none;cursor:pointer;font-family:inherit;font-size:14px}
 
 /* Header */
-.hdr{padding:0 16px;height:53px;display:flex;align-items:center;gap:16px;flex-shrink:0;background:rgba(0,0,0,.65);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:10}
-.hdr h1{font-size:20px;font-weight:800;color:var(--tx)}
-.hdr-b{background:none;border:none;color:var(--tx);cursor:pointer;padding:8px;display:flex;border-radius:9999px;transition:background .15s;margin:-8px}
-.hdr-b:hover{background:rgba(231,233,234,.1)}
+.hdr{padding:0 16px;height:56px;display:flex;align-items:center;gap:16px;flex-shrink:0;background:rgba(0,0,0,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);z-index:10;box-shadow:0 .5px 0 var(--sep)}
+.hdr h1{font-size:20px;font-weight:700;letter-spacing:-.01em}
+.hdr-b{background:none;border:none;color:var(--accent);cursor:pointer;padding:8px;display:flex;border-radius:12px;transition:all .15s;margin:-8px;-webkit-tap-highlight-color:transparent}
+.hdr-b:active{transform:scale(.9);background:var(--accent-soft)}
 .hdr-b svg{width:20px;height:20px}
 
 /* Avatar */
-.av{width:40px;height:40px;border-radius:9999px;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:var(--x);flex-shrink:0;position:relative}
-.av-s{width:36px;height:36px;font-size:14px}
-.av-xs{width:32px;height:32px;font-size:13px}
-.av-l{width:68px;height:68px;font-size:28px}
-.dot{width:10px;height:10px;background:var(--green);border-radius:50%;border:2.5px solid var(--bg);position:absolute;bottom:-1px;right:-1px}
+.av{width:44px;height:44px;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700;color:#fff;flex-shrink:0;position:relative;text-shadow:0 1px 2px rgba(0,0,0,.2)}
+.av-s{width:36px;height:36px;font-size:14px;border-radius:18px}
+.av-xs{width:32px;height:32px;font-size:13px;border-radius:16px}
+.av-l{width:80px;height:80px;font-size:32px;border-radius:40px}
+.dot{width:12px;height:12px;background:var(--green);border-radius:6px;border:2.5px solid var(--bg);position:absolute;bottom:-1px;right:-1px}
 
 /* List item */
-.li{display:flex;align-items:center;gap:12px;padding:12px 16px;width:100%;border:none;background:transparent;cursor:pointer;text-align:left;font-family:inherit;color:var(--tx);transition:background .1s;border-bottom:1px solid var(--border)}
-.li:hover{background:rgba(231,233,234,.03)}
-.li:active{background:rgba(231,233,234,.06)}
+.li{display:flex;align-items:center;gap:14px;padding:14px 16px;width:100%;border:none;background:transparent;cursor:pointer;text-align:left;font-family:inherit;color:var(--tx);transition:all .15s;-webkit-tap-highlight-color:transparent}
+.li:active{transform:scale(.98);background:rgba(255,255,255,.03)}
 
-/* Chat bubbles - X style */
+/* Chat bubbles */
 .mr{display:flex;margin-bottom:2px;padding:0 16px}
-.mb{max-width:80%;padding:12px 16px;font-size:15px;line-height:1.4;word-break:break-word}
-.mb-m{border-radius:22px 22px 4px 22px;background:var(--x);color:#fff}
-.mb-o{border-radius:22px 22px 22px 4px;background:var(--bg3);color:var(--tx)}
-.mb-t{display:flex;justify-content:flex-end;align-items:center;gap:5px;margin-top:3px;font-size:12px}
+.mb{max-width:78%;padding:10px 14px;font-size:15px;line-height:1.45;word-break:break-word}
+.mb-m{border-radius:20px 20px 6px 20px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 1px 4px rgba(10,132,255,.15)}
+.mb-o{border-radius:20px 20px 20px 6px;background:var(--bg1);color:var(--tx);border:1px solid var(--sep)}
+.mb-t{display:flex;justify-content:flex-end;align-items:center;gap:5px;margin-top:4px;font-size:11px;font-weight:500}
 .mb-m .mb-t{color:rgba(255,255,255,.5)}
 .mb-o .mb-t{color:var(--tx3)}
 
 /* Typing */
-.td span{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--tx3);margin:0 2px;animation:bounce .6s infinite alternate}
-.td span:nth-child(2){animation-delay:.2s}
-.td span:nth-child(3){animation-delay:.4s}
-@keyframes bounce{to{opacity:.3;transform:translateY(-3px)}}
+.td{display:flex;align-items:center;gap:4px;padding:2px 0}
+.td span{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--tx3);animation:dotBounce .8s infinite ease-in-out}
+.td span:nth-child(2){animation-delay:.15s}
+.td span:nth-child(3){animation-delay:.3s}
 
 /* Chat input */
-.ib{padding:8px 12px;display:flex;gap:8px;align-items:center;flex-shrink:0;background:var(--bg);border-top:1px solid var(--border)}
-.ib input{flex:1;padding:10px 16px;background:var(--bg2);border:1px solid transparent;border-radius:9999px;font-size:15px;font-family:inherit;color:var(--tx);outline:none;transition:all .2s}
+.ib{padding:8px 12px;display:flex;gap:8px;align-items:center;flex-shrink:0;background:rgba(0,0,0,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);box-shadow:0 -.5px 0 var(--sep)}
+.ib input{flex:1;padding:10px 16px;background:var(--bg1);border:1.5px solid transparent;border-radius:20px;font-size:15px;font-family:inherit;color:var(--tx);outline:none;transition:all .25s}
 .ib input::placeholder{color:var(--tx3)}
-.ib input:focus{background:var(--bg);border-color:var(--x)}
-.sb{width:36px;height:36px;border-radius:9999px;border:none;background:var(--x);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0}
-.sb:disabled{background:var(--bg3);color:var(--tx3)}
-.sb:hover:not(:disabled){background:var(--x2)}
-.sb svg{width:16px;height:16px}
+.ib input:focus{background:var(--bg);border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.send-btn{width:36px;height:36px;border-radius:18px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s cubic-bezier(.32,.72,0,1);flex-shrink:0;-webkit-tap-highlight-color:transparent}
+.send-btn:not(:disabled){background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 2px 8px rgba(10,132,255,.25)}
+.send-btn:disabled{background:var(--bg2);color:var(--tx3)}
+.send-btn:active:not(:disabled){transform:scale(.85)}
+.send-btn svg{width:16px;height:16px}
 
 /* Tab bar */
-.tb{display:flex;border-top:1px solid var(--border);flex-shrink:0;background:var(--bg);padding-bottom:env(safe-area-inset-bottom,0)}
-.ti{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:10px 0;background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;font-weight:600;color:var(--tx3);transition:color .15s;position:relative}
-.ti svg{width:24px;height:24px}
-.ti.on{color:var(--tx)}
-.ti.on::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:28px;height:3px;background:var(--x);border-radius:3px 3px 0 0}
+.tb{display:flex;flex-shrink:0;background:rgba(0,0,0,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);box-shadow:0 -.5px 0 var(--sep);padding-bottom:env(safe-area-inset-bottom,0)}
+.ti{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:8px 0 6px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;font-weight:500;color:var(--tx3);transition:all .2s;-webkit-tap-highlight-color:transparent}
+.ti svg{width:24px;height:24px;transition:transform .2s}
+.ti.on{color:var(--accent);font-weight:600}
+.ti.on svg{transform:scale(1.08)}
+.ti:active svg{transform:scale(.85)}
 
 /* Language card */
-.lc{display:flex;align-items:center;gap:14px;padding:16px;border-radius:16px;border:1px solid var(--border);background:var(--bg);cursor:pointer;transition:all .15s;text-align:left;font-family:inherit;width:100%;color:var(--tx)}
-.lc:hover{background:var(--bg2)}
-.lc.sel{border-color:var(--x);background:rgba(29,155,240,.1)}
+.lc{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--sep2);background:var(--bg1);cursor:pointer;transition:all .2s cubic-bezier(.32,.72,0,1);text-align:left;font-family:inherit;width:100%;color:var(--tx);-webkit-tap-highlight-color:transparent}
+.lc:active{transform:scale(.98)}
+.lc.sel{border-color:var(--accent);background:var(--accent-soft);box-shadow:0 0 0 2px rgba(10,132,255,.2)}
 
 /* Bridge bar */
-.br{padding:6px 16px;text-align:center;font-size:12px;color:var(--x);background:rgba(29,155,240,.08);font-weight:500;flex-shrink:0;border-bottom:1px solid var(--border)}
+.br{padding:8px 16px;text-align:center;font-size:12px;font-weight:500;color:var(--accent);background:var(--accent-soft);flex-shrink:0;letter-spacing:.01em}
 
 /* Profile */
-.prof-item{display:flex;align-items:center;justify-content:space-between;padding:16px;cursor:pointer;transition:background .1s;border-bottom:1px solid var(--border)}
-.prof-item:hover{background:rgba(231,233,234,.03)}
+.prof-card{margin:0 16px;border-radius:14px;background:var(--bg1);overflow:hidden}
+.prof-item{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;cursor:pointer;transition:background .1s;-webkit-tap-highlight-color:transparent}
+.prof-item:active{background:rgba(255,255,255,.04)}
+.prof-sep{height:.5px;background:var(--sep);margin-left:16px}
 
 /* Story ring */
-.story-ring{width:52px;height:52px;border-radius:9999px;padding:2px;background:linear-gradient(135deg,var(--x),#7856FF);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.story-ring .av{border:2px solid var(--bg)}
+.story-ring{width:52px;height:52px;border-radius:26px;padding:2.5px;background:linear-gradient(135deg,var(--accent),#BF5AF2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.story-ring .av{border:2.5px solid var(--bg)}
 
-/* Separator */
-.sep{height:1px;background:var(--border)}
-
+/* Scrollbar */
 ::-webkit-scrollbar{display:none}
 </style>
 </head>
 <body>
 <div id=&quot;app&quot; class=&quot;app&quot;></div>
 <script>
-// ============ DATA ============
-const LANGS=[{c:'en',n:'English',v:'English',f:'🇬🇧'},{c:'hi',n:'Hindi',v:'हिन्दी',f:'🇮🇳'},{c:'ta',n:'Tamil',v:'தமிழ்',f:'🇮🇳'},{c:'te',n:'Telugu',v:'తెలుగు',f:'🇮🇳'},{c:'kn',n:'Kannada',v:'ಕನ್ನಡ',f:'🇮🇳'},{c:'mr',n:'Marathi',v:'मराठी',f:'🇮🇳'}];
+// ============ DESIGN SYSTEM ============
+const AVATAR_GRAD=[
+  'linear-gradient(135deg,#FF6B6B,#EE5A24)',
+  'linear-gradient(135deg,#0A84FF,#5E5CE6)',
+  'linear-gradient(135deg,#30D158,#00C7BE)',
+  'linear-gradient(135deg,#FF9F0A,#FF375F)',
+  'linear-gradient(135deg,#BF5AF2,#5E5CE6)',
+  'linear-gradient(135deg,#64D2FF,#0A84FF)',
+  'linear-gradient(135deg,#FF375F,#BF5AF2)',
+  'linear-gradient(135deg,#FFD60A,#FF9F0A)',
+];
+function avGrad(name){return AVATAR_GRAD[(name||'?').charCodeAt(0)%AVATAR_GRAD.length]}
+function avHTML(name,cls){const g=avGrad(name);return`<div class=&quot;av ${cls||''}&quot; style=&quot;background:${g}&quot;>${(name||'?')[0].toUpperCase()}</div>`}
+
+const LANGS=[{c:'en',n:'English',v:'English',f:'\u{1F1EC}\u{1F1E7}'},{c:'hi',n:'Hindi',v:'\u0939\u093F\u0928\u094D\u0926\u0940',f:'\u{1F1EE}\u{1F1F3}'},{c:'ta',n:'Tamil',v:'\u0BA4\u0BAE\u0BBF\u0BB4\u0BCD',f:'\u{1F1EE}\u{1F1F3}'},{c:'te',n:'Telugu',v:'\u0C24\u0C46\u0C32\u0C41\u0C17\u0C41',f:'\u{1F1EE}\u{1F1F3}'},{c:'kn',n:'Kannada',v:'\u0C95\u0CA8\u0CCD\u0CA8\u0CA1',f:'\u{1F1EE}\u{1F1F3}'},{c:'mr',n:'Marathi',v:'\u092E\u0930\u093E\u0920\u0940',f:'\u{1F1EE}\u{1F1F3}'}];
 const LN=Object.fromEntries(LANGS.map(l=>[l.c,l.n]));
 
-const DICT={&quot;en|hi&quot;:{&quot;hello&quot;:&quot;नमस्ते&quot;,&quot;hi&quot;:&quot;नमस्ते&quot;,&quot;hey&quot;:&quot;अरे&quot;,&quot;how are you&quot;:&quot;आप कैसे हैं&quot;,&quot;how are you?&quot;:&quot;आप कैसे हैं?&quot;,&quot;good morning&quot;:&quot;सुप्रभात&quot;,&quot;good night&quot;:&quot;शुभ रात्रि&quot;,&quot;thank you&quot;:&quot;धन्यवाद&quot;,&quot;thanks&quot;:&quot;धन्यवाद&quot;,&quot;yes&quot;:&quot;हाँ&quot;,&quot;no&quot;:&quot;नहीं&quot;,&quot;ok&quot;:&quot;ठीक है&quot;,&quot;okay&quot;:&quot;ठीक है&quot;,&quot;bye&quot;:&quot;अलविदा&quot;,&quot;please&quot;:&quot;कृपया&quot;,&quot;sorry&quot;:&quot;माफ़ कीजिए&quot;,&quot;i am fine&quot;:&quot;मैं ठीक हूँ&quot;,&quot;what happened?&quot;:&quot;क्या हुआ?&quot;,&quot;tell me&quot;:&quot;बताओ&quot;,&quot;let's go&quot;:&quot;चलो&quot;,&quot;good&quot;:&quot;अच्छा&quot;,&quot;friend&quot;:&quot;दोस्त&quot;,&quot;very good&quot;:&quot;बहुत अच्छा&quot;,&quot;no problem&quot;:&quot;कोई बात नहीं&quot;,&quot;take care&quot;:&quot;अपना ख्याल रखो&quot;},&quot;hi|en&quot;:{&quot;नमस्ते&quot;:&quot;Hello&quot;,&quot;अरे&quot;:&quot;Hey&quot;,&quot;आप कैसे हैं?&quot;:&quot;How are you?&quot;,&quot;सुप्रभात&quot;:&quot;Good morning&quot;,&quot;शुभ रात्रि&quot;:&quot;Good night&quot;,&quot;धन्यवाद&quot;:&quot;Thank you&quot;,&quot;हाँ&quot;:&quot;Yes&quot;,&quot;नहीं&quot;:&quot;No&quot;,&quot;ठीक है&quot;:&quot;Okay&quot;,&quot;अलविदा&quot;:&quot;Goodbye&quot;,&quot;कृपया&quot;:&quot;Please&quot;,&quot;माफ़ कीजिए&quot;:&quot;Sorry&quot;,&quot;मैं ठीक हूँ&quot;:&quot;I am fine&quot;,&quot;बताओ&quot;:&quot;Tell me&quot;,&quot;चलो&quot;:&quot;Let's go&quot;,&quot;अच्छा&quot;:&quot;Good&quot;,&quot;दोस्त&quot;:&quot;Friend&quot;,&quot;बहुत अच्छा&quot;:&quot;Very good&quot;,&quot;कोई बात नहीं&quot;:&quot;No problem&quot;},&quot;en|ta&quot;:{&quot;hello&quot;:&quot;வணக்கம்&quot;,&quot;hi&quot;:&quot;வணக்கம்&quot;,&quot;how are you?&quot;:&quot;நீங்கள் எப்படி இருக்கிறீர்கள்?&quot;,&quot;good morning&quot;:&quot;காலை வணக்கம்&quot;,&quot;thank you&quot;:&quot;நன்றி&quot;,&quot;yes&quot;:&quot;ஆம்&quot;,&quot;no&quot;:&quot;இல்லை&quot;,&quot;okay&quot;:&quot;சரி&quot;,&quot;bye&quot;:&quot;போய் வருகிறேன்&quot;,&quot;good&quot;:&quot;நல்லது&quot;},&quot;en|te&quot;:{&quot;hello&quot;:&quot;హలో&quot;,&quot;hi&quot;:&quot;హాయ్&quot;,&quot;how are you?&quot;:&quot;మీరు ఎలా ఉన్నారు?&quot;,&quot;good morning&quot;:&quot;శుభోదయం&quot;,&quot;thank you&quot;:&quot;ధన్యవాదాలు&quot;,&quot;yes&quot;:&quot;అవును&quot;,&quot;no&quot;:&quot;కాదు&quot;,&quot;okay&quot;:&quot;సరే&quot;,&quot;bye&quot;:&quot;వీడ్కోలు&quot;,&quot;good&quot;:&quot;మంచిది&quot;},&quot;en|kn&quot;:{&quot;hello&quot;:&quot;ನಮಸ್ಕಾರ&quot;,&quot;hi&quot;:&quot;ಹಾಯ್&quot;,&quot;how are you?&quot;:&quot;ನೀವು ಹೇಗಿದ್ದೀರಿ?&quot;,&quot;good morning&quot;:&quot;ಶುಭೋದಯ&quot;,&quot;thank you&quot;:&quot;ಧನ್ಯವಾದಗಳು&quot;,&quot;yes&quot;:&quot;ಹೌದು&quot;,&quot;no&quot;:&quot;ಇಲ್ಲ&quot;,&quot;okay&quot;:&quot;ಸರಿ&quot;,&quot;bye&quot;:&quot;ವಿದಾಯ&quot;,&quot;good&quot;:&quot;ಒಳ್ಳೆಯದು&quot;},&quot;en|mr&quot;:{&quot;hello&quot;:&quot;नमस्कार&quot;,&quot;hi&quot;:&quot;नमस्कार&quot;,&quot;how are you?&quot;:&quot;तुम्ही कसे आहात?&quot;,&quot;good morning&quot;:&quot;शुभ सकाळ&quot;,&quot;thank you&quot;:&quot;धन्यवाद&quot;,&quot;yes&quot;:&quot;हो&quot;,&quot;no&quot;:&quot;नाही&quot;,&quot;okay&quot;:&quot;ठीक आहे&quot;,&quot;bye&quot;:&quot;निरोप&quot;,&quot;good&quot;:&quot;चांगले&quot;}};
+// Translation dictionary
+const DICT={&quot;en|hi&quot;:{&quot;hello&quot;:&quot;\u0928\u092E\u0938\u094D\u0924\u0947&quot;,&quot;hi&quot;:&quot;\u0928\u092E\u0938\u094D\u0924\u0947&quot;,&quot;hey&quot;:&quot;\u0905\u0930\u0947&quot;,&quot;how are you&quot;:&quot;\u0906\u092A \u0915\u0948\u0938\u0947 \u0939\u0948\u0902&quot;,&quot;how are you?&quot;:&quot;\u0906\u092A \u0915\u0948\u0938\u0947 \u0939\u0948\u0902?&quot;,&quot;good morning&quot;:&quot;\u0938\u0941\u092A\u094D\u0930\u092D\u093E\u0924&quot;,&quot;good night&quot;:&quot;\u0936\u0941\u092D \u0930\u093E\u0924\u094D\u0930\u093F&quot;,&quot;thank you&quot;:&quot;\u0927\u0928\u094D\u092F\u0935\u093E\u0926&quot;,&quot;thanks&quot;:&quot;\u0927\u0928\u094D\u092F\u0935\u093E\u0926&quot;,&quot;yes&quot;:&quot;\u0939\u093E\u0901&quot;,&quot;no&quot;:&quot;\u0928\u0939\u0940\u0902&quot;,&quot;ok&quot;:&quot;\u0920\u0940\u0915 \u0939\u0948&quot;,&quot;okay&quot;:&quot;\u0920\u0940\u0915 \u0939\u0948&quot;,&quot;bye&quot;:&quot;\u0905\u0932\u0935\u093F\u0926\u093E&quot;,&quot;please&quot;:&quot;\u0915\u0943\u092A\u092F\u093E&quot;,&quot;sorry&quot;:&quot;\u092E\u093E\u092B\u093C \u0915\u0940\u091C\u093F\u090F&quot;,&quot;i am fine&quot;:&quot;\u092E\u0948\u0902 \u0920\u0940\u0915 \u0939\u0942\u0901&quot;,&quot;what happened?&quot;:&quot;\u0915\u094D\u092F\u093E \u0939\u0941\u0906?&quot;,&quot;tell me&quot;:&quot;\u092C\u0924\u093E\u0913&quot;,&quot;let's go&quot;:&quot;\u091A\u0932\u094B&quot;,&quot;good&quot;:&quot;\u0905\u091A\u094D\u091B\u093E&quot;,&quot;friend&quot;:&quot;\u0926\u094B\u0938\u094D\u0924&quot;,&quot;very good&quot;:&quot;\u092C\u0939\u0941\u0924 \u0905\u091A\u094D\u091B\u093E&quot;,&quot;no problem&quot;:&quot;\u0915\u094B\u0908 \u092C\u093E\u0924 \u0928\u0939\u0940\u0902&quot;,&quot;take care&quot;:&quot;\u0905\u092A\u0928\u093E \u0916\u094D\u092F\u093E\u0932 \u0930\u0916\u094B&quot;},&quot;hi|en&quot;:{&quot;\u0928\u092E\u0938\u094D\u0924\u0947&quot;:&quot;Hello&quot;,&quot;\u0905\u0930\u0947&quot;:&quot;Hey&quot;,&quot;\u0906\u092A \u0915\u0948\u0938\u0947 \u0939\u0948\u0902?&quot;:&quot;How are you?&quot;,&quot;\u0938\u0941\u092A\u094D\u0930\u092D\u093E\u0924&quot;:&quot;Good morning&quot;,&quot;\u0936\u0941\u092D \u0930\u093E\u0924\u094D\u0930\u093F&quot;:&quot;Good night&quot;,&quot;\u0927\u0928\u094D\u092F\u0935\u093E\u0926&quot;:&quot;Thank you&quot;,&quot;\u0939\u093E\u0901&quot;:&quot;Yes&quot;,&quot;\u0928\u0939\u0940\u0902&quot;:&quot;No&quot;,&quot;\u0920\u0940\u0915 \u0939\u0948&quot;:&quot;Okay&quot;,&quot;\u0905\u0932\u0935\u093F\u0926\u093E&quot;:&quot;Goodbye&quot;,&quot;\u0915\u0943\u092A\u092F\u093E&quot;:&quot;Please&quot;,&quot;\u092E\u093E\u092B\u093C \u0915\u0940\u091C\u093F\u090F&quot;:&quot;Sorry&quot;,&quot;\u092E\u0948\u0902 \u0920\u0940\u0915 \u0939\u0942\u0901&quot;:&quot;I am fine&quot;,&quot;\u092C\u0924\u093E\u0913&quot;:&quot;Tell me&quot;,&quot;\u091A\u0932\u094B&quot;:&quot;Let's go&quot;,&quot;\u0905\u091A\u094D\u091B\u093E&quot;:&quot;Good&quot;,&quot;\u0926\u094B\u0938\u094D\u0924&quot;:&quot;Friend&quot;,&quot;\u092C\u0939\u0941\u0924 \u0905\u091A\u094D\u091B\u093E&quot;:&quot;Very good&quot;,&quot;\u0915\u094B\u0908 \u092C\u093E\u0924 \u0928\u0939\u0940\u0902&quot;:&quot;No problem&quot;},&quot;en|ta&quot;:{&quot;hello&quot;:&quot;\u0BB5\u0BA3\u0B95\u0BCD\u0B95\u0BAE\u0BCD&quot;,&quot;hi&quot;:&quot;\u0BB5\u0BA3\u0B95\u0BCD\u0B95\u0BAE\u0BCD&quot;,&quot;how are you?&quot;:&quot;\u0BA8\u0BC0\u0B99\u0BCD\u0B95\u0BB3\u0BCD \u0B8E\u0BAA\u0BCD\u0BAA\u0B9F\u0BBF \u0B87\u0BB0\u0BC1\u0B95\u0BCD\u0B95\u0BBF\u0BB1\u0BC0\u0BB0\u0BCD\u0B95\u0BB3\u0BCD?&quot;,&quot;good morning&quot;:&quot;\u0B95\u0BBE\u0BB2\u0BC8 \u0BB5\u0BA3\u0B95\u0BCD\u0B95\u0BAE\u0BCD&quot;,&quot;thank you&quot;:&quot;\u0BA8\u0BA9\u0BCD\u0BB1\u0BBF&quot;,&quot;yes&quot;:&quot;\u0B86\u0BAE\u0BCD&quot;,&quot;no&quot;:&quot;\u0B87\u0BB2\u0BCD\u0BB2\u0BC8&quot;,&quot;okay&quot;:&quot;\u0B9A\u0BB0\u0BBF&quot;,&quot;bye&quot;:&quot;\u0BAA\u0BCB\u0BAF\u0BCD \u0BB5\u0BB0\u0BC1\u0B95\u0BBF\u0BB1\u0BC7\u0BA9\u0BCD&quot;,&quot;good&quot;:&quot;\u0BA8\u0BB2\u0BCD\u0BB2\u0BA4\u0BC1&quot;},&quot;en|te&quot;:{&quot;hello&quot;:&quot;\u0C39\u0C32\u0C4B&quot;,&quot;hi&quot;:&quot;\u0C39\u0C3E\u0C2F\u0C4D&quot;,&quot;how are you?&quot;:&quot;\u0C2E\u0C40\u0C30\u0C41 \u0C0E\u0C32\u0C3E \u0C09\u0C28\u0C4D\u0C28\u0C3E\u0C30\u0C41?&quot;,&quot;good morning&quot;:&quot;\u0C36\u0C41\u0C2D\u0C4B\u0C26\u0C2F\u0C02&quot;,&quot;thank you&quot;:&quot;\u0C27\u0C28\u0C4D\u0C2F\u0C35\u0C3E\u0C26\u0C3E\u0C32\u0C41&quot;,&quot;yes&quot;:&quot;\u0C05\u0C35\u0C41\u0C28\u0C41&quot;,&quot;no&quot;:&quot;\u0C15\u0C3E\u0C26\u0C41&quot;,&quot;okay&quot;:&quot;\u0C38\u0C30\u0C47&quot;,&quot;bye&quot;:&quot;\u0C35\u0C40\u0C21\u0C4D\u0C15\u0C4B\u0C32\u0C41&quot;,&quot;good&quot;:&quot;\u0C2E\u0C02\u0C1A\u0C3F\u0C26\u0C3F&quot;},&quot;en|kn&quot;:{&quot;hello&quot;:&quot;\u0CA8\u0CAE\u0CB8\u0CCD\u0C95\u0CBE\u0CB0&quot;,&quot;hi&quot;:&quot;\u0CB9\u0CBE\u0CAF\u0CCD&quot;,&quot;how are you?&quot;:&quot;\u0CA8\u0CC0\u0CB5\u0CC1 \u0CB9\u0CC7\u0C97\u0CBF\u0CA6\u0CCD\u0CA6\u0CC0\u0CB0\u0CBF?&quot;,&quot;good morning&quot;:&quot;\u0CB6\u0CC1\u0CAD\u0CCB\u0CA6\u0CAF&quot;,&quot;thank you&quot;:&quot;\u0CA7\u0CA8\u0CCD\u0CAF\u0CB5\u0CBE\u0CA6\u0C97\u0CB3\u0CC1&quot;,&quot;yes&quot;:&quot;\u0CB9\u0CCC\u0CA6\u0CC1&quot;,&quot;no&quot;:&quot;\u0C87\u0CB2\u0CCD\u0CB2&quot;,&quot;okay&quot;:&quot;\u0CB8\u0CB0\u0CBF&quot;,&quot;bye&quot;:&quot;\u0CB5\u0CBF\u0CA6\u0CBE\u0CAF&quot;,&quot;good&quot;:&quot;\u0C92\u0CB3\u0CCD\u0CB3\u0CC6\u0CAF\u0CA6\u0CC1&quot;},&quot;en|mr&quot;:{&quot;hello&quot;:&quot;\u0928\u092E\u0938\u094D\u0915\u093E\u0930&quot;,&quot;hi&quot;:&quot;\u0928\u092E\u0938\u094D\u0915\u093E\u0930&quot;,&quot;how are you?&quot;:&quot;\u0924\u0941\u092E\u094D\u0939\u0940 \u0915\u0938\u0947 \u0906\u0939\u093E\u0924?&quot;,&quot;good morning&quot;:&quot;\u0936\u0941\u092D \u0938\u0915\u093E\u0933&quot;,&quot;thank you&quot;:&quot;\u0927\u0928\u094D\u092F\u0935\u093E\u0926&quot;,&quot;yes&quot;:&quot;\u0939\u094B&quot;,&quot;no&quot;:&quot;\u0928\u093E\u0939\u0940&quot;,&quot;okay&quot;:&quot;\u0920\u0940\u0915 \u0906\u0939\u0947&quot;,&quot;bye&quot;:&quot;\u0928\u093F\u0930\u094B\u092A&quot;,&quot;good&quot;:&quot;\u091A\u093E\u0902\u0917\u0932\u0947&quot;}};
 Object.keys(DICT).forEach(k=>{const[f,t]=k.split('|');const r=`${t}|${f}`;if(!DICT[r]){DICT[r]={};Object.entries(DICT[k]).forEach(([a,b])=>{DICT[r][b.toLowerCase()]=a})}});
 
 const trC={};
@@ -166,9 +205,9 @@ async function tr(text,from,to){if(from===to)return text;const k=`${from}|${to}|
 
 // Database
 const db={u:{},m:[]};
-[{id:'d1',name:'Rahul',phone:'9876500001',lang:'hi',on:true,bio:'Building cool stuff'},{id:'d2',name:'Priya',phone:'9876500002',lang:'ta',on:true,bio:'Coffee lover'},{id:'d3',name:'Arjun',phone:'9876500003',lang:'te',on:false,bio:'Tech enthusiast'},{id:'d4',name:'Sneha',phone:'9876500004',lang:'kn',on:true,bio:'Design is life'},{id:'d5',name:'Amit',phone:'9876500005',lang:'mr',on:false,bio:'Just vibing'}].forEach(u=>db.u[u.id]=u);
+[{id:'d1',name:'Rahul',phone:'9876500001',lang:'hi',on:true},{id:'d2',name:'Priya',phone:'9876500002',lang:'ta',on:true},{id:'d3',name:'Arjun',phone:'9876500003',lang:'te',on:false},{id:'d4',name:'Sneha',phone:'9876500004',lang:'kn',on:true},{id:'d5',name:'Amit',phone:'9876500005',lang:'mr',on:false}].forEach(u=>db.u[u.id]=u);
 
-const autoR={hi:[&quot;नमस्ते!&quot;,&quot;हाँ बताओ&quot;,&quot;अच्छा&quot;,&quot;ठीक है&quot;,&quot;बहुत अच्छा!&quot;,&quot;मैं ठीक हूँ&quot;],ta:[&quot;வணக்கம்!&quot;,&quot;ஆமா&quot;,&quot;நல்லது&quot;,&quot;சரி&quot;,&quot;நன்று!&quot;],te:[&quot;హలో!&quot;,&quot;చెప్పండి&quot;,&quot;మంచిది&quot;,&quot;సరే&quot;,&quot;బాగుంది!&quot;],kn:[&quot;ನಮಸ್ಕಾರ!&quot;,&quot;ಹೌದು&quot;,&quot;ಒಳ್ಳೆಯದು&quot;,&quot;ಸರಿ&quot;,&quot;ಚೆನ್ನಾಗಿದೆ!&quot;],mr:[&quot;नमस्कार!&quot;,&quot;हो&quot;,&quot;छान&quot;,&quot;ठीक आहे&quot;,&quot;खूप छान!&quot;],en:[&quot;Hey!&quot;,&quot;Sure&quot;,&quot;Great&quot;,&quot;Okay&quot;,&quot;Nice!&quot;]};
+const autoR={hi:[&quot;\u0928\u092E\u0938\u094D\u0924\u0947!&quot;,&quot;\u0939\u093E\u0901 \u092C\u0924\u093E\u0913&quot;,&quot;\u0905\u091A\u094D\u091B\u093E&quot;,&quot;\u0920\u0940\u0915 \u0939\u0948&quot;,&quot;\u092C\u0939\u0941\u0924 \u0905\u091A\u094D\u091B\u093E!&quot;,&quot;\u092E\u0948\u0902 \u0920\u0940\u0915 \u0939\u0942\u0901&quot;],ta:[&quot;\u0BB5\u0BA3\u0B95\u0BCD\u0B95\u0BAE\u0BCD!&quot;,&quot;\u0B86\u0BAE\u0BBE&quot;,&quot;\u0BA8\u0BB2\u0BCD\u0BB2\u0BA4\u0BC1&quot;,&quot;\u0B9A\u0BB0\u0BBF&quot;,&quot;\u0BA8\u0BA9\u0BCD\u0BB1\u0BC1!&quot;],te:[&quot;\u0C39\u0C32\u0C4B!&quot;,&quot;\u0C1A\u0C46\u0C2A\u0C4D\u0C2A\u0C02\u0C21\u0C3F&quot;,&quot;\u0C2E\u0C02\u0C1A\u0C3F\u0C26\u0C3F&quot;,&quot;\u0C38\u0C30\u0C47&quot;,&quot;\u0C2C\u0C3E\u0C17\u0C41\u0C02\u0C26\u0C3F!&quot;],kn:[&quot;\u0CA8\u0CAE\u0CB8\u0CCD\u0C95\u0CBE\u0CB0!&quot;,&quot;\u0CB9\u0CCC\u0CA6\u0CC1&quot;,&quot;\u0C92\u0CB3\u0CCD\u0CB3\u0CC6\u0CAF\u0CA6\u0CC1&quot;,&quot;\u0CB8\u0CB0\u0CBF&quot;,&quot;\u0C9A\u0CC6\u0CA8\u0CCD\u0CA8\u0CBE\u0C97\u0CBF\u0CA6\u0CC6!&quot;],mr:[&quot;\u0928\u092E\u0938\u094D\u0915\u093E\u0930!&quot;,&quot;\u0939\u094B&quot;,&quot;\u091B\u093E\u0928&quot;,&quot;\u0920\u0940\u0915 \u0906\u0939\u0947&quot;,&quot;\u0916\u0942\u092A \u091B\u093E\u0928!&quot;],en:[&quot;Hey!&quot;,&quot;Sure&quot;,&quot;Great&quot;,&quot;Okay&quot;,&quot;Nice!&quot;]};
 
 // State
 let S={user:null,screen:'login',tab:'chats',chatWith:null,showOrig:{},typing:false};
@@ -176,12 +215,13 @@ let login={step:'phone',phone:'',otp:'',gen:'',err:'',loading:false};
 let onboard={step:'name',name:'',lang:'en'};
 let chatInp='',chatSending=false,searchQ='';
 let call={on:false,type:'audio',user:null,muted:false,speaker:false,sec:0,tmr:null};
+let navAnim='screen-fade';
 
 // Stories
 const stories=[
-  {uid:'d1',items:[{id:'s1',text:'Good morning everyone! ☀️',bg:'linear-gradient(135deg,#1D9BF0,#7856FF)',ts:Date.now()-3600000}]},
-  {uid:'d2',items:[{id:'s2',text:'Just had amazing dosa! 🍽️',bg:'linear-gradient(135deg,#F4212E,#FF6B00)',ts:Date.now()-7200000}]},
-  {uid:'d4',items:[{id:'s3',text:'Beautiful sunset today 🌅',bg:'linear-gradient(135deg,#00BA7C,#1D9BF0)',ts:Date.now()-1800000},{id:'s4',text:'Loving this weather!',bg:'linear-gradient(135deg,#7856FF,#F4212E)',ts:Date.now()-900000}]},
+  {uid:'d1',items:[{id:'s1',text:'Good morning everyone! \u2600\uFE0F',bg:'linear-gradient(135deg,#0A84FF,#5E5CE6)',ts:Date.now()-3600000}]},
+  {uid:'d2',items:[{id:'s2',text:'Just had amazing dosa! \uD83C\uDF5D',bg:'linear-gradient(135deg,#FF453A,#FF9F0A)',ts:Date.now()-7200000}]},
+  {uid:'d4',items:[{id:'s3',text:'Beautiful sunset today \uD83C\uDF05',bg:'linear-gradient(135deg,#30D158,#0A84FF)',ts:Date.now()-1800000},{id:'s4',text:'Loving this weather!',bg:'linear-gradient(135deg,#BF5AF2,#FF453A)',ts:Date.now()-900000}]},
 ];
 let storyV={on:false,ui:0,si:0,prog:0,tmr:null};
 
@@ -189,7 +229,7 @@ let storyV={on:false,ui:0,si:0,prog:0,tmr:null};
 function esc(s){const d=document.createElement('div');d.textContent=s||'';return d.innerHTML}
 function uid(){return Math.random().toString(36).slice(2,9)}
 function fmtT(t){if(!t)return'';const d=new Date(t),n=new Date();return d.toDateString()===n.toDateString()?d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}):d.toLocaleDateString([],{month:'short',day:'numeric'})}
-function ago(ts){const d=Date.now()-ts,m=Math.floor(d/60000);if(m<1)return'now';if(m<60)return m+'m';const h=Math.floor(m/60);if(h<24)return h+'h';return Math.floor(h/24)+'d'}
+function ago(ts){const d=Date.now()-ts,m=Math.floor(d/60000);if(m&lt;1)return'now';if(m&lt;60)return m+'m';const h=Math.floor(m/60);if(h&lt;24)return h+'h';return Math.floor(h/24)+'d'}
 function fmtS(s){return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
 
 function getConvos(){
@@ -201,24 +241,27 @@ function getMsgs(){if(!S.user||!S.chatWith)return[];return db.m.filter(m=>(m.s==
 
 // Icons
 const ic={
-  back:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;><path d=&quot;M7.414 13l5.043 5.04-1.414 1.42L3.586 12l7.457-7.46 1.414 1.42L7.414 11H21v2H7.414z&quot;/></svg>',
-  send:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;><path d=&quot;M2.505 21L23.5 12 2.505 3 2.5 10l15 2-15 2z&quot;/></svg>',
-  chat:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;><path d=&quot;M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5v9c0 1.381-1.119 2.5-2.5 2.5h-3.79L12 21l-3.708-4.5H4.498c-1.381 0-2.5-1.119-2.5-2.5v-9z&quot;/></svg>',
-  users:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;><circle cx=&quot;12&quot; cy=&quot;8&quot; r=&quot;4.5&quot;/><path d=&quot;M3 21c0-4.97 4.03-9 9-9s9 4.03 9 9&quot;/></svg>',
-  search:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;><path d=&quot;M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z&quot;/></svg>',
-  compose:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;><path d=&quot;M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5V12h-2V5.5c0-.276-.224-.5-.5-.5h-15c-.276 0-.5.224-.5.5v9c0 .276.224.5.5.5H9v2H4.498c-1.381 0-2.5-1.119-2.5-2.5v-9zm19.28 7.22l-4.5 4.5-2-2 1.414-1.414.586.586 3.086-3.086 1.414 1.414z&quot;/></svg>',
-  story:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;><circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;/><circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;3&quot;/></svg>',
-  phone:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;><path d=&quot;M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.59.7 2.33a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.74.34 1.52.57 2.33.7A2 2 0 0122 16.92z&quot;/></svg>',
-  video:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;><polygon points=&quot;23 7 16 12 23 17&quot;/><rect x=&quot;1&quot; y=&quot;5&quot; width=&quot;15&quot; height=&quot;14&quot; rx=&quot;2&quot;/></svg>',
-  x:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;><path d=&quot;M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z&quot;/></svg>',
-  mic:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;><path d=&quot;M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z&quot;/><path d=&quot;M19 10v2a7 7 0 01-14 0v-2&quot;/><line x1=&quot;12&quot; y1=&quot;19&quot; x2=&quot;12&quot; y2=&quot;23&quot;/></svg>',
-  micOff:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;><line x1=&quot;1&quot; y1=&quot;1&quot; x2=&quot;23&quot; y2=&quot;23&quot;/><path d=&quot;M9 9v3a3 3 0 005.12 2.12M15 9.34V4a3 3 0 00-5.94-.6&quot;/><path d=&quot;M17 16.95A7 7 0 015 12v-2m14 0v2c0 .99-.21 1.93-.58 2.77&quot;/></svg>',
-  speaker:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;><polygon points=&quot;11 5 6 9 2 9 2 15 6 15 11 19 11 5&quot;/><path d=&quot;M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07&quot;/></svg>',
-  chevR:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot; style=&quot;width:18px;height:18px&quot;><path d=&quot;M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z&quot;/></svg>',
-  logout:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;><path d=&quot;M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4&quot;/><polyline points=&quot;16 17 21 12 16 7&quot;/><line x1=&quot;21&quot; y1=&quot;12&quot; x2=&quot;9&quot; y2=&quot;12&quot;/></svg>',
-  info:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;><path d=&quot;M12 18.042c-.553 0-1-.447-1-1v-5.5c0-.553.447-1 1-1s1 .447 1 1v5.5c0 .553-.447 1-1 1zm-.01-10.7c.612 0 1.108.503 1.108 1.122 0 .62-.496 1.123-1.108 1.123-.613 0-1.11-.503-1.11-1.123 0-.62.497-1.122 1.11-1.122zM12 2.252C6.612 2.252 2.252 6.612 2.252 12S6.612 21.748 12 21.748 21.748 17.388 21.748 12 17.388 2.252 12 2.252z&quot;/></svg>',
-  chk:'<svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;var(--x)&quot; stroke=&quot;#000&quot; stroke-width=&quot;2&quot;><circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;/><path d=&quot;M9 12l2 2 4-4&quot; stroke=&quot;#fff&quot;/></svg>',
-  unchk:'<div style=&quot;width:20px;height:20px;border-radius:50%;border:2px solid var(--border)&quot;></div>',
+  back:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;>&lt;polyline points=&quot;15 18 9 12 15 6&quot;/>&lt;/svg>',
+  send:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;>&lt;path d=&quot;M2.505 21L23.5 12 2.505 3 2.5 10l15 2-15 2z&quot;/>&lt;/svg>',
+  chat:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;>&lt;path d=&quot;M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5v9c0 1.381-1.119 2.5-2.5 2.5h-3.79L12 21l-3.708-4.5H4.498c-1.381 0-2.5-1.119-2.5-2.5v-9z&quot;/>&lt;/svg>',
+  chatFill:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;>&lt;path d=&quot;M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5v9c0 1.381-1.119 2.5-2.5 2.5h-3.79L12 21l-3.708-4.5H4.498c-1.381 0-2.5-1.119-2.5-2.5v-9z&quot;/>&lt;/svg>',
+  users:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;>&lt;circle cx=&quot;12&quot; cy=&quot;8&quot; r=&quot;4.5&quot;/>&lt;path d=&quot;M3 21c0-4.97 4.03-9 9-9s9 4.03 9 9&quot;/>&lt;/svg>',
+  usersFill:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;>&lt;circle cx=&quot;12&quot; cy=&quot;8&quot; r=&quot;4.5&quot;/>&lt;path d=&quot;M3 21c0-4.97 4.03-9 9-9s9 4.03 9 9&quot;/>&lt;/svg>',
+  search:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;>&lt;path d=&quot;M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z&quot;/>&lt;/svg>',
+  compose:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;>&lt;path d=&quot;M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5V12h-2V5.5c0-.276-.224-.5-.5-.5h-15c-.276 0-.5.224-.5.5v9c0 .276.224.5.5.5H9v2H4.498c-1.381 0-2.5-1.119-2.5-2.5v-9zm19.28 7.22l-4.5 4.5-2-2 1.414-1.414.586.586 3.086-3.086 1.414 1.414z&quot;/>&lt;/svg>',
+  story:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;>&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;/>&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;3&quot;/>&lt;/svg>',
+  storyFill:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;>&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z&quot;/>&lt;/svg>',
+  phone:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;>&lt;path d=&quot;M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.59.7 2.33a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.74.34 1.52.57 2.33.7A2 2 0 0122 16.92z&quot;/>&lt;/svg>',
+  video:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;>&lt;polygon points=&quot;23 7 16 12 23 17&quot;/>&lt;rect x=&quot;1&quot; y=&quot;5&quot; width=&quot;15&quot; height=&quot;14&quot; rx=&quot;2&quot;/>&lt;/svg>',
+  x:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;>&lt;path d=&quot;M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z&quot;/>&lt;/svg>',
+  mic:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;>&lt;path d=&quot;M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z&quot;/>&lt;path d=&quot;M19 10v2a7 7 0 01-14 0v-2&quot;/>&lt;line x1=&quot;12&quot; y1=&quot;19&quot; x2=&quot;12&quot; y2=&quot;23&quot;/>&lt;/svg>',
+  micOff:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;>&lt;line x1=&quot;1&quot; y1=&quot;1&quot; x2=&quot;23&quot; y2=&quot;23&quot;/>&lt;path d=&quot;M9 9v3a3 3 0 005.12 2.12M15 9.34V4a3 3 0 00-5.94-.6&quot;/>&lt;path d=&quot;M17 16.95A7 7 0 015 12v-2m14 0v2c0 .99-.21 1.93-.58 2.77&quot;/>&lt;/svg>',
+  speaker:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;>&lt;polygon points=&quot;11 5 6 9 2 9 2 15 6 15 11 19 11 5&quot;/>&lt;path d=&quot;M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07&quot;/>&lt;/svg>',
+  chevR:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; style=&quot;width:16px;height:16px&quot;>&lt;polyline points=&quot;9 6 15 12 9 18&quot;/>&lt;/svg>',
+  logout:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;>&lt;path d=&quot;M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4&quot;/>&lt;polyline points=&quot;16 17 21 12 16 7&quot;/>&lt;line x1=&quot;21&quot; y1=&quot;12&quot; x2=&quot;9&quot; y2=&quot;12&quot;/>&lt;/svg>',
+  chk:'&lt;svg width=&quot;22&quot; height=&quot;22&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;var(--accent)&quot;>&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;/>&lt;path d=&quot;M9 12l2 2 4-4&quot; stroke=&quot;#fff&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>&lt;/svg>',
+  unchk:'&lt;div style=&quot;width:22px;height:22px;border-radius:11px;border:2px solid var(--bg3)&quot;>&lt;/div>',
+  plus:'&lt;svg width=&quot;10&quot; height=&quot;10&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;#fff&quot; stroke-width=&quot;3&quot; stroke-linecap=&quot;round&quot;>&lt;path d=&quot;M12 5v14M5 12h14&quot;/>&lt;/svg>',
 };
 
 // ============ RENDER ============
@@ -234,67 +277,68 @@ function R(){
 
 // ============ LOGIN ============
 function rLogin(){
-  return`<div class=&quot;screen&quot; style=&quot;display:flex;flex-direction:column;justify-content:space-between&quot;>
-    <div style=&quot;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px 32px&quot;>
-      <div style=&quot;width:72px;height:72px;border-radius:20px;background:var(--x);display:flex;align-items:center;justify-content:center;margin-bottom:32px&quot;>
-        <span style=&quot;font-size:36px;font-weight:800;color:#fff&quot;>W</span>
-      </div>
-      <h1 style=&quot;font-size:30px;font-weight:800;color:var(--tx);margin-bottom:8px;text-align:center&quot;>Welcome to Weench</h1>
-      <p style=&quot;color:var(--tx3);font-size:15px;text-align:center;line-height:1.5&quot;>Speak yours. Read theirs.</p>
-    </div>
-    <div style=&quot;padding:24px;border-top:1px solid var(--border)&quot;>
+  return`&lt;div class=&quot;screen&quot; style=&quot;display:flex;flex-direction:column;justify-content:space-between&quot;>
+    &lt;div style=&quot;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px 32px&quot;>
+      &lt;div style=&quot;width:80px;height:80px;border-radius:22%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;margin-bottom:32px;box-shadow:0 8px 32px rgba(10,132,255,.3);animation:logoEntry .6s cubic-bezier(.32,.72,0,1)&quot;>
+        &lt;span style=&quot;font-size:38px;font-weight:700;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.15)&quot;>W&lt;/span>
+      &lt;/div>
+      &lt;h1 style=&quot;font-size:32px;font-weight:700;letter-spacing:-.02em;color:var(--tx);margin-bottom:8px;text-align:center;animation:textEntry .5s .1s both cubic-bezier(.32,.72,0,1)&quot;>Welcome to Weench&lt;/h1>
+      &lt;p style=&quot;font-size:15px;text-align:center;line-height:1.5;background:linear-gradient(135deg,var(--accent),#BF5AF2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:600;animation:textEntry .5s .2s both cubic-bezier(.32,.72,0,1)&quot;>Speak yours. Read theirs.&lt;/p>
+    &lt;/div>
+    &lt;div style=&quot;padding:24px;background:rgba(28,28,30,.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:.5px solid var(--sep);animation:inputEntry .5s .3s both cubic-bezier(.32,.72,0,1)&quot;>
       ${login.step==='phone'?rLPhone():rLOTP()}
-    </div>
-  </div>`;
+    &lt;/div>
+  &lt;/div>`;
 }
 function rLPhone(){
   const v=login.phone.length>=10;
-  return`<input class=&quot;inp inp-dark&quot; type=&quot;tel&quot; placeholder=&quot;Phone number&quot; value=&quot;${esc(login.phone)}&quot; oninput=&quot;login.phone=this.value.replace(/\\D/g,'').slice(0,15);updPh()&quot; onkeydown=&quot;if(event.key==='Enter')sendOTP()&quot; data-af>
-    ${login.err?`<p style=&quot;color:var(--red);font-size:13px;margin-top:8px&quot;>${esc(login.err)}</p>`:''}
-    <div style=&quot;height:16px&quot;></div>
-    <button id=&quot;phBtn&quot; class=&quot;btn btn-x&quot; onclick=&quot;sendOTP()&quot; ${!v||login.loading?'disabled':''}>${login.loading?'Sending...':'Next'}</button>`;
+  return`&lt;input class=&quot;inp&quot; type=&quot;tel&quot; placeholder=&quot;Phone number&quot; value=&quot;${esc(login.phone)}&quot; oninput=&quot;login.phone=this.value.replace(/\\D/g,'').slice(0,15);updPh()&quot; onkeydown=&quot;if(event.key==='Enter')sendOTP()&quot; data-af>
+    ${login.err?`&lt;p style=&quot;color:var(--red);font-size:13px;margin-top:8px;font-weight:500&quot;>${esc(login.err)}&lt;/p>`:''}
+    &lt;div style=&quot;height:12px&quot;>&lt;/div>
+    &lt;button id=&quot;phBtn&quot; class=&quot;btn btn-accent&quot; onclick=&quot;sendOTP()&quot; ${!v||login.loading?'disabled':''}>${login.loading?'Sending...':'Continue'}&lt;/button>`;
 }
 function rLOTP(){
   const v=login.otp.length===4;
-  return`<input class=&quot;inp inp-dark&quot; type=&quot;text&quot; value=&quot;${esc(login.otp)}&quot; oninput=&quot;login.otp=this.value.replace(/\\D/g,'').slice(0,4);updOtp();if(login.otp.length===4)setTimeout(verifyOTP,150)&quot; maxlength=&quot;4&quot; data-af style=&quot;letter-spacing:12px;font-size:24px;font-weight:700;text-align:center&quot;>
-    <p style=&quot;color:var(--tx3);font-size:13px;margin-top:10px;text-align:center&quot;>Code sent to +${esc(login.phone)} · <button class=&quot;btn-text&quot; onclick=&quot;login.step='phone';login.otp='';login.err='';R()&quot; style=&quot;font-size:13px;padding:0&quot;>Change</button></p>
-    ${login.gen?`<div style=&quot;text-align:center;margin-top:8px;padding:10px;background:var(--bg2);border-radius:12px;border:1px solid var(--border)&quot;><span style=&quot;color:var(--tx3);font-size:12px&quot;>Demo code:</span> <strong style=&quot;color:var(--x);letter-spacing:4px;font-size:18px&quot;>${login.gen}</strong></div>`:''}
-    ${login.err?`<p style=&quot;color:var(--red);font-size:13px;margin-top:8px;text-align:center&quot;>${esc(login.err)}</p>`:''}
-    <div style=&quot;height:16px&quot;></div>
-    <button id=&quot;otpBtn&quot; class=&quot;btn btn-x&quot; onclick=&quot;verifyOTP()&quot; ${!v||login.loading?'disabled':''}>${login.loading?'Verifying...':'Log in'}</button>`;
+  return`&lt;input class=&quot;inp&quot; type=&quot;text&quot; value=&quot;${esc(login.otp)}&quot; oninput=&quot;login.otp=this.value.replace(/\\D/g,'').slice(0,4);updOtp();if(login.otp.length===4)setTimeout(verifyOTP,150)&quot; maxlength=&quot;4&quot; data-af style=&quot;letter-spacing:16px;font-size:28px;font-weight:700;text-align:center&quot;>
+    &lt;p style=&quot;color:var(--tx2);font-size:13px;margin-top:12px;text-align:center;font-weight:500&quot;>Code sent to +${esc(login.phone)} &lt;button class=&quot;btn-text&quot; onclick=&quot;login.step='phone';login.otp='';login.err='';R()&quot; style=&quot;font-size:13px;padding:0&quot;>Change&lt;/button>&lt;/p>
+    ${login.gen?`&lt;div style=&quot;text-align:center;margin-top:12px;padding:12px;background:var(--bg1);border-radius:12px;border:1px solid var(--sep)&quot;>&lt;span style=&quot;color:var(--tx3);font-size:12px;font-weight:500&quot;>Demo code&lt;/span>&lt;br>&lt;strong style=&quot;color:var(--accent);letter-spacing:8px;font-size:22px;font-weight:700&quot;>${login.gen}&lt;/strong>&lt;/div>`:''}
+    ${login.err?`&lt;p style=&quot;color:var(--red);font-size:13px;margin-top:8px;text-align:center;font-weight:500&quot;>${esc(login.err)}&lt;/p>`:''}
+    &lt;div style=&quot;height:12px&quot;>&lt;/div>
+    &lt;button id=&quot;otpBtn&quot; class=&quot;btn btn-accent&quot; onclick=&quot;verifyOTP()&quot; ${!v||login.loading?'disabled':''}>${login.loading?'Verifying...':'Log in'}&lt;/button>`;
 }
-function updPh(){const b=document.getElementById('phBtn');if(b){b.disabled=login.phone.length<10}}
+function updPh(){const b=document.getElementById('phBtn');if(b){b.disabled=login.phone.length&lt;10}}
 function updOtp(){const b=document.getElementById('otpBtn');if(b){b.disabled=login.otp.length!==4}}
-function sendOTP(){if(login.phone.length<10){login.err='Enter a valid number';R();return}login.loading=true;login.err='';R();login.gen=String(1000+Math.floor(Math.random()*9000));setTimeout(()=>{login.loading=false;login.step='otp';R()},400)}
-function verifyOTP(){if(login.otp.length!==4)return;if(login.otp!==login.gen){login.err='Wrong code';R();return}login.loading=true;login.err='';R();setTimeout(()=>{let u=Object.values(db.u).find(x=>x.phone===login.phone);if(!u){u={id:uid(),phone:login.phone,name:null,lang:'en',on:true,bio:''};db.u[u.id]=u}S.user=u;login.loading=false;S.screen=u.name?'main':'onboarding';if(u.name)S.tab='chats';else onboard={step:'name',name:'',lang:'en'};R()},400)}
+function sendOTP(){if(login.phone.length&lt;10){login.err='Enter a valid number';R();return}login.loading=true;login.err='';R();login.gen=String(1000+Math.floor(Math.random()*9000));setTimeout(()=>{login.loading=false;login.step='otp';R()},400)}
+function verifyOTP(){if(login.otp.length!==4)return;if(login.otp!==login.gen){login.err='Wrong code';R();return}login.loading=true;login.err='';R();setTimeout(()=>{let u=Object.values(db.u).find(x=>x.phone===login.phone);if(!u){u={id:uid(),phone:login.phone,name:null,lang:'en',on:true};db.u[u.id]=u}S.user=u;login.loading=false;S.screen=u.name?'main':'onboarding';if(u.name)S.tab='chats';else onboard={step:'name',name:'',lang:'en'};navAnim='screen-fade';R()},400)}
 
 // ============ ONBOARDING ============
 function rOnboard(){
-  return`<div class=&quot;screen&quot;>
-    <div class=&quot;hdr&quot;><h1>${onboard.step==='name'?'What\'s your name?':'Choose language'}</h1></div>
-    <div style=&quot;flex:1;padding:20px 24px;overflow-y:auto&quot;>
-      <div style=&quot;display:flex;gap:6px;margin-bottom:24px&quot;><div style=&quot;flex:1;height:3px;border-radius:2px;background:var(--x)&quot;></div><div style=&quot;flex:1;height:3px;border-radius:2px;background:${onboard.step==='lang'?'var(--x)':'var(--bg4)'}&quot;></div></div>
+  const prog=onboard.step==='name'?50:100;
+  return`&lt;div class=&quot;screen screen-fade&quot;>
+    &lt;div class=&quot;hdr&quot;>&lt;h1>${onboard.step==='name'?&quot;What's your name?&quot;:'Choose language'}&lt;/h1>&lt;/div>
+    &lt;div style=&quot;flex:1;padding:20px 24px;overflow-y:auto&quot;>
+      &lt;div style=&quot;height:3px;border-radius:2px;background:var(--bg2);margin-bottom:24px;overflow:hidden&quot;>&lt;div style=&quot;height:100%;width:${prog}%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;transition:width .4s cubic-bezier(.32,.72,0,1)&quot;>&lt;/div>&lt;/div>
       ${onboard.step==='name'?rObN():rObL()}
-    </div>
-  </div>`;
+    &lt;/div>
+  &lt;/div>`;
 }
 function rObN(){
   const v=onboard.name.trim().length>=2;
-  return`<p style=&quot;color:var(--tx2);font-size:14px;margin-bottom:20px&quot;>This is how others see you</p>
-    <input class=&quot;inp inp-dark&quot; type=&quot;text&quot; placeholder=&quot;Your name&quot; value=&quot;${esc(onboard.name)}&quot; oninput=&quot;onboard.name=this.value;const b=document.getElementById('nB');if(b)b.disabled=this.value.trim().length<2&quot; onkeydown=&quot;if(event.key==='Enter'&amp;&amp;onboard.name.trim().length>=2){onboard.step='lang';R()}&quot; maxlength=&quot;30&quot; data-af style=&quot;font-size:17px&quot;>
-    <div style=&quot;height:24px&quot;></div>
-    <button id=&quot;nB&quot; class=&quot;btn btn-x&quot; onclick=&quot;if(onboard.name.trim().length>=2){onboard.step='lang';R()}&quot; ${!v?'disabled':''}>Next</button>`;
+  return`&lt;p style=&quot;color:var(--tx2);font-size:14px;margin-bottom:20px;font-weight:500&quot;>This is how others will see you&lt;/p>
+    &lt;input class=&quot;inp&quot; type=&quot;text&quot; placeholder=&quot;Your name&quot; value=&quot;${esc(onboard.name)}&quot; oninput=&quot;onboard.name=this.value;const b=document.getElementById('nB');if(b)b.disabled=this.value.trim().length&lt;2&quot; onkeydown=&quot;if(event.key==='Enter'&amp;&amp;onboard.name.trim().length>=2){onboard.step='lang';R()}&quot; maxlength=&quot;30&quot; data-af style=&quot;font-size:17px&quot;>
+    &lt;div style=&quot;height:24px&quot;>&lt;/div>
+    &lt;button id=&quot;nB&quot; class=&quot;btn btn-accent&quot; onclick=&quot;if(onboard.name.trim().length>=2){onboard.step='lang';R()}&quot; ${!v?'disabled':''}>Continue&lt;/button>`;
 }
 function rObL(){
-  return`<p style=&quot;color:var(--tx2);font-size:14px;margin-bottom:16px&quot;>Messages will be translated to this language</p>
-    <div style=&quot;display:flex;flex-direction:column;gap:8px;margin-bottom:24px&quot;>
-      ${LANGS.map(l=>`<button class=&quot;lc ${onboard.lang===l.c?'sel':''}&quot; onclick=&quot;onboard.lang='${l.c}';R()&quot;>
-        <span style=&quot;font-size:18px&quot;>${l.f}</span><div style=&quot;flex:1&quot;><span style=&quot;font-weight:700&quot;>${l.n}</span> <span style=&quot;color:var(--tx3);font-size:13px&quot;>${l.v}</span></div>
+  return`&lt;p style=&quot;color:var(--tx2);font-size:14px;margin-bottom:16px;font-weight:500&quot;>Messages will be translated to this language&lt;/p>
+    &lt;div style=&quot;display:flex;flex-direction:column;gap:8px;margin-bottom:24px&quot;>
+      ${LANGS.map((l,i)=>`&lt;button class=&quot;lc ${onboard.lang===l.c?'sel':''}&quot; onclick=&quot;onboard.lang='${l.c}';R()&quot; style=&quot;animation:fadeIn .3s ${i*.04}s both cubic-bezier(.32,.72,0,1)&quot;>
+        &lt;span style=&quot;font-size:20px&quot;>${l.f}&lt;/span>&lt;div style=&quot;flex:1&quot;>&lt;span style=&quot;font-weight:600;font-size:15px&quot;>${l.n}&lt;/span> &lt;span style=&quot;color:var(--tx3);font-size:13px;font-weight:500&quot;>${l.v}&lt;/span>&lt;/div>
         ${onboard.lang===l.c?ic.chk:ic.unchk}
-      </button>`).join('')}
-    </div>
-    <button class=&quot;btn btn-x&quot; onclick=&quot;S.user.name=onboard.name.trim();S.user.lang=onboard.lang;db.u[S.user.id]=S.user;S.screen='main';S.tab='chats';R()&quot;>Get started</button>
-    <button class=&quot;btn btn-dark&quot; style=&quot;margin-top:8px&quot; onclick=&quot;onboard.step='name';R()&quot;>Back</button>`;
+      &lt;/button>`).join('')}
+    &lt;/div>
+    &lt;button class=&quot;btn btn-accent&quot; onclick=&quot;S.user.name=onboard.name.trim();S.user.lang=onboard.lang;db.u[S.user.id]=S.user;S.screen='main';S.tab='chats';navAnim='screen-fade';R()&quot;>Get started&lt;/button>
+    &lt;button class=&quot;btn btn-secondary&quot; style=&quot;margin-top:8px&quot; onclick=&quot;onboard.step='name';R()&quot;>Back&lt;/button>`;
 }
 
 // ============ MAIN ============
@@ -304,93 +348,98 @@ function rMain(){
   else if(S.tab==='contacts')c=rContacts();
   else if(S.tab==='stories')c=rStories();
   else if(S.tab==='profile')c=rProfile();
-  return`<div class=&quot;screen&quot;>${c}${rTabs()}</div>`;
+  return`&lt;div class=&quot;screen screen-scale&quot;>${c}${rTabs()}&lt;/div>`;
 }
 function rTabs(){
-  return`<div class=&quot;tb&quot;>${[{id:'chats',i:ic.chat,l:'Messages'},{id:'contacts',i:ic.users,l:'People'},{id:'stories',i:ic.story,l:'Stories'},{id:'profile',i:ic.users,l:'Profile'}].map(t=>`<button class=&quot;ti ${S.tab===t.id?'on':''}&quot; onclick=&quot;S.tab='${t.id}';searchQ='';R()&quot;>${t.i}<span>${t.l}</span></button>`).join('')}</div>`;
+  const tabs=[
+    {id:'chats',i:ic.chat,fi:ic.chatFill,l:'Messages'},
+    {id:'contacts',i:ic.users,fi:ic.usersFill,l:'People'},
+    {id:'stories',i:ic.story,fi:ic.storyFill,l:'Stories'},
+    {id:'profile',i:ic.users,fi:ic.usersFill,l:'Profile'}
+  ];
+  return`&lt;div class=&quot;tb&quot;>${tabs.map(t=>`&lt;button class=&quot;ti ${S.tab===t.id?'on':''}&quot; onclick=&quot;S.tab='${t.id}';searchQ='';navAnim='screen-scale';R()&quot;>${S.tab===t.id?t.fi:t.i}&lt;span>${t.l}&lt;/span>&lt;/button>`).join('')}&lt;/div>`;
 }
 
 // Chat List
 function rChatList(){
   const cv=getConvos();
-  return`<div class=&quot;hdr&quot; style=&quot;justify-content:space-between&quot;>
-      <h1>Messages</h1>
-      <button class=&quot;hdr-b&quot; onclick=&quot;S.tab='contacts';R()&quot; style=&quot;margin:-4px&quot;>${ic.compose}</button>
-    </div>
-    <div style=&quot;padding:4px 16px 8px&quot;><input class=&quot;inp inp-dark&quot; placeholder=&quot;Search Direct Messages&quot; value=&quot;${esc(searchQ)}&quot; oninput=&quot;searchQ=this.value;R()&quot; style=&quot;padding:10px 16px;font-size:14px&quot;></div>
-    <div style=&quot;flex:1;overflow-y:auto&quot;>
+  return`&lt;div class=&quot;hdr&quot; style=&quot;justify-content:space-between&quot;>
+      &lt;h1>Messages&lt;/h1>
+      &lt;button class=&quot;hdr-b&quot; onclick=&quot;S.tab='contacts';R()&quot; style=&quot;margin:-4px;color:var(--accent)&quot;>${ic.compose}&lt;/button>
+    &lt;/div>
+    &lt;div style=&quot;padding:4px 16px 8px&quot;>&lt;input class=&quot;inp&quot; placeholder=&quot;Search Direct Messages&quot; value=&quot;${esc(searchQ)}&quot; oninput=&quot;searchQ=this.value;R()&quot; style=&quot;padding:10px 16px;font-size:14px;border-radius:12px&quot;>&lt;/div>
+    &lt;div style=&quot;flex:1;overflow-y:auto&quot;>
       ${cv.length===0?`
-        <div style=&quot;text-align:center;padding:60px 32px&quot;>
-          <h2 style=&quot;font-size:28px;font-weight:800;margin-bottom:8px&quot;>Welcome to your inbox!</h2>
-          <p style=&quot;color:var(--tx3);font-size:15px;line-height:1.5;margin-bottom:24px&quot;>Drop a line, share posts and more with private conversations between you and others.</p>
-          <button class=&quot;btn btn-x&quot; onclick=&quot;S.tab='contacts';R()&quot; style=&quot;width:auto;padding:12px 28px;display:inline-block&quot;>Write a message</button>
-        </div>
-      `:cv.filter(c=>!searchQ||(c.u.name||'').toLowerCase().includes(searchQ.toLowerCase())).map(c=>`
-        <button class=&quot;li&quot; onclick='openChat(${JSON.stringify(c.u).replace(/'/g,&quot;&amp;#39;&quot;)})'>
-          <div style=&quot;position:relative&quot;><div class=&quot;av&quot;>${(c.u.name||'?')[0].toUpperCase()}</div>${c.u.on?'<div class=&quot;dot&quot;></div>':''}</div>
-          <div style=&quot;flex:1;min-width:0&quot;>
-            <div style=&quot;display:flex;justify-content:space-between;align-items:baseline&quot;>
-              <div style=&quot;display:flex;align-items:baseline;gap:4px;min-width:0;flex:1&quot;>
-                <span style=&quot;font-weight:700;font-size:15px;white-space:nowrap&quot;>${esc(c.u.name)}</span>
-                <span style=&quot;color:var(--tx3);font-size:13px;white-space:nowrap&quot;>@${esc((c.u.name||'').toLowerCase().replace(/\s/g,''))}</span>
-              </div>
-              <span style=&quot;font-size:13px;color:var(--tx3);flex-shrink:0;margin-left:8px&quot;>· ${fmtT(c.ts)}</span>
-            </div>
-            <div style=&quot;display:flex;justify-content:space-between;align-items:center;margin-top:2px&quot;>
-              <p style=&quot;font-size:14px;color:var(--tx2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;margin-right:8px&quot;>${esc(c.p)}</p>
-              ${c.ur?`<span style=&quot;min-width:18px;height:18px;border-radius:9999px;background:var(--x);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 6px&quot;>${c.ur}</span>`:''}
-            </div>
-          </div>
-        </button>`).join('')}
-    </div>`;
+        &lt;div style=&quot;text-align:center;padding:64px 32px&quot;>
+          &lt;h2 style=&quot;font-size:26px;font-weight:700;margin-bottom:8px;letter-spacing:-.02em&quot;>Welcome to your inbox&lt;/h2>
+          &lt;p style=&quot;color:var(--tx2);font-size:15px;line-height:1.5;margin-bottom:28px;font-weight:400&quot;>Drop a line, share posts and more with private conversations.&lt;/p>
+          &lt;button class=&quot;btn btn-accent&quot; onclick=&quot;S.tab='contacts';R()&quot; style=&quot;width:auto;padding:12px 32px;display:inline-block;border-radius:24px&quot;>Write a message&lt;/button>
+        &lt;/div>
+      `:cv.filter(c=>!searchQ||(c.u.name||'').toLowerCase().includes(searchQ.toLowerCase())).map((c,i)=>`
+        &lt;button class=&quot;li&quot; onclick='openChat(${JSON.stringify(c.u).replace(/'/g,&quot;&amp;#39;&quot;)})' style=&quot;animation:fadeIn .3s ${i*.04}s both;border-bottom:.5px solid var(--sep)&quot;>
+          &lt;div style=&quot;position:relative&quot;>${avHTML(c.u.name)}${c.u.on?'&lt;div class=&quot;dot&quot;>&lt;/div>':''}&lt;/div>
+          &lt;div style=&quot;flex:1;min-width:0&quot;>
+            &lt;div style=&quot;display:flex;justify-content:space-between;align-items:baseline&quot;>
+              &lt;div style=&quot;display:flex;align-items:baseline;gap:6px;min-width:0;flex:1&quot;>
+                &lt;span style=&quot;font-weight:600;font-size:15px;white-space:nowrap&quot;>${esc(c.u.name)}&lt;/span>
+                &lt;span style=&quot;color:var(--tx3);font-size:13px;white-space:nowrap;font-weight:400&quot;>@${esc((c.u.name||'').toLowerCase().replace(/\s/g,''))}&lt;/span>
+              &lt;/div>
+              &lt;span style=&quot;font-size:12px;color:var(--tx3);flex-shrink:0;margin-left:8px;font-weight:500&quot;>${fmtT(c.ts)}&lt;/span>
+            &lt;/div>
+            &lt;div style=&quot;display:flex;justify-content:space-between;align-items:center;margin-top:3px&quot;>
+              &lt;p style=&quot;font-size:14px;color:var(--tx2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;margin-right:8px;font-weight:400&quot;>${esc(c.p)}&lt;/p>
+              ${c.ur?`&lt;span style=&quot;min-width:20px;height:20px;border-radius:10px;background:var(--accent);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 6px&quot;>${c.ur}&lt;/span>`:''}
+            &lt;/div>
+          &lt;/div>
+        &lt;/button>`).join('')}
+    &lt;/div>`;
 }
 
 // Contacts
 function rContacts(){
   const all=Object.values(db.u).filter(u=>u.id!==S.user?.id&amp;&amp;u.name);
   const f=all.filter(u=>(u.name||'').toLowerCase().includes(searchQ.toLowerCase()));
-  return`<div class=&quot;hdr&quot;><button class=&quot;hdr-b&quot; onclick=&quot;S.tab='chats';R()&quot;>${ic.back}</button><h1 style=&quot;flex:1&quot;>New message</h1></div>
-    <div style=&quot;padding:4px 16px 8px&quot;><input class=&quot;inp inp-dark&quot; placeholder=&quot;Search people&quot; value=&quot;${esc(searchQ)}&quot; oninput=&quot;searchQ=this.value;R()&quot; data-af style=&quot;padding:10px 16px;font-size:14px&quot;></div>
-    <div style=&quot;flex:1;overflow-y:auto&quot;>
-      ${f.map(u=>`<button class=&quot;li&quot; onclick='openChat(${JSON.stringify(u).replace(/'/g,&quot;&amp;#39;&quot;)})'>
-        <div style=&quot;position:relative&quot;><div class=&quot;av&quot;>${(u.name||'?')[0].toUpperCase()}</div>${u.on?'<div class=&quot;dot&quot;></div>':''}</div>
-        <div style=&quot;flex:1&quot;>
-          <div style=&quot;font-weight:700;font-size:15px&quot;>${esc(u.name)}</div>
-          <div style=&quot;font-size:13px;color:var(--tx3);margin-top:1px&quot;>@${esc((u.name||'').toLowerCase().replace(/\s/g,''))} · ${LN[u.lang]||u.lang}</div>
-        </div>
-      </button>`).join('')}
-      ${f.length===0?`<div style=&quot;text-align:center;padding:40px;color:var(--tx3);font-size:14px&quot;>${searchQ?'No results for &quot;'+esc(searchQ)+'&quot;':'No people found'}</div>`:''}
-    </div>`;
+  return`&lt;div class=&quot;hdr&quot;>&lt;button class=&quot;hdr-b&quot; onclick=&quot;S.tab='chats';navAnim='screen-back';R()&quot;>${ic.back}&lt;/button>&lt;h1 style=&quot;flex:1&quot;>New message&lt;/h1>&lt;/div>
+    &lt;div style=&quot;padding:4px 16px 8px&quot;>&lt;input class=&quot;inp&quot; placeholder=&quot;Search people&quot; value=&quot;${esc(searchQ)}&quot; oninput=&quot;searchQ=this.value;R()&quot; data-af style=&quot;padding:10px 16px;font-size:14px;border-radius:12px&quot;>&lt;/div>
+    &lt;div style=&quot;flex:1;overflow-y:auto&quot;>
+      ${f.map((u,i)=>`&lt;button class=&quot;li&quot; onclick='openChat(${JSON.stringify(u).replace(/'/g,&quot;&amp;#39;&quot;)})' style=&quot;animation:fadeIn .3s ${i*.04}s both;border-bottom:.5px solid var(--sep)&quot;>
+        &lt;div style=&quot;position:relative&quot;>${avHTML(u.name)}${u.on?'&lt;div class=&quot;dot&quot;>&lt;/div>':''}&lt;/div>
+        &lt;div style=&quot;flex:1&quot;>
+          &lt;div style=&quot;font-weight:600;font-size:15px&quot;>${esc(u.name)}&lt;/div>
+          &lt;div style=&quot;font-size:13px;color:var(--tx2);margin-top:2px;font-weight:400&quot;>@${esc((u.name||'').toLowerCase().replace(/\s/g,''))} \u00B7 ${LN[u.lang]||u.lang}&lt;/div>
+        &lt;/div>
+      &lt;/button>`).join('')}
+      ${f.length===0?`&lt;div style=&quot;text-align:center;padding:48px;color:var(--tx3);font-size:14px;font-weight:500&quot;>${searchQ?'No results':'No people found'}&lt;/div>`:''}
+    &lt;/div>`;
 }
-function openChat(u){S.chatWith=u;S.showOrig={};S.typing=false;chatInp='';db.m.forEach(m=>{if(m.s===u.id&amp;&amp;m.r===S.user.id)m.st='read'});R();scrl()}
+function openChat(u){navAnim='screen-slide';S.chatWith=u;S.showOrig={};S.typing=false;chatInp='';db.m.forEach(m=>{if(m.s===u.id&amp;&amp;m.r===S.user.id)m.st='read'});R();scrl()}
 
 // Stories
 function rStories(){
   const other=stories.filter(s=>s.uid!==S.user?.id);
-  return`<div class=&quot;hdr&quot;><h1>Stories</h1></div>
-    <div style=&quot;flex:1;overflow-y:auto&quot;>
-      <button class=&quot;li&quot; onclick=&quot;addMyStory()&quot; style=&quot;border-bottom:none&quot;>
-        <div style=&quot;position:relative&quot;><div class=&quot;av&quot;>${(S.user?.name||'?')[0].toUpperCase()}</div>
-        <div style=&quot;position:absolute;bottom:-2px;right:-2px;width:16px;height:16px;border-radius:9999px;background:var(--x);border:2px solid var(--bg);display:flex;align-items:center;justify-content:center&quot;><svg width=&quot;8&quot; height=&quot;8&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;#fff&quot; stroke-width=&quot;3&quot; stroke-linecap=&quot;round&quot;><path d=&quot;M12 5v14M5 12h14&quot;/></svg></div></div>
-        <div><div style=&quot;font-weight:700;font-size:15px&quot;>Add to story</div><div style=&quot;font-size:13px;color:var(--tx3);margin-top:1px&quot;>Share what's on your mind</div></div>
-      </button>
-      <div class=&quot;sep&quot;></div>
-      ${other.length===0?`<div style=&quot;text-align:center;padding:40px;color:var(--tx3)&quot;>No stories yet</div>`:
-      other.map((s,i)=>{const u=db.u[s.uid];if(!u)return'';return`<button class=&quot;li&quot; onclick=&quot;openStory(${i})&quot;>
-        <div class=&quot;story-ring&quot;><div class=&quot;av&quot; style=&quot;border:2px solid var(--bg)&quot;>${(u.name||'?')[0].toUpperCase()}</div></div>
-        <div><div style=&quot;font-weight:700;font-size:15px&quot;>${esc(u.name)}</div><div style=&quot;font-size:13px;color:var(--tx3);margin-top:1px&quot;>${ago(s.items[s.items.length-1].ts)}</div></div>
-      </button>`}).join('')}
-    </div>`;
+  return`&lt;div class=&quot;hdr&quot;>&lt;h1>Stories&lt;/h1>&lt;/div>
+    &lt;div style=&quot;flex:1;overflow-y:auto&quot;>
+      &lt;button class=&quot;li&quot; onclick=&quot;addMyStory()&quot; style=&quot;border-bottom:.5px solid var(--sep)&quot;>
+        &lt;div style=&quot;position:relative&quot;>${avHTML(S.user?.name)}
+        &lt;div style=&quot;position:absolute;bottom:-2px;right:-2px;width:18px;height:18px;border-radius:9px;background:var(--accent);border:2.5px solid var(--bg);display:flex;align-items:center;justify-content:center&quot;>${ic.plus}&lt;/div>&lt;/div>
+        &lt;div>&lt;div style=&quot;font-weight:600;font-size:15px&quot;>Add to story&lt;/div>&lt;div style=&quot;font-size:13px;color:var(--tx2);margin-top:2px;font-weight:400&quot;>Share what's on your mind&lt;/div>&lt;/div>
+      &lt;/button>
+      ${other.length===0?`&lt;div style=&quot;text-align:center;padding:48px;color:var(--tx3);font-weight:500&quot;>No stories yet&lt;/div>`:
+      other.map((s,i)=>{const u=db.u[s.uid];if(!u)return'';return`&lt;button class=&quot;li&quot; onclick=&quot;openStory(${i})&quot; style=&quot;animation:fadeIn .3s ${(i+1)*.04}s both;border-bottom:.5px solid var(--sep)&quot;>
+        &lt;div class=&quot;story-ring&quot;>${avHTML(u.name,'av-s')}&lt;/div>
+        &lt;div>&lt;div style=&quot;font-weight:600;font-size:15px&quot;>${esc(u.name)}&lt;/div>&lt;div style=&quot;font-size:13px;color:var(--tx2);margin-top:2px;font-weight:400&quot;>${ago(s.items[s.items.length-1].ts)}&lt;/div>&lt;/div>
+      &lt;/button>`}).join('')}
+    &lt;/div>`;
 }
-function addMyStory(){const t=prompt('Write your story:');if(!t?.trim())return;const bgs=['linear-gradient(135deg,#1D9BF0,#7856FF)','linear-gradient(135deg,#F4212E,#FF6B00)','linear-gradient(135deg,#00BA7C,#1D9BF0)','linear-gradient(135deg,#7856FF,#F4212E)','linear-gradient(135deg,#FF6B00,#FFD600)'];const bg=bgs[Math.floor(Math.random()*bgs.length)];const ex=stories.find(s=>s.uid===S.user.id);const st={id:uid(),text:t.trim(),bg,ts:Date.now()};if(ex)ex.items.push(st);else stories.unshift({uid:S.user.id,items:[st]});R()}
+function addMyStory(){const t=prompt('Write your story:');if(!t?.trim())return;const bgs=['linear-gradient(135deg,#0A84FF,#5E5CE6)','linear-gradient(135deg,#FF453A,#FF9F0A)','linear-gradient(135deg,#30D158,#0A84FF)','linear-gradient(135deg,#BF5AF2,#FF453A)','linear-gradient(135deg,#FF9F0A,#FFD60A)'];const bg=bgs[Math.floor(Math.random()*bgs.length)];const ex=stories.find(s=>s.uid===S.user.id);const st={id:uid(),text:t.trim(),bg,ts:Date.now()};if(ex)ex.items.push(st);else stories.unshift({uid:S.user.id,items:[st]});R()}
 function openStory(i){storyV={on:true,ui:i,si:0,prog:0,tmr:null};renderStoryV()}
 function renderStoryV(){
   if(!storyV.on)return;const other=stories.filter(s=>s.uid!==S.user?.id);const sd=other[storyV.ui];if(!sd){closeStory();return}const st=sd.items[storyV.si];if(!st){closeStory();return}const u=db.u[sd.uid];
-  document.getElementById('app').innerHTML=`<div class=&quot;screen&quot; style=&quot;background:#000&quot;><div style=&quot;position:absolute;inset:0;display:flex;flex-direction:column;background:${st.bg}&quot;>
-    <div style=&quot;display:flex;gap:3px;padding:10px 12px 0;z-index:2&quot;>${sd.items.map((_,i)=>`<div style=&quot;flex:1;height:2px;border-radius:1px;background:rgba(255,255,255,.25);overflow:hidden&quot;><div style=&quot;height:100%;background:#fff;width:${i<storyV.si?100:i===storyV.si?storyV.prog:0}%;transition:width .1s linear&quot;></div></div>`).join('')}</div>
-    <div style=&quot;display:flex;align-items:center;gap:10px;padding:12px 16px;z-index:2&quot;><div class=&quot;av av-xs&quot; style=&quot;background:rgba(255,255,255,.2);color:#fff&quot;>${(u?.name||'?')[0].toUpperCase()}</div><div style=&quot;flex:1&quot;><div style=&quot;font-weight:800;font-size:14px;color:#fff&quot;>${esc(u?.name||'')}</div><div style=&quot;font-size:12px;color:rgba(255,255,255,.5)&quot;>${ago(st.ts)}</div></div><button class=&quot;hdr-b&quot; onclick=&quot;closeStory()&quot; style=&quot;color:#fff&quot;>${ic.x}</button></div>
-    <div style=&quot;flex:1;display:flex;align-items:center;justify-content:center;padding:40px;z-index:1&quot; onclick=&quot;tapStory(event)&quot;><p style=&quot;font-size:24px;font-weight:800;color:#fff;text-align:center;line-height:1.5;text-shadow:0 2px 8px rgba(0,0,0,.3)&quot;>${esc(st.text)}</p></div>
-  </div></div>`;
+  document.getElementById('app').innerHTML=`&lt;div class=&quot;screen screen-modal&quot; style=&quot;background:#000&quot;>&lt;div style=&quot;position:absolute;inset:0;display:flex;flex-direction:column;background:${st.bg}&quot;>
+    &lt;div style=&quot;display:flex;gap:3px;padding:12px 12px 0;z-index:2&quot;>${sd.items.map((_,i)=>`&lt;div style=&quot;flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.2);overflow:hidden&quot;>&lt;div style=&quot;height:100%;background:#fff;border-radius:2px;width:${i&lt;storyV.si?100:i===storyV.si?storyV.prog:0}%;transition:width .1s linear&quot;>&lt;/div>&lt;/div>`).join('')}&lt;/div>
+    &lt;div style=&quot;display:flex;align-items:center;gap:12px;padding:12px 16px;z-index:2&quot;>${avHTML(u?.name,'av-xs')}&lt;div style=&quot;flex:1&quot;>&lt;div style=&quot;font-weight:600;font-size:14px;color:#fff&quot;>${esc(u?.name||'')}&lt;/div>&lt;div style=&quot;font-size:12px;color:rgba(255,255,255,.5);font-weight:500&quot;>${ago(st.ts)}&lt;/div>&lt;/div>&lt;button class=&quot;hdr-b&quot; onclick=&quot;closeStory()&quot; style=&quot;color:#fff&quot;>${ic.x}&lt;/button>&lt;/div>
+    &lt;div style=&quot;flex:1;display:flex;align-items:center;justify-content:center;padding:40px;z-index:1&quot; onclick=&quot;tapStory(event)&quot;>&lt;p style=&quot;font-size:26px;font-weight:700;color:#fff;text-align:center;line-height:1.4;text-shadow:0 2px 12px rgba(0,0,0,.3);letter-spacing:-.01em&quot;>${esc(st.text)}&lt;/p>&lt;/div>
+  &lt;/div>&lt;/div>`;
   if(storyV.tmr)clearInterval(storyV.tmr);storyV.prog=0;
   storyV.tmr=setInterval(()=>{storyV.prog+=2;if(storyV.prog>=100){storyV.si++;if(storyV.si>=sd.items.length){storyV.ui++;storyV.si=0;if(storyV.ui>=other.length){closeStory();return}}storyV.prog=0;renderStoryV();return}const bars=document.querySelectorAll('[style*=&quot;transition:width&quot;]');if(bars[storyV.si])bars[storyV.si].style.width=storyV.prog+'%'},100);
 }
@@ -401,19 +450,19 @@ function closeStory(){if(storyV.tmr)clearInterval(storyV.tmr);storyV={on:false,u
 function startCall(type){if(!S.chatWith)return;call={on:true,type,user:S.chatWith,muted:false,speaker:false,sec:0,tmr:null};renderCall();setTimeout(()=>{call.tmr=setInterval(()=>{call.sec++;updCT()},1000);renderCall()},2000)}
 function renderCall(){
   const u=call.user;if(!u)return;const c=call.tmr!==null;
-  document.getElementById('app').innerHTML=`<div class=&quot;screen&quot; style=&quot;background:#000&quot;>
-    <div style=&quot;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px&quot;>
-      <div class=&quot;av av-l&quot; style=&quot;width:96px;height:96px;font-size:36px;${!c?'animation:pulse 2s infinite':''}&quot;>${(u.name||'?')[0].toUpperCase()}</div>
-      <h2 style=&quot;font-size:22px;font-weight:800;margin-top:8px&quot;>${esc(u.name)}</h2>
-      <p style=&quot;color:var(--tx3);font-size:14px&quot;>@${esc((u.name||'').toLowerCase().replace(/\s/g,''))}</p>
-      <p id=&quot;cSt&quot; style=&quot;color:var(--tx2);font-size:16px;margin-top:4px;font-weight:600&quot;>${c?fmtS(call.sec):(call.type==='video'?'Video calling...':'Calling...')}</p>
-    </div>
-    <div style=&quot;padding:24px 40px 60px;display:flex;justify-content:center;gap:20px&quot;>
-      <button onclick=&quot;call.muted=!call.muted;renderCall()&quot; style=&quot;width:56px;height:56px;border-radius:9999px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;background:${call.muted?'var(--tx)':'var(--bg3)'};color:${call.muted?'#000':'var(--tx)'};transition:all .15s&quot;><div style=&quot;width:22px;height:22px&quot;>${call.muted?ic.micOff:ic.mic}</div></button>
-      <button onclick=&quot;call.speaker=!call.speaker;renderCall()&quot; style=&quot;width:56px;height:56px;border-radius:9999px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;background:${call.speaker?'var(--tx)':'var(--bg3)'};color:${call.speaker?'#000':'var(--tx)'};transition:all .15s&quot;><div style=&quot;width:22px;height:22px&quot;>${ic.speaker}</div></button>
-      <button onclick=&quot;endCall()&quot; style=&quot;width:56px;height:56px;border-radius:9999px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;background:var(--red);color:#fff&quot;><div style=&quot;width:22px;height:22px;transform:rotate(135deg)&quot;>${ic.phone}</div></button>
-    </div>
-  </div><style>@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(29,155,240,.3)}50%{box-shadow:0 0 0 20px rgba(29,155,240,0)}}</style>`;
+  document.getElementById('app').innerHTML=`&lt;div class=&quot;screen screen-modal&quot; style=&quot;background:#000&quot;>
+    &lt;div style=&quot;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px&quot;>
+      &lt;div style=&quot;width:96px;height:96px;border-radius:48px;background:${avGrad(u.name)};display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:700;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.2);${!c?'animation:pulse 2s infinite':''}&quot;>${(u.name||'?')[0].toUpperCase()}&lt;/div>
+      &lt;h2 style=&quot;font-size:22px;font-weight:700;margin-top:8px;letter-spacing:-.01em&quot;>${esc(u.name)}&lt;/h2>
+      &lt;p style=&quot;color:var(--tx3);font-size:14px;font-weight:500&quot;>@${esc((u.name||'').toLowerCase().replace(/\s/g,''))}&lt;/p>
+      &lt;p id=&quot;cSt&quot; style=&quot;color:var(--tx2);font-size:17px;margin-top:4px;font-weight:600;letter-spacing:.01em&quot;>${c?fmtS(call.sec):(call.type==='video'?'Video calling...':'Calling...')}&lt;/p>
+    &lt;/div>
+    &lt;div style=&quot;padding:24px 40px 64px;display:flex;justify-content:center;gap:20px&quot;>
+      &lt;button onclick=&quot;call.muted=!call.muted;renderCall()&quot; style=&quot;width:56px;height:56px;border-radius:28px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;background:${call.muted?'var(--tx)':'var(--bg1)'};color:${call.muted?'#000':'var(--tx)'};transition:all .2s&quot;>&lt;div style=&quot;width:22px;height:22px&quot;>${call.muted?ic.micOff:ic.mic}&lt;/div>&lt;/button>
+      &lt;button onclick=&quot;call.speaker=!call.speaker;renderCall()&quot; style=&quot;width:56px;height:56px;border-radius:28px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;background:${call.speaker?'var(--tx)':'var(--bg1)'};color:${call.speaker?'#000':'var(--tx)'};transition:all .2s&quot;>&lt;div style=&quot;width:22px;height:22px&quot;>${ic.speaker}&lt;/div>&lt;/button>
+      &lt;button onclick=&quot;endCall()&quot; style=&quot;width:56px;height:56px;border-radius:28px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;background:var(--red);color:#fff;transition:all .15s&quot;>&lt;div style=&quot;width:22px;height:22px;transform:rotate(135deg)&quot;>${ic.phone}&lt;/div>&lt;/button>
+    &lt;/div>
+  &lt;/div>`;
 }
 function updCT(){const e=document.getElementById('cSt');if(e)e.textContent=fmtS(call.sec)}
 function endCall(){if(call.tmr)clearInterval(call.tmr);call={on:false,type:'audio',user:null,muted:false,speaker:false,sec:0,tmr:null};R();scrl()}
@@ -422,71 +471,78 @@ function endCall(){if(call.tmr)clearInterval(call.tmr);call={on:false,type:'audi
 function rProfile(){
   const u=S.user,lo=LANGS.find(l=>l.c===u.lang);
   const mc=db.m.filter(m=>m.s===u.id||m.r===u.id).length;
-  return`<div class=&quot;hdr&quot;><h1>Profile</h1></div>
-    <div style=&quot;flex:1;overflow-y:auto&quot;>
-      <div style=&quot;padding:24px;display:flex;flex-direction:column;align-items:center&quot;>
-        <div class=&quot;av av-l&quot; style=&quot;margin-bottom:12px&quot;>${(u.name||'?')[0].toUpperCase()}</div>
-        <h2 style=&quot;font-size:20px;font-weight:800&quot;>${esc(u.name)}</h2>
-        <p style=&quot;color:var(--tx3);font-size:14px;margin-top:2px&quot;>@${esc((u.name||'').toLowerCase().replace(/\s/g,''))}</p>
-        <p style=&quot;color:var(--tx2);font-size:14px;margin-top:12px&quot;>${mc} messages sent</p>
-      </div>
-      <div class=&quot;sep&quot;></div>
-      <div class=&quot;prof-item&quot; onclick=&quot;editName()&quot;><div><div style=&quot;font-size:14px;font-weight:700&quot;>Name</div><div style=&quot;font-size:14px;color:var(--tx3);margin-top:2px&quot;>${esc(u.name)}</div></div><div style=&quot;color:var(--tx3);width:18px;height:18px&quot;>${ic.chevR}</div></div>
-      <div class=&quot;prof-item&quot; onclick=&quot;editLang()&quot;><div><div style=&quot;font-size:14px;font-weight:700&quot;>Language</div><div style=&quot;font-size:14px;color:var(--tx3);margin-top:2px&quot;>${lo?lo.f+' '+lo.n:u.lang}</div></div><div style=&quot;color:var(--tx3);width:18px;height:18px&quot;>${ic.chevR}</div></div>
-      <div class=&quot;prof-item&quot;><div><div style=&quot;font-size:14px;font-weight:700&quot;>Phone</div><div style=&quot;font-size:14px;color:var(--tx3);margin-top:2px&quot;>+${esc(u.phone)}</div></div></div>
-      <div class=&quot;sep&quot; style=&quot;margin:8px 0&quot;></div>
-      <div class=&quot;prof-item&quot; onclick=&quot;doLogout()&quot; style=&quot;color:var(--red)&quot;><div style=&quot;display:flex;align-items:center;gap:12px&quot;><div style=&quot;width:20px;height:20px&quot;>${ic.logout}</div><span style=&quot;font-weight:700&quot;>Log out</span></div></div>
-      <div style=&quot;text-align:center;padding:24px;color:var(--tx3);font-size:12px&quot;>Weench v1.0</div>
-    </div>`;
+  return`&lt;div class=&quot;hdr&quot;>&lt;h1>Profile&lt;/h1>&lt;/div>
+    &lt;div style=&quot;flex:1;overflow-y:auto&quot;>
+      &lt;div style=&quot;padding:32px 24px;display:flex;flex-direction:column;align-items:center&quot;>
+        ${avHTML(u.name,'av-l')}
+        &lt;h2 style=&quot;font-size:22px;font-weight:700;margin-top:16px;letter-spacing:-.01em&quot;>${esc(u.name)}&lt;/h2>
+        &lt;p style=&quot;color:var(--tx3);font-size:14px;margin-top:4px;font-weight:500&quot;>@${esc((u.name||'').toLowerCase().replace(/\s/g,''))}&lt;/p>
+        &lt;p style=&quot;color:var(--tx2);font-size:13px;margin-top:12px;font-weight:500&quot;>${mc} messages sent&lt;/p>
+      &lt;/div>
+      &lt;div style=&quot;padding:0 16px&quot;>
+        &lt;div class=&quot;prof-card&quot;>
+          &lt;div class=&quot;prof-item&quot; onclick=&quot;editName()&quot;>&lt;div>&lt;div style=&quot;font-size:13px;color:var(--tx3);font-weight:500&quot;>Name&lt;/div>&lt;div style=&quot;font-size:15px;font-weight:500;margin-top:2px&quot;>${esc(u.name)}&lt;/div>&lt;/div>&lt;div style=&quot;color:var(--tx3)&quot;>${ic.chevR}&lt;/div>&lt;/div>
+          &lt;div class=&quot;prof-sep&quot;>&lt;/div>
+          &lt;div class=&quot;prof-item&quot; onclick=&quot;editLang()&quot;>&lt;div>&lt;div style=&quot;font-size:13px;color:var(--tx3);font-weight:500&quot;>Language&lt;/div>&lt;div style=&quot;font-size:15px;font-weight:500;margin-top:2px&quot;>${lo?lo.f+' '+lo.n:u.lang}&lt;/div>&lt;/div>&lt;div style=&quot;color:var(--tx3)&quot;>${ic.chevR}&lt;/div>&lt;/div>
+          &lt;div class=&quot;prof-sep&quot;>&lt;/div>
+          &lt;div class=&quot;prof-item&quot;>&lt;div>&lt;div style=&quot;font-size:13px;color:var(--tx3);font-weight:500&quot;>Phone&lt;/div>&lt;div style=&quot;font-size:15px;font-weight:500;margin-top:2px&quot;>+${esc(u.phone)}&lt;/div>&lt;/div>&lt;/div>
+        &lt;/div>
+        &lt;div style=&quot;height:16px&quot;>&lt;/div>
+        &lt;div class=&quot;prof-card&quot;>
+          &lt;div class=&quot;prof-item&quot; onclick=&quot;doLogout()&quot; style=&quot;color:var(--red)&quot;>&lt;div style=&quot;display:flex;align-items:center;gap:12px&quot;>&lt;div style=&quot;width:20px;height:20px&quot;>${ic.logout}&lt;/div>&lt;span style=&quot;font-weight:600;font-size:15px&quot;>Log out&lt;/span>&lt;/div>&lt;/div>
+        &lt;/div>
+      &lt;/div>
+      &lt;div style=&quot;text-align:center;padding:24px;color:var(--tx3);font-size:11px;font-weight:500&quot;>Weench v1.0&lt;/div>
+    &lt;/div>`;
 }
 function editName(){const n=prompt('Name:',S.user.name);if(n?.trim().length>=2){S.user.name=n.trim();db.u[S.user.id]=S.user;R()}}
 function editLang(){const c=prompt('Language ('+LANGS.map(l=>l.n).join(', ')+'):',LN[S.user.lang]);if(c){const m=LANGS.find(l=>l.n.toLowerCase()===c.toLowerCase());if(m){S.user.lang=m.c;db.u[S.user.id]=S.user;R()}}}
-function doLogout(){if(!confirm('Log out?'))return;S={user:null,screen:'login',tab:'chats',chatWith:null,showOrig:{},typing:false};login={step:'phone',phone:'',otp:'',gen:'',err:'',loading:false};R()}
+function doLogout(){if(!confirm('Log out?'))return;S={user:null,screen:'login',tab:'chats',chatWith:null,showOrig:{},typing:false};login={step:'phone',phone:'',otp:'',gen:'',err:'',loading:false};navAnim='screen-fade';R()}
 
 // ============ CHAT ============
 function rChat(){
   const o=S.chatWith,ms=getMsgs(),ml=S.user.lang,tl=o.lang,cl=ml!==tl;
-  return`<div class=&quot;screen&quot;>
-    <div class=&quot;hdr&quot; style=&quot;gap:12px&quot;>
-      <button class=&quot;hdr-b&quot; onclick=&quot;S.chatWith=null;chatInp='';R()&quot;>${ic.back}</button>
-      <div class=&quot;av av-s&quot;>${(o.name||'?')[0].toUpperCase()}</div>
-      <div style=&quot;flex:1;min-width:0&quot;>
-        <div style=&quot;font-weight:800;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis&quot;>${esc(o.name)}</div>
-        <div style=&quot;font-size:12px;color:var(--tx3)&quot;>${o.on?'Active now':'Offline'}</div>
-      </div>
-      <button class=&quot;hdr-b&quot; onclick=&quot;startCall('audio')&quot;>${ic.phone}</button>
-      <button class=&quot;hdr-b&quot; onclick=&quot;startCall('video')&quot;>${ic.video}</button>
-    </div>
-    ${cl?`<div class=&quot;br&quot;>${LN[ml]} ⟷ ${LN[tl]} · auto-translating</div>`:''}
-    <div id=&quot;mL&quot; style=&quot;flex:1;overflow-y:auto;padding:16px 0;display:flex;flex-direction:column;gap:3px;background:var(--bg)&quot;>
-      ${ms.length===0?`<div style=&quot;text-align:center;padding:60px 20px&quot;>
-        <div class=&quot;av av-l&quot; style=&quot;margin:0 auto 16px&quot;>${(o.name||'?')[0].toUpperCase()}</div>
-        <div style=&quot;font-weight:800;font-size:16px;margin-bottom:4px&quot;>${esc(o.name)}</div>
-        <div style=&quot;color:var(--tx3);font-size:13px;margin-bottom:4px&quot;>@${esc((o.name||'').toLowerCase().replace(/\s/g,''))}</div>
-        ${cl?`<div style=&quot;color:var(--tx3);font-size:13px;margin-top:12px&quot;>You type ${LN[ml]}, they read ${LN[tl]}</div>`:''}</div>`:''}
+  return`&lt;div class=&quot;screen screen-slide&quot;>
+    &lt;div class=&quot;hdr&quot; style=&quot;gap:12px&quot;>
+      &lt;button class=&quot;hdr-b&quot; onclick=&quot;S.chatWith=null;chatInp='';navAnim='screen-back';R()&quot;>${ic.back}&lt;/button>
+      ${avHTML(o.name,'av-s')}
+      &lt;div style=&quot;flex:1;min-width:0&quot;>
+        &lt;div style=&quot;font-weight:600;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:-.01em&quot;>${esc(o.name)}&lt;/div>
+        &lt;div style=&quot;font-size:12px;color:${o.on?'var(--green)':'var(--tx3)'};font-weight:500&quot;>${o.on?'Active now':'Offline'}&lt;/div>
+      &lt;/div>
+      &lt;button class=&quot;hdr-b&quot; onclick=&quot;startCall('audio')&quot; style=&quot;color:var(--accent)&quot;>${ic.phone}&lt;/button>
+      &lt;button class=&quot;hdr-b&quot; onclick=&quot;startCall('video')&quot; style=&quot;color:var(--accent)&quot;>${ic.video}&lt;/button>
+    &lt;/div>
+    ${cl?`&lt;div class=&quot;br&quot;>${LN[ml]} \u27F7 ${LN[tl]} \u00B7 auto-translating&lt;/div>`:''}
+    &lt;div id=&quot;mL&quot; style=&quot;flex:1;overflow-y:auto;padding:16px 0;display:flex;flex-direction:column;gap:3px;background:var(--bg)&quot;>
+      ${ms.length===0?`&lt;div style=&quot;text-align:center;padding:64px 24px&quot;>
+        ${avHTML(o.name,'av-l')}
+        &lt;div style=&quot;font-weight:700;font-size:17px;margin-top:16px;letter-spacing:-.01em&quot;>${esc(o.name)}&lt;/div>
+        &lt;div style=&quot;color:var(--tx3);font-size:13px;margin-top:4px;font-weight:500&quot;>@${esc((o.name||'').toLowerCase().replace(/\s/g,''))}&lt;/div>
+        ${cl?`&lt;div style=&quot;color:var(--tx2);font-size:13px;margin-top:16px;font-weight:500;padding:8px 16px;background:var(--accent-soft);border-radius:8px;display:inline-block&quot;>You type ${LN[ml]}, they read ${LN[tl]}&lt;/div>`:''}&lt;/div>`:''}
       ${ms.map(m=>rMsg(m)).join('')}
-      ${S.typing?'<div class=&quot;mr&quot;><div class=&quot;mb mb-o&quot; style=&quot;padding:14px 18px&quot;><div class=&quot;td&quot;><span></span><span></span><span></span></div></div></div>':''}
-      <div id=&quot;cE&quot;></div>
-    </div>
-    <div class=&quot;ib&quot;><input id=&quot;cI&quot; placeholder=&quot;Start a new message&quot; value=&quot;${esc(chatInp)}&quot; oninput=&quot;chatInp=this.value;updSB()&quot; onkeydown=&quot;if(event.key==='Enter'&amp;&amp;!event.shiftKey){event.preventDefault();doSend()}&quot; data-af>
-    <button class=&quot;sb&quot; id=&quot;sB&quot; onclick=&quot;doSend()&quot; ${!chatInp.trim()||chatSending?'disabled':''}>${ic.send}</button></div>
-  </div>`;
+      ${S.typing?'&lt;div class=&quot;mr&quot;>&lt;div class=&quot;mb mb-o&quot; style=&quot;padding:14px 18px&quot;>&lt;div class=&quot;td&quot;>&lt;span>&lt;/span>&lt;span>&lt;/span>&lt;span>&lt;/span>&lt;/div>&lt;/div>&lt;/div>':''}
+      &lt;div id=&quot;cE&quot;>&lt;/div>
+    &lt;/div>
+    &lt;div class=&quot;ib&quot;>&lt;input id=&quot;cI&quot; placeholder=&quot;Start a new message&quot; value=&quot;${esc(chatInp)}&quot; oninput=&quot;chatInp=this.value;updSB()&quot; onkeydown=&quot;if(event.key==='Enter'&amp;&amp;!event.shiftKey){event.preventDefault();doSend()}&quot; data-af>
+    &lt;button class=&quot;send-btn&quot; id=&quot;sB&quot; onclick=&quot;doSend()&quot; ${!chatInp.trim()||chatSending?'disabled':''}>${ic.send}&lt;/button>&lt;/div>
+  &lt;/div>`;
 }
 function rMsg(m){
   const so=S.showOrig[m.id],ht=m.ot!==m.tt&amp;&amp;m.sl!==m.rl;
   let dt=m.mine?m.ot:(so?m.ot:(m.tt||m.ot));
-  return`<div class=&quot;mr&quot; style=&quot;justify-content:${m.mine?'flex-end':'flex-start'}&quot;>
-    <div class=&quot;mb ${m.mine?'mb-m':'mb-o'}&quot; ${!m.mine&amp;&amp;ht?`onclick=&quot;togO('${m.id}')&quot; style=&quot;cursor:pointer&quot;`:''}>
-      <div>${esc(dt)}</div>
-      <div class=&quot;mb-t&quot;>
-        ${!m.mine&amp;&amp;ht?`<span style=&quot;cursor:pointer;text-decoration:underline;opacity:.7&quot;>${so?'translated':'original'}</span>`:''}
-        <span>${fmtT(m.ts)}</span>${m.mine?'<span style=&quot;opacity:.5&quot;>✓✓</span>':''}
-      </div>
-    </div>
-  </div>`;
+  return`&lt;div class=&quot;mr&quot; style=&quot;justify-content:${m.mine?'flex-end':'flex-start'}&quot;>
+    &lt;div class=&quot;mb ${m.mine?'mb-m':'mb-o'}&quot; ${!m.mine&amp;&amp;ht?`onclick=&quot;togO('${m.id}')&quot; style=&quot;cursor:pointer&quot;`:''}>
+      &lt;div>${esc(dt)}&lt;/div>
+      &lt;div class=&quot;mb-t&quot;>
+        ${!m.mine&amp;&amp;ht?`&lt;span style=&quot;cursor:pointer;text-decoration:underline;opacity:.6;font-weight:500&quot;>${so?'translated':'original'}&lt;/span>`:''}
+        &lt;span>${fmtT(m.ts)}&lt;/span>${m.mine?'&lt;span style=&quot;opacity:.5&quot;>\u2713\u2713&lt;/span>':''}
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>`;
 }
 function togO(id){S.showOrig[id]=!S.showOrig[id];R();scrl()}
-function updSB(){const b=document.getElementById('sB');if(!b)return;const h=chatInp.trim().length>0;b.disabled=!h;b.style.background=h?'var(--x)':'var(--bg3)';b.style.color=h?'#fff':'var(--tx3)'}
+function updSB(){const b=document.getElementById('sB');if(!b)return;b.disabled=!chatInp.trim().length}
 function scrl(){setTimeout(()=>{const e=document.getElementById('cE');if(e)e.scrollIntoView({behavior:'smooth'})},60)}
 
 async function doSend(){
@@ -509,7 +565,6 @@ R();
 </body>
 </html>
 "></iframe></div><div class="home"></div></div>
-<div class="label">Interactive Preview</div>
 </div>
 </body>
 </html>
