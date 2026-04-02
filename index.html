@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weench — iPhone 16 Pro</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{min-height:100vh;background:#000;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;padding:20px;overflow:auto}
+.wrap{display:flex;flex-direction:column;align-items:center;gap:20px}
+.title{color:#E7E9EA;font-size:18px;font-weight:800;text-align:center}
+.sub{color:#71767B;font-size:12px;margin-top:4px;text-align:center}
+.phone{width:402px;height:874px;border-radius:55px;background:linear-gradient(145deg,#2A2A2E,#1A1A1E,#2A2A2E);padding:10px;position:relative;box-shadow:0 0 0 1.5px rgba(255,255,255,.06),inset 0 0 0 1px rgba(255,255,255,.03),0 30px 80px rgba(0,0,0,.7)}
+.phone::before{content:'';position:absolute;inset:0;border-radius:55px;background:linear-gradient(180deg,rgba(255,255,255,.04) 0%,transparent 30%,transparent 70%,rgba(255,255,255,.02) 100%);pointer-events:none}
+.island{position:absolute;top:16px;left:50%;transform:translateX(-50%);width:126px;height:37px;background:#000;border-radius:20px;z-index:100}
+.scr{width:100%;height:100%;border-radius:46px;overflow:hidden;background:#000;position:relative;z-index:1}
+.scr iframe{width:100%;height:100%;border:none;border-radius:46px}
+.sb{position:absolute;background:linear-gradient(180deg,#3A3A3E,#2A2A2E);border-radius:2px}
+.sb-pwr{width:3px;height:84px;right:-3px;top:190px;border-radius:0 3px 3px 0}
+.sb-vu{width:3px;height:38px;left:-3px;top:165px;border-radius:3px 0 0 3px}
+.sb-vd{width:3px;height:38px;left:-3px;top:216px;border-radius:3px 0 0 3px}
+.sb-act{width:3px;height:26px;left:-3px;top:125px;border-radius:3px 0 0 3px}
+.home{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);width:130px;height:5px;background:rgba(255,255,255,.1);border-radius:3px;z-index:101;pointer-events:none}
+.label{color:#536471;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div><div class="title">Weench</div><div class="sub">iPhone 16 Pro — 402 x 874</div></div>
+<div class="phone"><div class="island"></div><div class="sb sb-pwr"></div><div class="sb sb-vu"></div><div class="sb sb-vd"></div><div class="sb sb-act"></div>
+<div class="scr"><iframe srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;>
+<title>Weench</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --x:#1D9BF0;
+  --x2:#1A8CD8;
+  --xL:#E8F5FE;
+  --bg:#000;
+  --bg2:#16181C;
+  --bg3:#1D1F23;
+  --bg4:#2F3336;
+  --card:#16181C;
+  --tx:#E7E9EA;
+  --tx2:#71767B;
+  --tx3:#536471;
+  --border:#2F3336;
+  --green:#00BA7C;
+  --red:#F4212E;
+  --white:#E7E9EA;
+}
+html,body{height:100%;width:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#000;color:var(--tx);-webkit-font-smoothing:antialiased}
+
+.app{width:100%;max-width:430px;height:100vh;height:100dvh;position:relative;overflow:hidden;margin:0 auto;background:var(--bg)}
+@media(min-width:431px){.app{height:92vh;max-height:860px;border-radius:16px;margin-top:4vh;box-shadow:0 0 40px rgba(0,0,0,.5);border:1px solid var(--border)}}
+
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;background:var(--bg);animation:fi .15s ease}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+
+/* Inputs */
+.inp{width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:9999px;font-size:15px;font-family:inherit;color:var(--tx);outline:none;transition:all .2s}
+.inp::placeholder{color:var(--tx3)}
+.inp:focus{border-color:var(--x);box-shadow:0 0 0 1px var(--x)}
+.inp-dark{background:var(--bg2);border-color:transparent}
+.inp-dark:focus{background:var(--bg);border-color:var(--x)}
+
+/* Buttons */
+.btn{padding:12px 0;width:100%;border-radius:9999px;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:all .15s}
+.btn-x{background:var(--white);color:#000}
+.btn-x:hover:not(:disabled){background:#D7DBDC}
+.btn-x:active:not(:disabled){background:#CDD1D3}
+.btn-x:disabled{opacity:.5;cursor:not-allowed}
+.btn-dark{background:var(--bg3);color:var(--tx)}
+.btn-dark:hover{background:var(--bg4)}
+.btn-text{background:none;color:var(--x);font-weight:700;padding:8px 0;border:none;cursor:pointer;font-family:inherit;font-size:14px}
+
+/* Header */
+.hdr{padding:0 16px;height:53px;display:flex;align-items:center;gap:16px;flex-shrink:0;background:rgba(0,0,0,.65);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:10}
+.hdr h1{font-size:20px;font-weight:800;color:var(--tx)}
+.hdr-b{background:none;border:none;color:var(--tx);cursor:pointer;padding:8px;display:flex;border-radius:9999px;transition:background .15s;margin:-8px}
+.hdr-b:hover{background:rgba(231,233,234,.1)}
+.hdr-b svg{width:20px;height:20px}
+
+/* Avatar */
+.av{width:40px;height:40px;border-radius:9999px;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:var(--x);flex-shrink:0;position:relative}
+.av-s{width:36px;height:36px;font-size:14px}
+.av-xs{width:32px;height:32px;font-size:13px}
+.av-l{width:68px;height:68px;font-size:28px}
+.dot{width:10px;height:10px;background:var(--green);border-radius:50%;border:2.5px solid var(--bg);position:absolute;bottom:-1px;right:-1px}
+
+/* List item */
+.li{display:flex;align-items:center;gap:12px;padding:12px 16px;width:100%;border:none;background:transparent;cursor:pointer;text-align:left;font-family:inherit;color:var(--tx);transition:background .1s;border-bottom:1px solid var(--border)}
+.li:hover{background:rgba(231,233,234,.03)}
+.li:active{background:rgba(231,233,234,.06)}
+
+/* Chat bubbles - X style */
+.mr{display:flex;margin-bottom:2px;padding:0 16px}
+.mb{max-width:80%;padding:12px 16px;font-size:15px;line-height:1.4;word-break:break-word}
+.mb-m{border-radius:22px 22px 4px 22px;background:var(--x);color:#fff}
+.mb-o{border-radius:22px 22px 22px 4px;background:var(--bg3);color:var(--tx)}
+.mb-t{display:flex;justify-content:flex-end;align-items:center;gap:5px;margin-top:3px;font-size:12px}
+.mb-m .mb-t{color:rgba(255,255,255,.5)}
+.mb-o .mb-t{color:var(--tx3)}
+
+/* Typing */
+.td span{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--tx3);margin:0 2px;animation:bounce .6s infinite alternate}
+.td span:nth-child(2){animation-delay:.2s}
+.td span:nth-child(3){animation-delay:.4s}
+@keyframes bounce{to{opacity:.3;transform:translateY(-3px)}}
+
+/* Chat input */
+.ib{padding:8px 12px;display:flex;gap:8px;align-items:center;flex-shrink:0;background:var(--bg);border-top:1px solid var(--border)}
+.ib input{flex:1;padding:10px 16px;background:var(--bg2);border:1px solid transparent;border-radius:9999px;font-size:15px;font-family:inherit;color:var(--tx);outline:none;transition:all .2s}
+.ib input::placeholder{color:var(--tx3)}
+.ib input:focus{background:var(--bg);border-color:var(--x)}
+.sb{width:36px;height:36px;border-radius:9999px;border:none;background:var(--x);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0}
+.sb:disabled{background:var(--bg3);color:var(--tx3)}
+.sb:hover:not(:disabled){background:var(--x2)}
+.sb svg{width:16px;height:16px}
+
+/* Tab bar */
+.tb{display:flex;border-top:1px solid var(--border);flex-shrink:0;background:var(--bg);padding-bottom:env(safe-area-inset-bottom,0)}
+.ti{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:10px 0;background:none;border:none;cursor:pointer;font-family:inherit;font-size:10px;font-weight:600;color:var(--tx3);transition:color .15s;position:relative}
+.ti svg{width:24px;height:24px}
+.ti.on{color:var(--tx)}
+.ti.on::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:28px;height:3px;background:var(--x);border-radius:3px 3px 0 0}
+
+/* Language card */
+.lc{display:flex;align-items:center;gap:14px;padding:16px;border-radius:16px;border:1px solid var(--border);background:var(--bg);cursor:pointer;transition:all .15s;text-align:left;font-family:inherit;width:100%;color:var(--tx)}
+.lc:hover{background:var(--bg2)}
+.lc.sel{border-color:var(--x);background:rgba(29,155,240,.1)}
+
+/* Bridge bar */
+.br{padding:6px 16px;text-align:center;font-size:12px;color:var(--x);background:rgba(29,155,240,.08);font-weight:500;flex-shrink:0;border-bottom:1px solid var(--border)}
+
+/* Profile */
+.prof-item{display:flex;align-items:center;justify-content:space-between;padding:16px;cursor:pointer;transition:background .1s;border-bottom:1px solid var(--border)}
+.prof-item:hover{background:rgba(231,233,234,.03)}
+
+/* Story ring */
+.story-ring{width:52px;height:52px;border-radius:9999px;padding:2px;background:linear-gradient(135deg,var(--x),#7856FF);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.story-ring .av{border:2px solid var(--bg)}
+
+/* Separator */
+.sep{height:1px;background:var(--border)}
+
+::-webkit-scrollbar{display:none}
+</style>
+</head>
+<body>
+<div id=&quot;app&quot; class=&quot;app&quot;></div>
+<script>
+// ============ DATA ============
+const LANGS=[{c:'en',n:'English',v:'English',f:'🇬🇧'},{c:'hi',n:'Hindi',v:'हिन्दी',f:'🇮🇳'},{c:'ta',n:'Tamil',v:'தமிழ்',f:'🇮🇳'},{c:'te',n:'Telugu',v:'తెలుగు',f:'🇮🇳'},{c:'kn',n:'Kannada',v:'ಕನ್ನಡ',f:'🇮🇳'},{c:'mr',n:'Marathi',v:'मराठी',f:'🇮🇳'}];
+const LN=Object.fromEntries(LANGS.map(l=>[l.c,l.n]));
+
+const DICT={&quot;en|hi&quot;:{&quot;hello&quot;:&quot;नमस्ते&quot;,&quot;hi&quot;:&quot;नमस्ते&quot;,&quot;hey&quot;:&quot;अरे&quot;,&quot;how are you&quot;:&quot;आप कैसे हैं&quot;,&quot;how are you?&quot;:&quot;आप कैसे हैं?&quot;,&quot;good morning&quot;:&quot;सुप्रभात&quot;,&quot;good night&quot;:&quot;शुभ रात्रि&quot;,&quot;thank you&quot;:&quot;धन्यवाद&quot;,&quot;thanks&quot;:&quot;धन्यवाद&quot;,&quot;yes&quot;:&quot;हाँ&quot;,&quot;no&quot;:&quot;नहीं&quot;,&quot;ok&quot;:&quot;ठीक है&quot;,&quot;okay&quot;:&quot;ठीक है&quot;,&quot;bye&quot;:&quot;अलविदा&quot;,&quot;please&quot;:&quot;कृपया&quot;,&quot;sorry&quot;:&quot;माफ़ कीजिए&quot;,&quot;i am fine&quot;:&quot;मैं ठीक हूँ&quot;,&quot;what happened?&quot;:&quot;क्या हुआ?&quot;,&quot;tell me&quot;:&quot;बताओ&quot;,&quot;let's go&quot;:&quot;चलो&quot;,&quot;good&quot;:&quot;अच्छा&quot;,&quot;friend&quot;:&quot;दोस्त&quot;,&quot;very good&quot;:&quot;बहुत अच्छा&quot;,&quot;no problem&quot;:&quot;कोई बात नहीं&quot;,&quot;take care&quot;:&quot;अपना ख्याल रखो&quot;},&quot;hi|en&quot;:{&quot;नमस्ते&quot;:&quot;Hello&quot;,&quot;अरे&quot;:&quot;Hey&quot;,&quot;आप कैसे हैं?&quot;:&quot;How are you?&quot;,&quot;सुप्रभात&quot;:&quot;Good morning&quot;,&quot;शुभ रात्रि&quot;:&quot;Good night&quot;,&quot;धन्यवाद&quot;:&quot;Thank you&quot;,&quot;हाँ&quot;:&quot;Yes&quot;,&quot;नहीं&quot;:&quot;No&quot;,&quot;ठीक है&quot;:&quot;Okay&quot;,&quot;अलविदा&quot;:&quot;Goodbye&quot;,&quot;कृपया&quot;:&quot;Please&quot;,&quot;माफ़ कीजिए&quot;:&quot;Sorry&quot;,&quot;मैं ठीक हूँ&quot;:&quot;I am fine&quot;,&quot;बताओ&quot;:&quot;Tell me&quot;,&quot;चलो&quot;:&quot;Let's go&quot;,&quot;अच्छा&quot;:&quot;Good&quot;,&quot;दोस्त&quot;:&quot;Friend&quot;,&quot;बहुत अच्छा&quot;:&quot;Very good&quot;,&quot;कोई बात नहीं&quot;:&quot;No problem&quot;},&quot;en|ta&quot;:{&quot;hello&quot;:&quot;வணக்கம்&quot;,&quot;hi&quot;:&quot;வணக்கம்&quot;,&quot;how are you?&quot;:&quot;நீங்கள் எப்படி இருக்கிறீர்கள்?&quot;,&quot;good morning&quot;:&quot;காலை வணக்கம்&quot;,&quot;thank you&quot;:&quot;நன்றி&quot;,&quot;yes&quot;:&quot;ஆம்&quot;,&quot;no&quot;:&quot;இல்லை&quot;,&quot;okay&quot;:&quot;சரி&quot;,&quot;bye&quot;:&quot;போய் வருகிறேன்&quot;,&quot;good&quot;:&quot;நல்லது&quot;},&quot;en|te&quot;:{&quot;hello&quot;:&quot;హలో&quot;,&quot;hi&quot;:&quot;హాయ్&quot;,&quot;how are you?&quot;:&quot;మీరు ఎలా ఉన్నారు?&quot;,&quot;good morning&quot;:&quot;శుభోదయం&quot;,&quot;thank you&quot;:&quot;ధన్యవాదాలు&quot;,&quot;yes&quot;:&quot;అవును&quot;,&quot;no&quot;:&quot;కాదు&quot;,&quot;okay&quot;:&quot;సరే&quot;,&quot;bye&quot;:&quot;వీడ్కోలు&quot;,&quot;good&quot;:&quot;మంచిది&quot;},&quot;en|kn&quot;:{&quot;hello&quot;:&quot;ನಮಸ್ಕಾರ&quot;,&quot;hi&quot;:&quot;ಹಾಯ್&quot;,&quot;how are you?&quot;:&quot;ನೀವು ಹೇಗಿದ್ದೀರಿ?&quot;,&quot;good morning&quot;:&quot;ಶುಭೋದಯ&quot;,&quot;thank you&quot;:&quot;ಧನ್ಯವಾದಗಳು&quot;,&quot;yes&quot;:&quot;ಹೌದು&quot;,&quot;no&quot;:&quot;ಇಲ್ಲ&quot;,&quot;okay&quot;:&quot;ಸರಿ&quot;,&quot;bye&quot;:&quot;ವಿದಾಯ&quot;,&quot;good&quot;:&quot;ಒಳ್ಳೆಯದು&quot;},&quot;en|mr&quot;:{&quot;hello&quot;:&quot;नमस्कार&quot;,&quot;hi&quot;:&quot;नमस्कार&quot;,&quot;how are you?&quot;:&quot;तुम्ही कसे आहात?&quot;,&quot;good morning&quot;:&quot;शुभ सकाळ&quot;,&quot;thank you&quot;:&quot;धन्यवाद&quot;,&quot;yes&quot;:&quot;हो&quot;,&quot;no&quot;:&quot;नाही&quot;,&quot;okay&quot;:&quot;ठीक आहे&quot;,&quot;bye&quot;:&quot;निरोप&quot;,&quot;good&quot;:&quot;चांगले&quot;}};
+Object.keys(DICT).forEach(k=>{const[f,t]=k.split('|');const r=`${t}|${f}`;if(!DICT[r]){DICT[r]={};Object.entries(DICT[k]).forEach(([a,b])=>{DICT[r][b.toLowerCase()]=a})}});
+
+const trC={};
+async function tr(text,from,to){if(from===to)return text;const k=`${from}|${to}|${text.toLowerCase().trim()}`;if(trC[k])return trC[k];const d=DICT[`${from}|${to}`]?.[text.toLowerCase().trim()];if(d){trC[k]=d;return d}try{const r=await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&amp;langpair=${from}|${to}`);const j=await r.json();if(j.responseStatus===200&amp;&amp;j.responseData?.translatedText){let v=j.responseData.translatedText;if(v&amp;&amp;v.toLowerCase()!==text.toLowerCase()){trC[k]=v;return v}}}catch(e){}return text}
+
+// Database
+const db={u:{},m:[]};
+[{id:'d1',name:'Rahul',phone:'9876500001',lang:'hi',on:true,bio:'Building cool stuff'},{id:'d2',name:'Priya',phone:'9876500002',lang:'ta',on:true,bio:'Coffee lover'},{id:'d3',name:'Arjun',phone:'9876500003',lang:'te',on:false,bio:'Tech enthusiast'},{id:'d4',name:'Sneha',phone:'9876500004',lang:'kn',on:true,bio:'Design is life'},{id:'d5',name:'Amit',phone:'9876500005',lang:'mr',on:false,bio:'Just vibing'}].forEach(u=>db.u[u.id]=u);
+
+const autoR={hi:[&quot;नमस्ते!&quot;,&quot;हाँ बताओ&quot;,&quot;अच्छा&quot;,&quot;ठीक है&quot;,&quot;बहुत अच्छा!&quot;,&quot;मैं ठीक हूँ&quot;],ta:[&quot;வணக்கம்!&quot;,&quot;ஆமா&quot;,&quot;நல்லது&quot;,&quot;சரி&quot;,&quot;நன்று!&quot;],te:[&quot;హలో!&quot;,&quot;చెప్పండి&quot;,&quot;మంచిది&quot;,&quot;సరే&quot;,&quot;బాగుంది!&quot;],kn:[&quot;ನಮಸ್ಕಾರ!&quot;,&quot;ಹೌದು&quot;,&quot;ಒಳ್ಳೆಯದು&quot;,&quot;ಸರಿ&quot;,&quot;ಚೆನ್ನಾಗಿದೆ!&quot;],mr:[&quot;नमस्कार!&quot;,&quot;हो&quot;,&quot;छान&quot;,&quot;ठीक आहे&quot;,&quot;खूप छान!&quot;],en:[&quot;Hey!&quot;,&quot;Sure&quot;,&quot;Great&quot;,&quot;Okay&quot;,&quot;Nice!&quot;]};
+
+// State
+let S={user:null,screen:'login',tab:'chats',chatWith:null,showOrig:{},typing:false};
+let login={step:'phone',phone:'',otp:'',gen:'',err:'',loading:false};
+let onboard={step:'name',name:'',lang:'en'};
+let chatInp='',chatSending=false,searchQ='';
+let call={on:false,type:'audio',user:null,muted:false,speaker:false,sec:0,tmr:null};
+
+// Stories
+const stories=[
+  {uid:'d1',items:[{id:'s1',text:'Good morning everyone! ☀️',bg:'linear-gradient(135deg,#1D9BF0,#7856FF)',ts:Date.now()-3600000}]},
+  {uid:'d2',items:[{id:'s2',text:'Just had amazing dosa! 🍽️',bg:'linear-gradient(135deg,#F4212E,#FF6B00)',ts:Date.now()-7200000}]},
+  {uid:'d4',items:[{id:'s3',text:'Beautiful sunset today 🌅',bg:'linear-gradient(135deg,#00BA7C,#1D9BF0)',ts:Date.now()-1800000},{id:'s4',text:'Loving this weather!',bg:'linear-gradient(135deg,#7856FF,#F4212E)',ts:Date.now()-900000}]},
+];
+let storyV={on:false,ui:0,si:0,prog:0,tmr:null};
+
+// Helpers
+function esc(s){const d=document.createElement('div');d.textContent=s||'';return d.innerHTML}
+function uid(){return Math.random().toString(36).slice(2,9)}
+function fmtT(t){if(!t)return'';const d=new Date(t),n=new Date();return d.toDateString()===n.toDateString()?d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}):d.toLocaleDateString([],{month:'short',day:'numeric'})}
+function ago(ts){const d=Date.now()-ts,m=Math.floor(d/60000);if(m<1)return'now';if(m<60)return m+'m';const h=Math.floor(m/60);if(h<24)return h+'h';return Math.floor(h/24)+'d'}
+function fmtS(s){return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+
+function getConvos(){
+  if(!S.user)return[];const map={};
+  db.m.forEach(m=>{if(m.s!==S.user.id&amp;&amp;m.r!==S.user.id)return;const o=m.s===S.user.id?m.r:m.s;if(!map[o]||new Date(m.ts)>new Date(map[o].ts))map[o]=m});
+  return Object.entries(map).map(([o,m])=>{const u=db.u[o];if(!u)return null;const p=m.s===S.user.id?m.ot:(m.tt||m.ot);const ur=db.m.filter(x=>x.s===o&amp;&amp;x.r===S.user.id&amp;&amp;x.st!=='read').length;return{u,p,ts:m.ts,ur}}).filter(Boolean).sort((a,b)=>new Date(b.ts)-new Date(a.ts));
+}
+function getMsgs(){if(!S.user||!S.chatWith)return[];return db.m.filter(m=>(m.s===S.user.id&amp;&amp;m.r===S.chatWith.id)||(m.s===S.chatWith.id&amp;&amp;m.r===S.user.id)).map(m=>({...m,mine:m.s===S.user.id}))}
+
+// Icons
+const ic={
+  back:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;><path d=&quot;M7.414 13l5.043 5.04-1.414 1.42L3.586 12l7.457-7.46 1.414 1.42L7.414 11H21v2H7.414z&quot;/></svg>',
+  send:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;><path d=&quot;M2.505 21L23.5 12 2.505 3 2.5 10l15 2-15 2z&quot;/></svg>',
+  chat:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;><path d=&quot;M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5v9c0 1.381-1.119 2.5-2.5 2.5h-3.79L12 21l-3.708-4.5H4.498c-1.381 0-2.5-1.119-2.5-2.5v-9z&quot;/></svg>',
+  users:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;><circle cx=&quot;12&quot; cy=&quot;8&quot; r=&quot;4.5&quot;/><path d=&quot;M3 21c0-4.97 4.03-9 9-9s9 4.03 9 9&quot;/></svg>',
+  search:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;><path d=&quot;M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z&quot;/></svg>',
+  compose:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;><path d=&quot;M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5V12h-2V5.5c0-.276-.224-.5-.5-.5h-15c-.276 0-.5.224-.5.5v9c0 .276.224.5.5.5H9v2H4.498c-1.381 0-2.5-1.119-2.5-2.5v-9zm19.28 7.22l-4.5 4.5-2-2 1.414-1.414.586.586 3.086-3.086 1.414 1.414z&quot;/></svg>',
+  story:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;><circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;/><circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;3&quot;/></svg>',
+  phone:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;><path d=&quot;M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.59.7 2.33a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.74.34 1.52.57 2.33.7A2 2 0 0122 16.92z&quot;/></svg>',
+  video:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;><polygon points=&quot;23 7 16 12 23 17&quot;/><rect x=&quot;1&quot; y=&quot;5&quot; width=&quot;15&quot; height=&quot;14&quot; rx=&quot;2&quot;/></svg>',
+  x:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;><path d=&quot;M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z&quot;/></svg>',
+  mic:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;><path d=&quot;M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z&quot;/><path d=&quot;M19 10v2a7 7 0 01-14 0v-2&quot;/><line x1=&quot;12&quot; y1=&quot;19&quot; x2=&quot;12&quot; y2=&quot;23&quot;/></svg>',
+  micOff:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;><line x1=&quot;1&quot; y1=&quot;1&quot; x2=&quot;23&quot; y2=&quot;23&quot;/><path d=&quot;M9 9v3a3 3 0 005.12 2.12M15 9.34V4a3 3 0 00-5.94-.6&quot;/><path d=&quot;M17 16.95A7 7 0 015 12v-2m14 0v2c0 .99-.21 1.93-.58 2.77&quot;/></svg>',
+  speaker:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;><polygon points=&quot;11 5 6 9 2 9 2 15 6 15 11 19 11 5&quot;/><path d=&quot;M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07&quot;/></svg>',
+  chevR:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot; style=&quot;width:18px;height:18px&quot;><path d=&quot;M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z&quot;/></svg>',
+  logout:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;><path d=&quot;M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4&quot;/><polyline points=&quot;16 17 21 12 16 7&quot;/><line x1=&quot;21&quot; y1=&quot;12&quot; x2=&quot;9&quot; y2=&quot;12&quot;/></svg>',
+  info:'<svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;><path d=&quot;M12 18.042c-.553 0-1-.447-1-1v-5.5c0-.553.447-1 1-1s1 .447 1 1v5.5c0 .553-.447 1-1 1zm-.01-10.7c.612 0 1.108.503 1.108 1.122 0 .62-.496 1.123-1.108 1.123-.613 0-1.11-.503-1.11-1.123 0-.62.497-1.122 1.11-1.122zM12 2.252C6.612 2.252 2.252 6.612 2.252 12S6.612 21.748 12 21.748 21.748 17.388 21.748 12 17.388 2.252 12 2.252z&quot;/></svg>',
+  chk:'<svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;var(--x)&quot; stroke=&quot;#000&quot; stroke-width=&quot;2&quot;><circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;/><path d=&quot;M9 12l2 2 4-4&quot; stroke=&quot;#fff&quot;/></svg>',
+  unchk:'<div style=&quot;width:20px;height:20px;border-radius:50%;border:2px solid var(--border)&quot;></div>',
+};
+
+// ============ RENDER ============
+function R(){
+  if(call.on){renderCall();return}
+  if(storyV.on){renderStoryV();return}
+  const a=document.getElementById('app');
+  if(S.screen==='login')a.innerHTML=rLogin();
+  else if(S.screen==='onboarding')a.innerHTML=rOnboard();
+  else if(S.screen==='main'){a.innerHTML=S.chatWith?rChat():rMain()}
+  requestAnimationFrame(()=>{const f=document.querySelector('[data-af]');if(f){f.focus();if(f.value)f.setSelectionRange(f.value.length,f.value.length)}});
+}
+
+// ============ LOGIN ============
+function rLogin(){
+  return`<div class=&quot;screen&quot; style=&quot;display:flex;flex-direction:column;justify-content:space-between&quot;>
+    <div style=&quot;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px 32px&quot;>
+      <div style=&quot;width:72px;height:72px;border-radius:20px;background:var(--x);display:flex;align-items:center;justify-content:center;margin-bottom:32px&quot;>
+        <span style=&quot;font-size:36px;font-weight:800;color:#fff&quot;>W</span>
+      </div>
+      <h1 style=&quot;font-size:30px;font-weight:800;color:var(--tx);margin-bottom:8px;text-align:center&quot;>Welcome to Weench</h1>
+      <p style=&quot;color:var(--tx3);font-size:15px;text-align:center;line-height:1.5&quot;>Speak yours. Read theirs.</p>
+    </div>
+    <div style=&quot;padding:24px;border-top:1px solid var(--border)&quot;>
+      ${login.step==='phone'?rLPhone():rLOTP()}
+    </div>
+  </div>`;
+}
+function rLPhone(){
+  const v=login.phone.length>=10;
+  return`<input class=&quot;inp inp-dark&quot; type=&quot;tel&quot; placeholder=&quot;Phone number&quot; value=&quot;${esc(login.phone)}&quot; oninput=&quot;login.phone=this.value.replace(/\\D/g,'').slice(0,15);updPh()&quot; onkeydown=&quot;if(event.key==='Enter')sendOTP()&quot; data-af>
+    ${login.err?`<p style=&quot;color:var(--red);font-size:13px;margin-top:8px&quot;>${esc(login.err)}</p>`:''}
+    <div style=&quot;height:16px&quot;></div>
+    <button id=&quot;phBtn&quot; class=&quot;btn btn-x&quot; onclick=&quot;sendOTP()&quot; ${!v||login.loading?'disabled':''}>${login.loading?'Sending...':'Next'}</button>`;
+}
+function rLOTP(){
+  const v=login.otp.length===4;
+  return`<input class=&quot;inp inp-dark&quot; type=&quot;text&quot; value=&quot;${esc(login.otp)}&quot; oninput=&quot;login.otp=this.value.replace(/\\D/g,'').slice(0,4);updOtp();if(login.otp.length===4)setTimeout(verifyOTP,150)&quot; maxlength=&quot;4&quot; data-af style=&quot;letter-spacing:12px;font-size:24px;font-weight:700;text-align:center&quot;>
+    <p style=&quot;color:var(--tx3);font-size:13px;margin-top:10px;text-align:center&quot;>Code sent to +${esc(login.phone)} · <button class=&quot;btn-text&quot; onclick=&quot;login.step='phone';login.otp='';login.err='';R()&quot; style=&quot;font-size:13px;padding:0&quot;>Change</button></p>
+    ${login.gen?`<div style=&quot;text-align:center;margin-top:8px;padding:10px;background:var(--bg2);border-radius:12px;border:1px solid var(--border)&quot;><span style=&quot;color:var(--tx3);font-size:12px&quot;>Demo code:</span> <strong style=&quot;color:var(--x);letter-spacing:4px;font-size:18px&quot;>${login.gen}</strong></div>`:''}
+    ${login.err?`<p style=&quot;color:var(--red);font-size:13px;margin-top:8px;text-align:center&quot;>${esc(login.err)}</p>`:''}
+    <div style=&quot;height:16px&quot;></div>
+    <button id=&quot;otpBtn&quot; class=&quot;btn btn-x&quot; onclick=&quot;verifyOTP()&quot; ${!v||login.loading?'disabled':''}>${login.loading?'Verifying...':'Log in'}</button>`;
+}
+function updPh(){const b=document.getElementById('phBtn');if(b){b.disabled=login.phone.length<10}}
+function updOtp(){const b=document.getElementById('otpBtn');if(b){b.disabled=login.otp.length!==4}}
+function sendOTP(){if(login.phone.length<10){login.err='Enter a valid number';R();return}login.loading=true;login.err='';R();login.gen=String(1000+Math.floor(Math.random()*9000));setTimeout(()=>{login.loading=false;login.step='otp';R()},400)}
+function verifyOTP(){if(login.otp.length!==4)return;if(login.otp!==login.gen){login.err='Wrong code';R();return}login.loading=true;login.err='';R();setTimeout(()=>{let u=Object.values(db.u).find(x=>x.phone===login.phone);if(!u){u={id:uid(),phone:login.phone,name:null,lang:'en',on:true,bio:''};db.u[u.id]=u}S.user=u;login.loading=false;S.screen=u.name?'main':'onboarding';if(u.name)S.tab='chats';else onboard={step:'name',name:'',lang:'en'};R()},400)}
+
+// ============ ONBOARDING ============
+function rOnboard(){
+  return`<div class=&quot;screen&quot;>
+    <div class=&quot;hdr&quot;><h1>${onboard.step==='name'?'What\'s your name?':'Choose language'}</h1></div>
+    <div style=&quot;flex:1;padding:20px 24px;overflow-y:auto&quot;>
+      <div style=&quot;display:flex;gap:6px;margin-bottom:24px&quot;><div style=&quot;flex:1;height:3px;border-radius:2px;background:var(--x)&quot;></div><div style=&quot;flex:1;height:3px;border-radius:2px;background:${onboard.step==='lang'?'var(--x)':'var(--bg4)'}&quot;></div></div>
+      ${onboard.step==='name'?rObN():rObL()}
+    </div>
+  </div>`;
+}
+function rObN(){
+  const v=onboard.name.trim().length>=2;
+  return`<p style=&quot;color:var(--tx2);font-size:14px;margin-bottom:20px&quot;>This is how others see you</p>
+    <input class=&quot;inp inp-dark&quot; type=&quot;text&quot; placeholder=&quot;Your name&quot; value=&quot;${esc(onboard.name)}&quot; oninput=&quot;onboard.name=this.value;const b=document.getElementById('nB');if(b)b.disabled=this.value.trim().length<2&quot; onkeydown=&quot;if(event.key==='Enter'&amp;&amp;onboard.name.trim().length>=2){onboard.step='lang';R()}&quot; maxlength=&quot;30&quot; data-af style=&quot;font-size:17px&quot;>
+    <div style=&quot;height:24px&quot;></div>
+    <button id=&quot;nB&quot; class=&quot;btn btn-x&quot; onclick=&quot;if(onboard.name.trim().length>=2){onboard.step='lang';R()}&quot; ${!v?'disabled':''}>Next</button>`;
+}
+function rObL(){
+  return`<p style=&quot;color:var(--tx2);font-size:14px;margin-bottom:16px&quot;>Messages will be translated to this language</p>
+    <div style=&quot;display:flex;flex-direction:column;gap:8px;margin-bottom:24px&quot;>
+      ${LANGS.map(l=>`<button class=&quot;lc ${onboard.lang===l.c?'sel':''}&quot; onclick=&quot;onboard.lang='${l.c}';R()&quot;>
+        <span style=&quot;font-size:18px&quot;>${l.f}</span><div style=&quot;flex:1&quot;><span style=&quot;font-weight:700&quot;>${l.n}</span> <span style=&quot;color:var(--tx3);font-size:13px&quot;>${l.v}</span></div>
+        ${onboard.lang===l.c?ic.chk:ic.unchk}
+      </button>`).join('')}
+    </div>
+    <button class=&quot;btn btn-x&quot; onclick=&quot;S.user.name=onboard.name.trim();S.user.lang=onboard.lang;db.u[S.user.id]=S.user;S.screen='main';S.tab='chats';R()&quot;>Get started</button>
+    <button class=&quot;btn btn-dark&quot; style=&quot;margin-top:8px&quot; onclick=&quot;onboard.step='name';R()&quot;>Back</button>`;
+}
+
+// ============ MAIN ============
+function rMain(){
+  let c='';
+  if(S.tab==='chats')c=rChatList();
+  else if(S.tab==='contacts')c=rContacts();
+  else if(S.tab==='stories')c=rStories();
+  else if(S.tab==='profile')c=rProfile();
+  return`<div class=&quot;screen&quot;>${c}${rTabs()}</div>`;
+}
+function rTabs(){
+  return`<div class=&quot;tb&quot;>${[{id:'chats',i:ic.chat,l:'Messages'},{id:'contacts',i:ic.users,l:'People'},{id:'stories',i:ic.story,l:'Stories'},{id:'profile',i:ic.users,l:'Profile'}].map(t=>`<button class=&quot;ti ${S.tab===t.id?'on':''}&quot; onclick=&quot;S.tab='${t.id}';searchQ='';R()&quot;>${t.i}<span>${t.l}</span></button>`).join('')}</div>`;
+}
+
+// Chat List
+function rChatList(){
+  const cv=getConvos();
+  return`<div class=&quot;hdr&quot; style=&quot;justify-content:space-between&quot;>
+      <h1>Messages</h1>
+      <button class=&quot;hdr-b&quot; onclick=&quot;S.tab='contacts';R()&quot; style=&quot;margin:-4px&quot;>${ic.compose}</button>
+    </div>
+    <div style=&quot;padding:4px 16px 8px&quot;><input class=&quot;inp inp-dark&quot; placeholder=&quot;Search Direct Messages&quot; value=&quot;${esc(searchQ)}&quot; oninput=&quot;searchQ=this.value;R()&quot; style=&quot;padding:10px 16px;font-size:14px&quot;></div>
+    <div style=&quot;flex:1;overflow-y:auto&quot;>
+      ${cv.length===0?`
+        <div style=&quot;text-align:center;padding:60px 32px&quot;>
+          <h2 style=&quot;font-size:28px;font-weight:800;margin-bottom:8px&quot;>Welcome to your inbox!</h2>
+          <p style=&quot;color:var(--tx3);font-size:15px;line-height:1.5;margin-bottom:24px&quot;>Drop a line, share posts and more with private conversations between you and others.</p>
+          <button class=&quot;btn btn-x&quot; onclick=&quot;S.tab='contacts';R()&quot; style=&quot;width:auto;padding:12px 28px;display:inline-block&quot;>Write a message</button>
+        </div>
+      `:cv.filter(c=>!searchQ||(c.u.name||'').toLowerCase().includes(searchQ.toLowerCase())).map(c=>`
+        <button class=&quot;li&quot; onclick='openChat(${JSON.stringify(c.u).replace(/'/g,&quot;&amp;#39;&quot;)})'>
+          <div style=&quot;position:relative&quot;><div class=&quot;av&quot;>${(c.u.name||'?')[0].toUpperCase()}</div>${c.u.on?'<div class=&quot;dot&quot;></div>':''}</div>
+          <div style=&quot;flex:1;min-width:0&quot;>
+            <div style=&quot;display:flex;justify-content:space-between;align-items:baseline&quot;>
+              <div style=&quot;display:flex;align-items:baseline;gap:4px;min-width:0;flex:1&quot;>
+                <span style=&quot;font-weight:700;font-size:15px;white-space:nowrap&quot;>${esc(c.u.name)}</span>
+                <span style=&quot;color:var(--tx3);font-size:13px;white-space:nowrap&quot;>@${esc((c.u.name||'').toLowerCase().replace(/\s/g,''))}</span>
+              </div>
+              <span style=&quot;font-size:13px;color:var(--tx3);flex-shrink:0;margin-left:8px&quot;>· ${fmtT(c.ts)}</span>
+            </div>
+            <div style=&quot;display:flex;justify-content:space-between;align-items:center;margin-top:2px&quot;>
+              <p style=&quot;font-size:14px;color:var(--tx2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;margin-right:8px&quot;>${esc(c.p)}</p>
+              ${c.ur?`<span style=&quot;min-width:18px;height:18px;border-radius:9999px;background:var(--x);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 6px&quot;>${c.ur}</span>`:''}
+            </div>
+          </div>
+        </button>`).join('')}
+    </div>`;
+}
+
+// Contacts
+function rContacts(){
+  const all=Object.values(db.u).filter(u=>u.id!==S.user?.id&amp;&amp;u.name);
+  const f=all.filter(u=>(u.name||'').toLowerCase().includes(searchQ.toLowerCase()));
+  return`<div class=&quot;hdr&quot;><button class=&quot;hdr-b&quot; onclick=&quot;S.tab='chats';R()&quot;>${ic.back}</button><h1 style=&quot;flex:1&quot;>New message</h1></div>
+    <div style=&quot;padding:4px 16px 8px&quot;><input class=&quot;inp inp-dark&quot; placeholder=&quot;Search people&quot; value=&quot;${esc(searchQ)}&quot; oninput=&quot;searchQ=this.value;R()&quot; data-af style=&quot;padding:10px 16px;font-size:14px&quot;></div>
+    <div style=&quot;flex:1;overflow-y:auto&quot;>
+      ${f.map(u=>`<button class=&quot;li&quot; onclick='openChat(${JSON.stringify(u).replace(/'/g,&quot;&amp;#39;&quot;)})'>
+        <div style=&quot;position:relative&quot;><div class=&quot;av&quot;>${(u.name||'?')[0].toUpperCase()}</div>${u.on?'<div class=&quot;dot&quot;></div>':''}</div>
+        <div style=&quot;flex:1&quot;>
+          <div style=&quot;font-weight:700;font-size:15px&quot;>${esc(u.name)}</div>
+          <div style=&quot;font-size:13px;color:var(--tx3);margin-top:1px&quot;>@${esc((u.name||'').toLowerCase().replace(/\s/g,''))} · ${LN[u.lang]||u.lang}</div>
+        </div>
+      </button>`).join('')}
+      ${f.length===0?`<div style=&quot;text-align:center;padding:40px;color:var(--tx3);font-size:14px&quot;>${searchQ?'No results for &quot;'+esc(searchQ)+'&quot;':'No people found'}</div>`:''}
+    </div>`;
+}
+function openChat(u){S.chatWith=u;S.showOrig={};S.typing=false;chatInp='';db.m.forEach(m=>{if(m.s===u.id&amp;&amp;m.r===S.user.id)m.st='read'});R();scrl()}
+
+// Stories
+function rStories(){
+  const other=stories.filter(s=>s.uid!==S.user?.id);
+  return`<div class=&quot;hdr&quot;><h1>Stories</h1></div>
+    <div style=&quot;flex:1;overflow-y:auto&quot;>
+      <button class=&quot;li&quot; onclick=&quot;addMyStory()&quot; style=&quot;border-bottom:none&quot;>
+        <div style=&quot;position:relative&quot;><div class=&quot;av&quot;>${(S.user?.name||'?')[0].toUpperCase()}</div>
+        <div style=&quot;position:absolute;bottom:-2px;right:-2px;width:16px;height:16px;border-radius:9999px;background:var(--x);border:2px solid var(--bg);display:flex;align-items:center;justify-content:center&quot;><svg width=&quot;8&quot; height=&quot;8&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;#fff&quot; stroke-width=&quot;3&quot; stroke-linecap=&quot;round&quot;><path d=&quot;M12 5v14M5 12h14&quot;/></svg></div></div>
+        <div><div style=&quot;font-weight:700;font-size:15px&quot;>Add to story</div><div style=&quot;font-size:13px;color:var(--tx3);margin-top:1px&quot;>Share what's on your mind</div></div>
+      </button>
+      <div class=&quot;sep&quot;></div>
+      ${other.length===0?`<div style=&quot;text-align:center;padding:40px;color:var(--tx3)&quot;>No stories yet</div>`:
+      other.map((s,i)=>{const u=db.u[s.uid];if(!u)return'';return`<button class=&quot;li&quot; onclick=&quot;openStory(${i})&quot;>
+        <div class=&quot;story-ring&quot;><div class=&quot;av&quot; style=&quot;border:2px solid var(--bg)&quot;>${(u.name||'?')[0].toUpperCase()}</div></div>
+        <div><div style=&quot;font-weight:700;font-size:15px&quot;>${esc(u.name)}</div><div style=&quot;font-size:13px;color:var(--tx3);margin-top:1px&quot;>${ago(s.items[s.items.length-1].ts)}</div></div>
+      </button>`}).join('')}
+    </div>`;
+}
+function addMyStory(){const t=prompt('Write your story:');if(!t?.trim())return;const bgs=['linear-gradient(135deg,#1D9BF0,#7856FF)','linear-gradient(135deg,#F4212E,#FF6B00)','linear-gradient(135deg,#00BA7C,#1D9BF0)','linear-gradient(135deg,#7856FF,#F4212E)','linear-gradient(135deg,#FF6B00,#FFD600)'];const bg=bgs[Math.floor(Math.random()*bgs.length)];const ex=stories.find(s=>s.uid===S.user.id);const st={id:uid(),text:t.trim(),bg,ts:Date.now()};if(ex)ex.items.push(st);else stories.unshift({uid:S.user.id,items:[st]});R()}
+function openStory(i){storyV={on:true,ui:i,si:0,prog:0,tmr:null};renderStoryV()}
+function renderStoryV(){
+  if(!storyV.on)return;const other=stories.filter(s=>s.uid!==S.user?.id);const sd=other[storyV.ui];if(!sd){closeStory();return}const st=sd.items[storyV.si];if(!st){closeStory();return}const u=db.u[sd.uid];
+  document.getElementById('app').innerHTML=`<div class=&quot;screen&quot; style=&quot;background:#000&quot;><div style=&quot;position:absolute;inset:0;display:flex;flex-direction:column;background:${st.bg}&quot;>
+    <div style=&quot;display:flex;gap:3px;padding:10px 12px 0;z-index:2&quot;>${sd.items.map((_,i)=>`<div style=&quot;flex:1;height:2px;border-radius:1px;background:rgba(255,255,255,.25);overflow:hidden&quot;><div style=&quot;height:100%;background:#fff;width:${i<storyV.si?100:i===storyV.si?storyV.prog:0}%;transition:width .1s linear&quot;></div></div>`).join('')}</div>
+    <div style=&quot;display:flex;align-items:center;gap:10px;padding:12px 16px;z-index:2&quot;><div class=&quot;av av-xs&quot; style=&quot;background:rgba(255,255,255,.2);color:#fff&quot;>${(u?.name||'?')[0].toUpperCase()}</div><div style=&quot;flex:1&quot;><div style=&quot;font-weight:800;font-size:14px;color:#fff&quot;>${esc(u?.name||'')}</div><div style=&quot;font-size:12px;color:rgba(255,255,255,.5)&quot;>${ago(st.ts)}</div></div><button class=&quot;hdr-b&quot; onclick=&quot;closeStory()&quot; style=&quot;color:#fff&quot;>${ic.x}</button></div>
+    <div style=&quot;flex:1;display:flex;align-items:center;justify-content:center;padding:40px;z-index:1&quot; onclick=&quot;tapStory(event)&quot;><p style=&quot;font-size:24px;font-weight:800;color:#fff;text-align:center;line-height:1.5;text-shadow:0 2px 8px rgba(0,0,0,.3)&quot;>${esc(st.text)}</p></div>
+  </div></div>`;
+  if(storyV.tmr)clearInterval(storyV.tmr);storyV.prog=0;
+  storyV.tmr=setInterval(()=>{storyV.prog+=2;if(storyV.prog>=100){storyV.si++;if(storyV.si>=sd.items.length){storyV.ui++;storyV.si=0;if(storyV.ui>=other.length){closeStory();return}}storyV.prog=0;renderStoryV();return}const bars=document.querySelectorAll('[style*=&quot;transition:width&quot;]');if(bars[storyV.si])bars[storyV.si].style.width=storyV.prog+'%'},100);
+}
+function tapStory(e){const r=e.currentTarget.getBoundingClientRect();const other=stories.filter(s=>s.uid!==S.user?.id);const sd=other[storyV.ui];if(!sd)return;if(e.clientX-r.left>r.width/2){storyV.si++;if(storyV.si>=sd.items.length){storyV.ui++;storyV.si=0;if(storyV.ui>=other.length){closeStory();return}}}else{if(storyV.si>0)storyV.si--}storyV.prog=0;renderStoryV()}
+function closeStory(){if(storyV.tmr)clearInterval(storyV.tmr);storyV={on:false,ui:0,si:0,prog:0,tmr:null};R()}
+
+// Call
+function startCall(type){if(!S.chatWith)return;call={on:true,type,user:S.chatWith,muted:false,speaker:false,sec:0,tmr:null};renderCall();setTimeout(()=>{call.tmr=setInterval(()=>{call.sec++;updCT()},1000);renderCall()},2000)}
+function renderCall(){
+  const u=call.user;if(!u)return;const c=call.tmr!==null;
+  document.getElementById('app').innerHTML=`<div class=&quot;screen&quot; style=&quot;background:#000&quot;>
+    <div style=&quot;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px&quot;>
+      <div class=&quot;av av-l&quot; style=&quot;width:96px;height:96px;font-size:36px;${!c?'animation:pulse 2s infinite':''}&quot;>${(u.name||'?')[0].toUpperCase()}</div>
+      <h2 style=&quot;font-size:22px;font-weight:800;margin-top:8px&quot;>${esc(u.name)}</h2>
+      <p style=&quot;color:var(--tx3);font-size:14px&quot;>@${esc((u.name||'').toLowerCase().replace(/\s/g,''))}</p>
+      <p id=&quot;cSt&quot; style=&quot;color:var(--tx2);font-size:16px;margin-top:4px;font-weight:600&quot;>${c?fmtS(call.sec):(call.type==='video'?'Video calling...':'Calling...')}</p>
+    </div>
+    <div style=&quot;padding:24px 40px 60px;display:flex;justify-content:center;gap:20px&quot;>
+      <button onclick=&quot;call.muted=!call.muted;renderCall()&quot; style=&quot;width:56px;height:56px;border-radius:9999px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;background:${call.muted?'var(--tx)':'var(--bg3)'};color:${call.muted?'#000':'var(--tx)'};transition:all .15s&quot;><div style=&quot;width:22px;height:22px&quot;>${call.muted?ic.micOff:ic.mic}</div></button>
+      <button onclick=&quot;call.speaker=!call.speaker;renderCall()&quot; style=&quot;width:56px;height:56px;border-radius:9999px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;background:${call.speaker?'var(--tx)':'var(--bg3)'};color:${call.speaker?'#000':'var(--tx)'};transition:all .15s&quot;><div style=&quot;width:22px;height:22px&quot;>${ic.speaker}</div></button>
+      <button onclick=&quot;endCall()&quot; style=&quot;width:56px;height:56px;border-radius:9999px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;background:var(--red);color:#fff&quot;><div style=&quot;width:22px;height:22px;transform:rotate(135deg)&quot;>${ic.phone}</div></button>
+    </div>
+  </div><style>@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(29,155,240,.3)}50%{box-shadow:0 0 0 20px rgba(29,155,240,0)}}</style>`;
+}
+function updCT(){const e=document.getElementById('cSt');if(e)e.textContent=fmtS(call.sec)}
+function endCall(){if(call.tmr)clearInterval(call.tmr);call={on:false,type:'audio',user:null,muted:false,speaker:false,sec:0,tmr:null};R();scrl()}
+
+// Profile
+function rProfile(){
+  const u=S.user,lo=LANGS.find(l=>l.c===u.lang);
+  const mc=db.m.filter(m=>m.s===u.id||m.r===u.id).length;
+  return`<div class=&quot;hdr&quot;><h1>Profile</h1></div>
+    <div style=&quot;flex:1;overflow-y:auto&quot;>
+      <div style=&quot;padding:24px;display:flex;flex-direction:column;align-items:center&quot;>
+        <div class=&quot;av av-l&quot; style=&quot;margin-bottom:12px&quot;>${(u.name||'?')[0].toUpperCase()}</div>
+        <h2 style=&quot;font-size:20px;font-weight:800&quot;>${esc(u.name)}</h2>
+        <p style=&quot;color:var(--tx3);font-size:14px;margin-top:2px&quot;>@${esc((u.name||'').toLowerCase().replace(/\s/g,''))}</p>
+        <p style=&quot;color:var(--tx2);font-size:14px;margin-top:12px&quot;>${mc} messages sent</p>
+      </div>
+      <div class=&quot;sep&quot;></div>
+      <div class=&quot;prof-item&quot; onclick=&quot;editName()&quot;><div><div style=&quot;font-size:14px;font-weight:700&quot;>Name</div><div style=&quot;font-size:14px;color:var(--tx3);margin-top:2px&quot;>${esc(u.name)}</div></div><div style=&quot;color:var(--tx3);width:18px;height:18px&quot;>${ic.chevR}</div></div>
+      <div class=&quot;prof-item&quot; onclick=&quot;editLang()&quot;><div><div style=&quot;font-size:14px;font-weight:700&quot;>Language</div><div style=&quot;font-size:14px;color:var(--tx3);margin-top:2px&quot;>${lo?lo.f+' '+lo.n:u.lang}</div></div><div style=&quot;color:var(--tx3);width:18px;height:18px&quot;>${ic.chevR}</div></div>
+      <div class=&quot;prof-item&quot;><div><div style=&quot;font-size:14px;font-weight:700&quot;>Phone</div><div style=&quot;font-size:14px;color:var(--tx3);margin-top:2px&quot;>+${esc(u.phone)}</div></div></div>
+      <div class=&quot;sep&quot; style=&quot;margin:8px 0&quot;></div>
+      <div class=&quot;prof-item&quot; onclick=&quot;doLogout()&quot; style=&quot;color:var(--red)&quot;><div style=&quot;display:flex;align-items:center;gap:12px&quot;><div style=&quot;width:20px;height:20px&quot;>${ic.logout}</div><span style=&quot;font-weight:700&quot;>Log out</span></div></div>
+      <div style=&quot;text-align:center;padding:24px;color:var(--tx3);font-size:12px&quot;>Weench v1.0</div>
+    </div>`;
+}
+function editName(){const n=prompt('Name:',S.user.name);if(n?.trim().length>=2){S.user.name=n.trim();db.u[S.user.id]=S.user;R()}}
+function editLang(){const c=prompt('Language ('+LANGS.map(l=>l.n).join(', ')+'):',LN[S.user.lang]);if(c){const m=LANGS.find(l=>l.n.toLowerCase()===c.toLowerCase());if(m){S.user.lang=m.c;db.u[S.user.id]=S.user;R()}}}
+function doLogout(){if(!confirm('Log out?'))return;S={user:null,screen:'login',tab:'chats',chatWith:null,showOrig:{},typing:false};login={step:'phone',phone:'',otp:'',gen:'',err:'',loading:false};R()}
+
+// ============ CHAT ============
+function rChat(){
+  const o=S.chatWith,ms=getMsgs(),ml=S.user.lang,tl=o.lang,cl=ml!==tl;
+  return`<div class=&quot;screen&quot;>
+    <div class=&quot;hdr&quot; style=&quot;gap:12px&quot;>
+      <button class=&quot;hdr-b&quot; onclick=&quot;S.chatWith=null;chatInp='';R()&quot;>${ic.back}</button>
+      <div class=&quot;av av-s&quot;>${(o.name||'?')[0].toUpperCase()}</div>
+      <div style=&quot;flex:1;min-width:0&quot;>
+        <div style=&quot;font-weight:800;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis&quot;>${esc(o.name)}</div>
+        <div style=&quot;font-size:12px;color:var(--tx3)&quot;>${o.on?'Active now':'Offline'}</div>
+      </div>
+      <button class=&quot;hdr-b&quot; onclick=&quot;startCall('audio')&quot;>${ic.phone}</button>
+      <button class=&quot;hdr-b&quot; onclick=&quot;startCall('video')&quot;>${ic.video}</button>
+    </div>
+    ${cl?`<div class=&quot;br&quot;>${LN[ml]} ⟷ ${LN[tl]} · auto-translating</div>`:''}
+    <div id=&quot;mL&quot; style=&quot;flex:1;overflow-y:auto;padding:16px 0;display:flex;flex-direction:column;gap:3px;background:var(--bg)&quot;>
+      ${ms.length===0?`<div style=&quot;text-align:center;padding:60px 20px&quot;>
+        <div class=&quot;av av-l&quot; style=&quot;margin:0 auto 16px&quot;>${(o.name||'?')[0].toUpperCase()}</div>
+        <div style=&quot;font-weight:800;font-size:16px;margin-bottom:4px&quot;>${esc(o.name)}</div>
+        <div style=&quot;color:var(--tx3);font-size:13px;margin-bottom:4px&quot;>@${esc((o.name||'').toLowerCase().replace(/\s/g,''))}</div>
+        ${cl?`<div style=&quot;color:var(--tx3);font-size:13px;margin-top:12px&quot;>You type ${LN[ml]}, they read ${LN[tl]}</div>`:''}</div>`:''}
+      ${ms.map(m=>rMsg(m)).join('')}
+      ${S.typing?'<div class=&quot;mr&quot;><div class=&quot;mb mb-o&quot; style=&quot;padding:14px 18px&quot;><div class=&quot;td&quot;><span></span><span></span><span></span></div></div></div>':''}
+      <div id=&quot;cE&quot;></div>
+    </div>
+    <div class=&quot;ib&quot;><input id=&quot;cI&quot; placeholder=&quot;Start a new message&quot; value=&quot;${esc(chatInp)}&quot; oninput=&quot;chatInp=this.value;updSB()&quot; onkeydown=&quot;if(event.key==='Enter'&amp;&amp;!event.shiftKey){event.preventDefault();doSend()}&quot; data-af>
+    <button class=&quot;sb&quot; id=&quot;sB&quot; onclick=&quot;doSend()&quot; ${!chatInp.trim()||chatSending?'disabled':''}>${ic.send}</button></div>
+  </div>`;
+}
+function rMsg(m){
+  const so=S.showOrig[m.id],ht=m.ot!==m.tt&amp;&amp;m.sl!==m.rl;
+  let dt=m.mine?m.ot:(so?m.ot:(m.tt||m.ot));
+  return`<div class=&quot;mr&quot; style=&quot;justify-content:${m.mine?'flex-end':'flex-start'}&quot;>
+    <div class=&quot;mb ${m.mine?'mb-m':'mb-o'}&quot; ${!m.mine&amp;&amp;ht?`onclick=&quot;togO('${m.id}')&quot; style=&quot;cursor:pointer&quot;`:''}>
+      <div>${esc(dt)}</div>
+      <div class=&quot;mb-t&quot;>
+        ${!m.mine&amp;&amp;ht?`<span style=&quot;cursor:pointer;text-decoration:underline;opacity:.7&quot;>${so?'translated':'original'}</span>`:''}
+        <span>${fmtT(m.ts)}</span>${m.mine?'<span style=&quot;opacity:.5&quot;>✓✓</span>':''}
+      </div>
+    </div>
+  </div>`;
+}
+function togO(id){S.showOrig[id]=!S.showOrig[id];R();scrl()}
+function updSB(){const b=document.getElementById('sB');if(!b)return;const h=chatInp.trim().length>0;b.disabled=!h;b.style.background=h?'var(--x)':'var(--bg3)';b.style.color=h?'#fff':'var(--tx3)'}
+function scrl(){setTimeout(()=>{const e=document.getElementById('cE');if(e)e.scrollIntoView({behavior:'smooth'})},60)}
+
+async function doSend(){
+  const t=chatInp.trim();if(!t||chatSending)return;chatSending=true;
+  const ml=S.user.lang,tl=S.chatWith.lang;
+  let v=t;if(ml!==tl){try{v=await tr(t,ml,tl)}catch(e){}}
+  db.m.push({id:uid(),s:S.user.id,r:S.chatWith.id,ot:t,tt:v,sl:ml,rl:tl,ts:new Date().toISOString(),st:'delivered'});
+  chatInp='';chatSending=false;R();scrl();
+  setTimeout(()=>{const i=document.getElementById('cI');if(i)i.focus()},50);
+  if(S.chatWith.id.startsWith('d')){const rl=S.chatWith.lang;
+    setTimeout(async()=>{S.typing=true;R();scrl();await new Promise(r=>setTimeout(r,600+Math.random()*1000));
+    const rps=autoR[rl]||autoR.en;const rt=rps[Math.floor(Math.random()*rps.length)];
+    let rv=rt;if(rl!==ml){try{rv=await tr(rt,rl,ml)}catch(e){}}
+    db.m.push({id:uid(),s:S.chatWith.id,r:S.user.id,ot:rt,tt:rv,sl:rl,rl:ml,ts:new Date().toISOString(),st:'read'});
+    S.typing=false;R();scrl()},800+Math.random()*1500)}
+}
+
+R();
+</script>
+</body>
+</html>
+"></iframe></div><div class="home"></div></div>
+<div class="label">Interactive Preview</div>
+</div>
+</body>
+</html>
