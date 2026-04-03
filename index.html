@@ -374,7 +374,6 @@ function rMain(){
   let c='';
   if(S.tab==='chats')c=rChatList();
   else if(S.tab==='contacts')c=rPeopleFeed();
-  else if(S.tab==='stories')c=rStories();
   else if(S.tab==='profile')c=rProfile();
   return`&lt;div class=&quot;screen screen-scale&quot;>${c}${rTabs()}&lt;/div>`;
 }
@@ -382,7 +381,6 @@ function rTabs(){
   const tabs=[
     {id:'chats',i:ic.chat,fi:ic.chatFill,l:'Messages'},
     {id:'contacts',i:ic.users,fi:ic.usersFill,l:'People'},
-    {id:'stories',i:ic.story,fi:ic.storyFill,l:'Stories'},
     {id:'profile',i:ic.users,fi:ic.usersFill,l:'Profile'}
   ];
   return`&lt;div class=&quot;tb&quot;>${tabs.map(t=>`&lt;button class=&quot;ti ${S.tab===t.id?'on':''}&quot; onclick=&quot;S.tab='${t.id}';searchQ='';R()&quot;>${S.tab===t.id?t.fi:t.i}&lt;span>${t.l}&lt;/span>&lt;/button>`).join('')}&lt;/div>`;
