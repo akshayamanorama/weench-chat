@@ -178,19 +178,38 @@ html,body{height:100%;width:100%;overflow:hidden;font-family:'SF Pro Display','S
 .story-av-add{background:var(--card);box-shadow:var(--shadow);position:relative}
 .story-av-add .av{border-color:var(--card)}
 
-/* Post card */
-.post-card{background:var(--card);border-radius:20px;box-shadow:var(--shadow);margin:0 16px 14px;overflow:hidden;animation:fadeIn .4s both}
-.post-head{display:flex;align-items:center;gap:12px;padding:14px 16px 10px}
-.post-head .av{width:40px;height:40px;font-size:16px;border-radius:20px}
-.post-name{font-weight:600;font-size:14px;color:var(--tx)}
-.post-time{font-size:12px;color:var(--tx3);font-weight:500}
-.post-body{padding:0 16px;font-size:14px;line-height:1.55;color:var(--tx);margin-bottom:12px}
-.post-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--bg3);border-radius:12px;margin:0 16px 12px;width:calc(100% - 32px)}
-.post-actions{display:flex;align-items:center;gap:4px;padding:8px 12px 14px;border-top:.5px solid var(--sep)}
-.post-action{display:flex;align-items:center;gap:5px;padding:6px 10px;border-radius:20px;background:none;border:none;font-family:inherit;font-size:13px;font-weight:500;color:var(--tx2);cursor:pointer;transition:all .15s;-webkit-tap-highlight-color:transparent}
+/* Profile page on People tab */
+.pp-stats{display:flex;justify-content:center;gap:0;padding:0 16px}
+.pp-stat{flex:1;text-align:center;padding:12px 0}
+.pp-stat strong{font-size:18px;font-weight:800;color:var(--tx);letter-spacing:-.02em}
+.pp-stat span{display:block;font-size:12px;color:var(--tx3);font-weight:500;margin-top:2px}
+
+/* Content toggle tabs */
+.ct-tabs{display:flex;background:var(--card);border-radius:14px;margin:0 20px 12px;box-shadow:var(--shadow);overflow:hidden}
+.ct-tab{flex:1;display:flex;align-items:center;justify-content:center;padding:12px 0;background:none;border:none;cursor:pointer;font-family:inherit;color:var(--tx3);transition:all .2s;-webkit-tap-highlight-color:transparent;border-radius:14px}
+.ct-tab svg{width:22px;height:22px}
+.ct-tab.on{background:var(--bg3);color:var(--tx);box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.ct-tab:active{transform:scale(.92)}
+
+/* Content grid */
+.ct-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:0 2px}
+.ct-cell{aspect-ratio:1;border-radius:4px;overflow:hidden;cursor:pointer;position:relative;transition:transform .15s;display:flex;align-items:center;justify-content:center}
+.ct-cell:active{transform:scale(.96)}
+.ct-cell-play{position:absolute;top:6px;right:6px;color:rgba(255,255,255,.9)}
+.ct-cell-play svg{width:16px;height:16px}
+
+/* Post card (for text view) */
+.post-card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);margin:0 16px 12px;overflow:hidden;animation:fadeIn .4s both}
+.post-head{display:flex;align-items:center;gap:10px;padding:12px 14px 8px}
+.post-head .av{width:36px;height:36px;font-size:14px;border-radius:18px}
+.post-name{font-weight:600;font-size:13px;color:var(--tx)}
+.post-time{font-size:11px;color:var(--tx3);font-weight:500}
+.post-body{padding:0 14px;font-size:14px;line-height:1.5;color:var(--tx);margin-bottom:10px}
+.post-actions{display:flex;align-items:center;gap:4px;padding:6px 10px 12px;border-top:.5px solid var(--sep)}
+.post-action{display:flex;align-items:center;gap:5px;padding:5px 8px;border-radius:20px;background:none;border:none;font-family:inherit;font-size:12px;font-weight:500;color:var(--tx2);cursor:pointer;transition:all .15s;-webkit-tap-highlight-color:transparent}
 .post-action:active{background:rgba(0,0,0,.04);transform:scale(.95)}
 .post-action.liked{color:var(--red)}
-.post-action svg{width:18px;height:18px}
+.post-action svg{width:16px;height:16px}
 .post-share{margin-left:auto}
 
 ::-webkit-scrollbar{display:none}
@@ -227,7 +246,7 @@ const db={u:{},m:[]};
 
 const autoR={hi:[&quot;\u0928\u092E\u0938\u094D\u0924\u0947!&quot;,&quot;\u0939\u093E\u0901 \u092C\u0924\u093E\u0913&quot;,&quot;\u0905\u091A\u094D\u091B\u093E&quot;,&quot;\u0920\u0940\u0915 \u0939\u0948&quot;,&quot;\u092C\u0939\u0941\u0924 \u0905\u091A\u094D\u091B\u093E!&quot;],ta:[&quot;\u0BB5\u0BA3\u0B95\u0BCD\u0B95\u0BAE\u0BCD!&quot;,&quot;\u0B86\u0BAE\u0BBE&quot;,&quot;\u0BA8\u0BB2\u0BCD\u0BB2\u0BA4\u0BC1&quot;,&quot;\u0B9A\u0BB0\u0BBF&quot;,&quot;\u0BA8\u0BA9\u0BCD\u0BB1\u0BC1!&quot;],te:[&quot;\u0C39\u0C32\u0C4B!&quot;,&quot;\u0C1A\u0C46\u0C2A\u0C4D\u0C2A\u0C02\u0C21\u0C3F&quot;,&quot;\u0C2E\u0C02\u0C1A\u0C3F\u0C26\u0C3F&quot;,&quot;\u0C38\u0C30\u0C47&quot;,&quot;\u0C2C\u0C3E\u0C17\u0C41\u0C02\u0C26\u0C3F!&quot;],kn:[&quot;\u0CA8\u0CAE\u0CB8\u0CCD\u0C95\u0CBE\u0CB0!&quot;,&quot;\u0CB9\u0CCC\u0CA6\u0CC1&quot;,&quot;\u0C92\u0CB3\u0CCD\u0CB3\u0CC6\u0CAF\u0CA6\u0CC1&quot;,&quot;\u0CB8\u0CB0\u0CBF&quot;,&quot;\u0C9A\u0CC6\u0CA8\u0CCD\u0CA8\u0CBE\u0C97\u0CBF\u0CA6\u0CC6!&quot;],mr:[&quot;\u0928\u092E\u0938\u094D\u0915\u093E\u0930!&quot;,&quot;\u0939\u094B&quot;,&quot;\u091B\u093E\u0928&quot;,&quot;\u0920\u0940\u0915 \u0906\u0939\u0947&quot;,&quot;\u0916\u0942\u092A \u091B\u093E\u0928!&quot;],en:[&quot;Hey!&quot;,&quot;Sure&quot;,&quot;Great&quot;,&quot;Okay&quot;,&quot;Nice!&quot;]};
 
-let S={user:null,screen:'login',tab:'chats',chatWith:null,showOrig:{},typing:false,picker:false};
+let S={user:null,screen:'login',tab:'chats',chatWith:null,showOrig:{},typing:false,picker:false,pTab:'image'};
 let login={step:'phone',phone:'',otp:'',gen:'',err:'',loading:false};
 let onboard={step:'name',name:'',lang:'en'};
 let chatInp='',chatSending=false,searchQ='';
@@ -281,15 +300,22 @@ const ic={
   share:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;>&lt;path d=&quot;M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8&quot;/>&lt;polyline points=&quot;16 6 12 2 8 6&quot;/>&lt;line x1=&quot;12&quot; y1=&quot;2&quot; x2=&quot;12&quot; y2=&quot;15&quot;/>&lt;/svg>',
   bell:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;>&lt;path d=&quot;M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9&quot;/>&lt;path d=&quot;M13.73 21a2 2 0 01-3.46 0&quot;/>&lt;/svg>',
   search:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;>&lt;circle cx=&quot;11&quot; cy=&quot;11&quot; r=&quot;8&quot;/>&lt;line x1=&quot;21&quot; y1=&quot;21&quot; x2=&quot;16.65&quot; y2=&quot;16.65&quot;/>&lt;/svg>',
+  grid:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;>&lt;rect x=&quot;3&quot; y=&quot;3&quot; width=&quot;7&quot; height=&quot;7&quot; rx=&quot;1.5&quot;/>&lt;rect x=&quot;14&quot; y=&quot;3&quot; width=&quot;7&quot; height=&quot;7&quot; rx=&quot;1.5&quot;/>&lt;rect x=&quot;3&quot; y=&quot;14&quot; width=&quot;7&quot; height=&quot;7&quot; rx=&quot;1.5&quot;/>&lt;rect x=&quot;14&quot; y=&quot;14&quot; width=&quot;7&quot; height=&quot;7&quot; rx=&quot;1.5&quot;/>&lt;/svg>',
+  play:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot;>&lt;rect x=&quot;2&quot; y=&quot;3&quot; width=&quot;20&quot; height=&quot;18&quot; rx=&quot;3&quot;/>&lt;polygon points=&quot;10 8 16 12 10 16&quot; fill=&quot;currentColor&quot; stroke=&quot;none&quot;/>&lt;/svg>',
+  textIcon:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot; stroke-linecap=&quot;round&quot;>&lt;path d=&quot;M4 7V4h16v3&quot;/>&lt;line x1=&quot;12&quot; y1=&quot;4&quot; x2=&quot;12&quot; y2=&quot;20&quot;/>&lt;path d=&quot;M8 20h8&quot;/>&lt;/svg>',
 };
 
 // ============ POSTS DATA ============
 const posts=[
-  {id:'p1',uid:'d1',text:'Just tried translating a full conversation in Hindi with my English-speaking friend. Weench makes it feel so natural! \uD83C\uDF1F',ts:Date.now()-1200000,likes:24,comments:5,liked:false},
-  {id:'p2',uid:'d2',text:'Good morning from Chennai! The weather is absolutely beautiful today. Perfect day for filter coffee and coding \u2615\uD83D\uDCBB',bg:'linear-gradient(135deg,#FF9500,#FFCC00)',ts:Date.now()-3600000,likes:42,comments:8,liked:true},
-  {id:'p3',uid:'d4',text:'Just discovered you can tap &quot;original&quot; on any message to see what someone actually typed. Mind blown! \uD83E\uDD2F',ts:Date.now()-7200000,likes:18,comments:3,liked:false},
-  {id:'p4',uid:'d3',text:'Working on a new project. Building something exciting with multilingual support. Stay tuned! \uD83D\uDE80',bg:'linear-gradient(135deg,#34C759,#007AFF)',ts:Date.now()-14400000,likes:31,comments:12,liked:false},
-  {id:'p5',uid:'d5',text:'Marathi to English translation is so smooth on Weench. Finally no more awkward Google Translate screenshots \uD83D\uDE02',ts:Date.now()-28800000,likes:56,comments:15,liked:true},
+  {id:'p1',uid:'d1',type:'image',text:'Just tried translating a full conversation in Hindi with my English-speaking friend. Weench makes it feel so natural! \uD83C\uDF1F',bg:'linear-gradient(135deg,#667eea,#764ba2)',ts:Date.now()-1200000,likes:24,comments:5,liked:false},
+  {id:'p2',uid:'d2',type:'image',text:'Good morning from Chennai! The weather is absolutely beautiful today. Perfect day for filter coffee and coding \u2615\uD83D\uDCBB',bg:'linear-gradient(135deg,#FF9500,#FFCC00)',ts:Date.now()-3600000,likes:42,comments:8,liked:true},
+  {id:'p3',uid:'d4',type:'text',text:'Just discovered you can tap &quot;original&quot; on any message to see what someone actually typed. Mind blown! \uD83E\uDD2F',ts:Date.now()-7200000,likes:18,comments:3,liked:false},
+  {id:'p4',uid:'d3',type:'image',text:'Working on a new project. Building something exciting with multilingual support. Stay tuned! \uD83D\uDE80',bg:'linear-gradient(135deg,#34C759,#007AFF)',ts:Date.now()-14400000,likes:31,comments:12,liked:false},
+  {id:'p5',uid:'d5',type:'text',text:'Marathi to English translation is so smooth on Weench. Finally no more awkward Google Translate screenshots \uD83D\uDE02',ts:Date.now()-28800000,likes:56,comments:15,liked:true},
+  {id:'p6',uid:'d1',type:'video',text:'Check out this quick tutorial on setting up Weench for your family \uD83C\uDFA5',bg:'linear-gradient(135deg,#FF3B30,#FF9500)',ts:Date.now()-36000000,likes:89,comments:23,liked:false},
+  {id:'p7',uid:'d2',type:'image',text:'Our team just crossed 1000 translations today! \uD83C\uDF89',bg:'linear-gradient(135deg,#AF52DE,#FF2D55)',ts:Date.now()-43200000,likes:112,comments:34,liked:true},
+  {id:'p8',uid:'d3',type:'video',text:'Live demo: Real-time Telugu to English translation in action \u26A1',bg:'linear-gradient(135deg,#007AFF,#5856D6)',ts:Date.now()-50400000,likes:67,comments:19,liked:false},
+  {id:'p9',uid:'d4',type:'text',text:'The beauty of language is that every translation carries a piece of the original soul. Love how Weench preserves that \u2764\uFE0F',ts:Date.now()-57600000,likes:45,comments:7,liked:false},
 ];
 
 function R(){
@@ -437,67 +463,83 @@ function rPicker(){
 }
 
 function rPeopleFeed(){
-  const all=Object.values(db.u).filter(u=>u.id!==S.user?.id&amp;&amp;u.name);
-  const storyUsers=stories.filter(s=>s.uid!==S.user?.id).map(s=>({s,u:db.u[s.uid]})).filter(x=>x.u);
-  const otherStories=stories.filter(s=>s.uid!==S.user?.id);
-  return`&lt;div style=&quot;padding:0 20px&quot;>
-      &lt;div style=&quot;display:flex;justify-content:space-between;align-items:center;margin-bottom:12px&quot;>
-        &lt;h1 style=&quot;font-size:32px;font-weight:800;letter-spacing:-.03em&quot;>People&lt;/h1>
-        &lt;div style=&quot;display:flex;gap:6px&quot;>
-          &lt;button class=&quot;hdr-b&quot; style=&quot;width:38px;height:38px;background:var(--card);border-radius:19px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center&quot;>${ic.bell}&lt;/button>
-          &lt;button class=&quot;hdr-b&quot; style=&quot;width:38px;height:38px;background:var(--card);border-radius:19px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center&quot;>${ic.search}&lt;/button>
+  const u=S.user;if(!u)return'';
+  const all=Object.values(db.u).filter(x=>x.id!==u.id&amp;&amp;x.name);
+  const storyUsers=stories.filter(s=>s.uid!==u.id).map(s=>({s,u:db.u[s.uid]})).filter(x=>x.u);
+  const mc=db.m.filter(m=>m.s===u.id).length;
+  const filtered=posts.filter(p=>S.pTab==='image'?p.type==='image':S.pTab==='video'?p.type==='video':p.type==='text');
+  return`&lt;div style=&quot;flex:1;overflow-y:auto&quot;>
+    &lt;!-- Profile header --&gt;
+    &lt;div style=&quot;display:flex;align-items:center;gap:16px;padding:8px 20px 12px&quot;>
+      &lt;div style=&quot;position:relative;flex-shrink:0&quot;>
+        &lt;div style=&quot;width:80px;height:80px;border-radius:40px;background:${avGrad(u.name)};display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.15)&quot;>${(u.name||'?')[0].toUpperCase()}&lt;/div>
+      &lt;/div>
+      &lt;div style=&quot;flex:1;min-width:0&quot;>
+        &lt;h1 style=&quot;font-size:22px;font-weight:800;letter-spacing:-.02em&quot;>${esc(u.name)}&lt;/h1>
+        &lt;p style=&quot;font-size:13px;color:var(--tx3);font-weight:500;margin-top:2px&quot;>@${esc((u.name||'').toLowerCase().replace(/\s/g,''))}&lt;/p>
+        &lt;p style=&quot;font-size:12px;color:var(--tx2);margin-top:6px;line-height:1.4&quot;>Multilingual communicator on Weench \u2728&lt;/p>
+        &lt;div style=&quot;display:flex;gap:6px;margin-top:8px;flex-wrap:wrap&quot;>
+          &lt;span style=&quot;font-size:11px;padding:4px 10px;border-radius:20px;background:var(--bg3);color:var(--tx2);font-weight:500&quot;>\uD83C\uDDF3 ${LN[u.lang]||u.lang}&lt;/span>
+          &lt;span style=&quot;font-size:11px;padding:4px 10px;border-radius:20px;background:var(--bg3);color:var(--tx2);font-weight:500&quot;>\uD83D\uDCAC chat&lt;/span>
         &lt;/div>
       &lt;/div>
     &lt;/div>
-    &lt;div class=&quot;story-row&quot;>
-      &lt;div class=&quot;story-item&quot; onclick=&quot;addMyStory()&quot;>
-        &lt;div class=&quot;story-av story-av-add&quot;>
-          ${avHTML(S.user?.name)}
-          &lt;div style=&quot;position:absolute;bottom:0;right:0;width:20px;height:20px;border-radius:10px;background:var(--blue);border:2.5px solid var(--card);display:flex;align-items:center;justify-content:center;z-index:2&quot;>${ic.plus}&lt;/div>
-        &lt;/div>
-        &lt;span>You&lt;/span>
-      &lt;/div>
+
+    &lt;!-- Stats row --&gt;
+    &lt;div class=&quot;pp-stats&quot;>
+      &lt;div class=&quot;pp-stat&quot;>&lt;strong>${mc||posts.length}&lt;/strong>&lt;span>Posts&lt;/span>&lt;/div>
+      &lt;div class=&quot;pp-stat&quot;>&lt;strong>${all.length * 214 + 12}&lt;/strong>&lt;span>Followers&lt;/span>&lt;/div>
+      &lt;div class=&quot;pp-stat&quot;>&lt;strong>${all.length * 142}&lt;/strong>&lt;span>Following&lt;/span>&lt;/div>
+    &lt;/div>
+
+    &lt;!-- Story highlights --&gt;
+    &lt;div class=&quot;story-row&quot; style=&quot;padding-top:8px&quot;>
       ${storyUsers.map((x,i)=>`&lt;div class=&quot;story-item&quot; onclick=&quot;openStory(${i})&quot;>
         &lt;div class=&quot;story-av&quot;>${avHTML(x.u.name)}&lt;/div>
         &lt;span>${esc(x.u.name)}&lt;/span>
       &lt;/div>`).join('')}
-      ${all.filter(u=>!storyUsers.find(x=>x.u.id===u.id)).map(u=>`&lt;div class=&quot;story-item&quot; onclick='openChat(${JSON.stringify(u).replace(/&amp;#39;/g,&quot;&amp;#39;&quot;).replace(/'/g,&quot;&amp;#39;&quot;)})'>
-        &lt;div style=&quot;width:60px;height:60px;border-radius:30px;padding:2.5px;background:var(--bg4);display:flex;align-items:center;justify-content:center&quot;>
-          ${avHTML(u.name)}
+      &lt;div class=&quot;story-item&quot; onclick=&quot;addMyStory()&quot;>
+        &lt;div class=&quot;story-av&quot; style=&quot;background:none;border:2px dashed var(--tx3)&quot;>
+          &lt;div style=&quot;width:53px;height:53px;border-radius:27px;display:flex;align-items:center;justify-content:center;color:var(--tx3);font-size:24px;font-weight:300&quot;>+&lt;/div>
         &lt;/div>
-        &lt;span>${esc(u.name)}&lt;/span>
-      &lt;/div>`).join('')}
+        &lt;span>New&lt;/span>
+      &lt;/div>
     &lt;/div>
-    &lt;div style=&quot;height:.5px;background:var(--sep);margin:0 20px 14px&quot;>&lt;/div>
-    &lt;div style=&quot;flex:1;overflow-y:auto;padding-bottom:8px&quot;>
-      ${posts.map((p,i)=>{const u=db.u[p.uid];if(!u)return'';
-        return`&lt;div class=&quot;post-card&quot; style=&quot;animation-delay:${i*.06}s&quot;>
-          &lt;div class=&quot;post-head&quot;>
-            &lt;div style=&quot;position:relative&quot;>${avHTML(u.name)}&lt;/div>
-            &lt;div style=&quot;flex:1&quot;>
-              &lt;div class=&quot;post-name&quot;>${esc(u.name)}&lt;/div>
-              &lt;div class=&quot;post-time&quot;>${ago(p.ts)}&lt;/div>
-            &lt;/div>
-            &lt;button class=&quot;hdr-b&quot; style=&quot;padding:4px;color:var(--tx3)&quot;>${ic.more}&lt;/button>
-          &lt;/div>
-          ${p.bg?`&lt;div style=&quot;margin:0 16px 12px;padding:28px 20px;border-radius:16px;background:${p.bg}&quot;>&lt;p style=&quot;font-size:15px;font-weight:600;color:#fff;line-height:1.5;text-shadow:0 1px 4px rgba(0,0,0,.15)&quot;>${esc(p.text)}&lt;/p>&lt;/div>`
-          :`&lt;div class=&quot;post-body&quot;>${esc(p.text)}&lt;/div>`}
-          &lt;div class=&quot;post-actions&quot;>
-            &lt;button class=&quot;post-action ${p.liked?'liked':''}&quot; onclick=&quot;toggleLike('${p.id}')&quot;>
-              ${p.liked?ic.heartFill:ic.heart}
-              &lt;span>${p.likes}&lt;/span>
-            &lt;/button>
-            &lt;button class=&quot;post-action&quot;>
-              ${ic.comment}
-              &lt;span>${p.comments}&lt;/span>
-            &lt;/button>
-            &lt;button class=&quot;post-action post-share&quot;>
-              ${ic.share}
-              &lt;span>Share&lt;/span>
-            &lt;/button>
-          &lt;/div>
-        &lt;/div>`}).join('')}
-    &lt;/div>`;
+
+    &lt;div style=&quot;height:.5px;background:var(--sep);margin:4px 20px 12px&quot;>&lt;/div>
+
+    &lt;!-- 3 toggle tabs: Image / Video / Text --&gt;
+    &lt;div class=&quot;ct-tabs&quot;>
+      &lt;button class=&quot;ct-tab ${S.pTab==='image'?'on':''}&quot; onclick=&quot;S.pTab='image';R()&quot;>${ic.grid}&lt;/button>
+      &lt;button class=&quot;ct-tab ${S.pTab==='video'?'on':''}&quot; onclick=&quot;S.pTab='video';R()&quot;>${ic.play}&lt;/button>
+      &lt;button class=&quot;ct-tab ${S.pTab==='text'?'on':''}&quot; onclick=&quot;S.pTab='text';R()&quot;>${ic.textIcon}&lt;/button>
+    &lt;/div>
+
+    &lt;!-- Content --&gt;
+    ${S.pTab==='text'?`&lt;div style=&quot;padding-bottom:8px&quot;>
+      ${filtered.map((p,i)=>{const pu=db.u[p.uid];if(!pu)return'';return`&lt;div class=&quot;post-card&quot; style=&quot;animation-delay:${i*.06}s&quot;>
+        &lt;div class=&quot;post-head&quot;>
+          &lt;div style=&quot;position:relative&quot;>${avHTML(pu.name,'av-s')}&lt;/div>
+          &lt;div style=&quot;flex:1&quot;>&lt;div class=&quot;post-name&quot;>${esc(pu.name)}&lt;/div>&lt;div class=&quot;post-time&quot;>${ago(p.ts)}&lt;/div>&lt;/div>
+          &lt;button class=&quot;hdr-b&quot; style=&quot;padding:4px;color:var(--tx3)&quot;>${ic.more}&lt;/button>
+        &lt;/div>
+        &lt;div class=&quot;post-body&quot;>${esc(p.text)}&lt;/div>
+        &lt;div class=&quot;post-actions&quot;>
+          &lt;button class=&quot;post-action ${p.liked?'liked':''}&quot; onclick=&quot;toggleLike('${p.id}')&quot;>${p.liked?ic.heartFill:ic.heart}&lt;span>${p.likes}&lt;/span>&lt;/button>
+          &lt;button class=&quot;post-action&quot;>${ic.comment}&lt;span>${p.comments}&lt;/span>&lt;/button>
+          &lt;button class=&quot;post-action post-share&quot;>${ic.share}&lt;span>Share&lt;/span>&lt;/button>
+        &lt;/div>
+      &lt;/div>`}).join('')}
+      ${filtered.length===0?'&lt;div style=&quot;text-align:center;padding:40px 20px;color:var(--tx3);font-size:14px&quot;>No text posts yet&lt;/div>':''}
+    &lt;/div>`:
+    `&lt;div class=&quot;ct-grid&quot;>
+      ${filtered.map((p,i)=>`&lt;div class=&quot;ct-cell&quot; onclick=&quot;toggleLike('${p.id}')&quot; style=&quot;background:${p.bg||'var(--bg4)'};animation:fadeIn .3s ${i*.04}s both&quot;>
+        &lt;p style=&quot;font-size:10px;font-weight:600;color:#fff;text-align:center;padding:8px;line-height:1.3;text-shadow:0 1px 3px rgba(0,0,0,.3);overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical&quot;>${esc(p.text)}&lt;/p>
+        ${p.type==='video'?'&lt;div class=&quot;ct-cell-play&quot;>&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;>&lt;polygon points=&quot;10 8 16 12 10 16&quot;/>&lt;/svg>&lt;/div>':''}
+      &lt;/div>`).join('')}
+      ${filtered.length===0?'&lt;div style=&quot;grid-column:1/-1;text-align:center;padding:40px 20px;color:var(--tx3);font-size:14px&quot;>No ${S.pTab} posts yet&lt;/div>':''}
+    &lt;/div>`}
+  &lt;/div>`;
 }
 function toggleLike(pid){const p=posts.find(x=>x.id===pid);if(!p)return;p.liked=!p.liked;p.likes+=p.liked?1:-1;R()}
 
@@ -579,7 +621,7 @@ function rProfile(){
 }
 function editName(){const n=prompt('Name:',S.user.name);if(n?.trim().length>=2){S.user.name=n.trim();db.u[S.user.id]=S.user;R()}}
 function editLang(){const c=prompt('Language ('+LANGS.map(l=>l.n).join(', ')+'):',LN[S.user.lang]);if(c){const m=LANGS.find(l=>l.n.toLowerCase()===c.toLowerCase());if(m){S.user.lang=m.c;db.u[S.user.id]=S.user;R()}}}
-function doLogout(){if(!confirm('Log out?'))return;S={user:null,screen:'login',tab:'chats',chatWith:null,showOrig:{},typing:false};login={step:'phone',phone:'',otp:'',gen:'',err:'',loading:false};R()}
+function doLogout(){if(!confirm('Log out?'))return;S={user:null,screen:'login',tab:'chats',chatWith:null,showOrig:{},typing:false,picker:false,pTab:'image'};login={step:'phone',phone:'',otp:'',gen:'',err:'',loading:false};R()}
 
 // ============ CHAT ============
 function rChat(){
