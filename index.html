@@ -195,8 +195,7 @@ html,body{height:100%;width:100%;overflow:hidden;font-family:'SF Pro Display','S
 .ct-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:0 2px}
 .ct-cell{aspect-ratio:1;border-radius:4px;overflow:hidden;cursor:pointer;position:relative;transition:transform .15s;display:flex;align-items:center;justify-content:center}
 .ct-cell:active{transform:scale(.96)}
-.ct-cell-play{position:absolute;top:6px;right:6px;color:rgba(255,255,255,.9)}
-.ct-cell-play svg{width:16px;height:16px}
+.ct-cell-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:rgba(255,255,255,.95);filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))}
 
 /* Post card (for text view) */
 .post-card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);margin:0 16px 12px;overflow:hidden;animation:fadeIn .4s both}
@@ -307,15 +306,24 @@ const ic={
 
 // ============ POSTS DATA ============
 const posts=[
-  {id:'p1',uid:'d1',type:'image',text:'Just tried translating a full conversation in Hindi with my English-speaking friend. Weench makes it feel so natural! \uD83C\uDF1F',bg:'linear-gradient(135deg,#667eea,#764ba2)',ts:Date.now()-1200000,likes:24,comments:5,liked:false},
-  {id:'p2',uid:'d2',type:'image',text:'Good morning from Chennai! The weather is absolutely beautiful today. Perfect day for filter coffee and coding \u2615\uD83D\uDCBB',bg:'linear-gradient(135deg,#FF9500,#FFCC00)',ts:Date.now()-3600000,likes:42,comments:8,liked:true},
+  {id:'p1',uid:'d1',type:'image',text:'Morning workspace vibes \u2615',img:'https://picsum.photos/seed/weench1/400/400',ts:Date.now()-1200000,likes:24,comments:5,liked:false},
+  {id:'p2',uid:'d2',type:'image',text:'Chennai sunsets hit different \uD83C\uDF05',img:'https://picsum.photos/seed/weench2/400/400',ts:Date.now()-3600000,likes:42,comments:8,liked:true},
   {id:'p3',uid:'d4',type:'text',text:'Just discovered you can tap &quot;original&quot; on any message to see what someone actually typed. Mind blown! \uD83E\uDD2F',ts:Date.now()-7200000,likes:18,comments:3,liked:false},
-  {id:'p4',uid:'d3',type:'image',text:'Working on a new project. Building something exciting with multilingual support. Stay tuned! \uD83D\uDE80',bg:'linear-gradient(135deg,#34C759,#007AFF)',ts:Date.now()-14400000,likes:31,comments:12,liked:false},
+  {id:'p4',uid:'d3',type:'image',text:'Building the future of multilingual chat \uD83D\uDE80',img:'https://picsum.photos/seed/weench3/400/400',ts:Date.now()-14400000,likes:31,comments:12,liked:false},
   {id:'p5',uid:'d5',type:'text',text:'Marathi to English translation is so smooth on Weench. Finally no more awkward Google Translate screenshots \uD83D\uDE02',ts:Date.now()-28800000,likes:56,comments:15,liked:true},
-  {id:'p6',uid:'d1',type:'video',text:'Check out this quick tutorial on setting up Weench for your family \uD83C\uDFA5',bg:'linear-gradient(135deg,#FF3B30,#FF9500)',ts:Date.now()-36000000,likes:89,comments:23,liked:false},
-  {id:'p7',uid:'d2',type:'image',text:'Our team just crossed 1000 translations today! \uD83C\uDF89',bg:'linear-gradient(135deg,#AF52DE,#FF2D55)',ts:Date.now()-43200000,likes:112,comments:34,liked:true},
-  {id:'p8',uid:'d3',type:'video',text:'Live demo: Real-time Telugu to English translation in action \u26A1',bg:'linear-gradient(135deg,#007AFF,#5856D6)',ts:Date.now()-50400000,likes:67,comments:19,liked:false},
+  {id:'p6',uid:'d1',type:'video',text:'Quick tutorial: Setting up Weench \uD83C\uDFA5',img:'https://picsum.photos/seed/weenchv1/400/400',ts:Date.now()-36000000,likes:89,comments:23,liked:false},
+  {id:'p7',uid:'d2',type:'image',text:'1000 translations milestone! \uD83C\uDF89',img:'https://picsum.photos/seed/weench4/400/400',ts:Date.now()-43200000,likes:112,comments:34,liked:true},
+  {id:'p8',uid:'d3',type:'video',text:'Live: Telugu to English in real-time \u26A1',img:'https://picsum.photos/seed/weenchv2/400/400',ts:Date.now()-50400000,likes:67,comments:19,liked:false},
   {id:'p9',uid:'d4',type:'text',text:'The beauty of language is that every translation carries a piece of the original soul. Love how Weench preserves that \u2764\uFE0F',ts:Date.now()-57600000,likes:45,comments:7,liked:false},
+  {id:'p10',uid:'d1',type:'image',text:'Team meetup was amazing \uD83E\uDD1D',img:'https://picsum.photos/seed/weench5/400/400',ts:Date.now()-64800000,likes:76,comments:11,liked:false},
+  {id:'p11',uid:'d4',type:'image',text:'Coding session with chai \u2615',img:'https://picsum.photos/seed/weench6/400/400',ts:Date.now()-72000000,likes:38,comments:6,liked:true},
+  {id:'p12',uid:'d5',type:'video',text:'How Weench handles 6 languages \uD83C\uDF0D',img:'https://picsum.photos/seed/weenchv3/400/400',ts:Date.now()-79200000,likes:94,comments:27,liked:false},
+  {id:'p13',uid:'d2',type:'image',text:'Friday evening inspiration \u2728',img:'https://picsum.photos/seed/weench7/400/400',ts:Date.now()-86400000,likes:53,comments:9,liked:false},
+  {id:'p14',uid:'d3',type:'video',text:'Behind the scenes: Translation engine \uD83D\uDD27',img:'https://picsum.photos/seed/weenchv4/400/400',ts:Date.now()-93600000,likes:41,comments:14,liked:true},
+  {id:'p15',uid:'d1',type:'image',text:'Weekend project showcase \uD83C\uDFA8',img:'https://picsum.photos/seed/weench8/400/400',ts:Date.now()-100800000,likes:65,comments:18,liked:false},
+  {id:'p16',uid:'d5',type:'text',text:'Pro tip: Set your preferred language in Profile settings and all incoming messages auto-translate. Game changer! \uD83D\uDCA1',ts:Date.now()-108000000,likes:72,comments:21,liked:false},
+  {id:'p17',uid:'d4',type:'video',text:'Weench vs Google Translate comparison \uD83E\uDD14',img:'https://picsum.photos/seed/weenchv5/400/400',ts:Date.now()-115200000,likes:156,comments:43,liked:true},
+  {id:'p18',uid:'d2',type:'image',text:'Design process for Weench 2.0 \uD83C\uDFA8',img:'https://picsum.photos/seed/weench9/400/400',ts:Date.now()-122400000,likes:88,comments:16,liked:false},
 ];
 
 function R(){
@@ -533,9 +541,11 @@ function rPeopleFeed(){
       ${filtered.length===0?'&lt;div style=&quot;text-align:center;padding:40px 20px;color:var(--tx3);font-size:14px&quot;>No text posts yet&lt;/div>':''}
     &lt;/div>`:
     `&lt;div class=&quot;ct-grid&quot;>
-      ${filtered.map((p,i)=>`&lt;div class=&quot;ct-cell&quot; onclick=&quot;toggleLike('${p.id}')&quot; style=&quot;background:${p.bg||'var(--bg4)'};animation:fadeIn .3s ${i*.04}s both&quot;>
-        &lt;p style=&quot;font-size:10px;font-weight:600;color:#fff;text-align:center;padding:8px;line-height:1.3;text-shadow:0 1px 3px rgba(0,0,0,.3);overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical&quot;>${esc(p.text)}&lt;/p>
-        ${p.type==='video'?'&lt;div class=&quot;ct-cell-play&quot;>&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;>&lt;polygon points=&quot;10 8 16 12 10 16&quot;/>&lt;/svg>&lt;/div>':''}
+      ${filtered.map((p,i)=>`&lt;div class=&quot;ct-cell&quot; onclick=&quot;toggleLike('${p.id}')&quot; style=&quot;background:var(--bg4);animation:fadeIn .3s ${i*.04}s both&quot;>
+        ${p.img?`&lt;img src=&quot;${p.img}&quot; alt=&quot;&quot; style=&quot;width:100%;height:100%;object-fit:cover;display:block&quot; loading=&quot;lazy&quot;>`:
+        `&lt;div style=&quot;width:100%;height:100%;background:${p.bg||'var(--bg4)'};display:flex;align-items:center;justify-content:center;padding:8px&quot;>&lt;p style=&quot;font-size:10px;font-weight:600;color:#fff;text-align:center;line-height:1.3;text-shadow:0 1px 3px rgba(0,0,0,.3)&quot;>${esc(p.text)}&lt;/p>&lt;/div>`}
+        ${p.type==='video'?`&lt;div class=&quot;ct-cell-play&quot;>&lt;svg viewBox=&quot;0 0 24 24&quot; width=&quot;28&quot; height=&quot;28&quot;>&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;11&quot; fill=&quot;rgba(0,0,0,.45)&quot;/>&lt;polygon points=&quot;10 7.5 17 12 10 16.5&quot; fill=&quot;#fff&quot;/>&lt;/svg>&lt;/div>`:''}
+        ${p.liked?'&lt;div style=&quot;position:absolute;bottom:6px;left:6px&quot;>&lt;svg viewBox=&quot;0 0 24 24&quot; width=&quot;14&quot; height=&quot;14&quot; fill=&quot;#FF3B30&quot;>&lt;path d=&quot;M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z&quot;/>&lt;/svg>&lt;/div>':''}
       &lt;/div>`).join('')}
       ${filtered.length===0?'&lt;div style=&quot;grid-column:1/-1;text-align:center;padding:40px 20px;color:var(--tx3);font-size:14px&quot;>No ${S.pTab} posts yet&lt;/div>':''}
     &lt;/div>`}
