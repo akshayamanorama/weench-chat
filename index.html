@@ -168,6 +168,31 @@ html,body{height:100%;width:100%;overflow:hidden;font-family:'SF Pro Display','S
 .story-ring{width:52px;height:52px;border-radius:26px;padding:2.5px;background:linear-gradient(135deg,#007AFF,#AF52DE);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .story-ring .av{border:2.5px solid var(--bg)}
 
+/* Story circles row */
+.story-row{display:flex;gap:16px;padding:0 20px 16px;overflow-x:auto;flex-shrink:0;scroll-snap-type:x mandatory}
+.story-item{display:flex;flex-direction:column;align-items:center;gap:6px;flex-shrink:0;scroll-snap-align:start;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.story-item:active{transform:scale(.95)}
+.story-item span{font-size:11px;font-weight:500;color:var(--tx2);max-width:60px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center}
+.story-av{width:60px;height:60px;border-radius:30px;padding:2.5px;background:linear-gradient(135deg,#007AFF,#AF52DE);display:flex;align-items:center;justify-content:center}
+.story-av .av{width:53px;height:53px;border-radius:27px;font-size:20px;border:2.5px solid var(--bg)}
+.story-av-add{background:var(--card);box-shadow:var(--shadow);position:relative}
+.story-av-add .av{border-color:var(--card)}
+
+/* Post card */
+.post-card{background:var(--card);border-radius:20px;box-shadow:var(--shadow);margin:0 16px 14px;overflow:hidden;animation:fadeIn .4s both}
+.post-head{display:flex;align-items:center;gap:12px;padding:14px 16px 10px}
+.post-head .av{width:40px;height:40px;font-size:16px;border-radius:20px}
+.post-name{font-weight:600;font-size:14px;color:var(--tx)}
+.post-time{font-size:12px;color:var(--tx3);font-weight:500}
+.post-body{padding:0 16px;font-size:14px;line-height:1.55;color:var(--tx);margin-bottom:12px}
+.post-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--bg3);border-radius:12px;margin:0 16px 12px;width:calc(100% - 32px)}
+.post-actions{display:flex;align-items:center;gap:4px;padding:8px 12px 14px;border-top:.5px solid var(--sep)}
+.post-action{display:flex;align-items:center;gap:5px;padding:6px 10px;border-radius:20px;background:none;border:none;font-family:inherit;font-size:13px;font-weight:500;color:var(--tx2);cursor:pointer;transition:all .15s;-webkit-tap-highlight-color:transparent}
+.post-action:active{background:rgba(0,0,0,.04);transform:scale(.95)}
+.post-action.liked{color:var(--red)}
+.post-action svg{width:18px;height:18px}
+.post-share{margin-left:auto}
+
 ::-webkit-scrollbar{display:none}
 </style>
 </head>
@@ -202,7 +227,7 @@ const db={u:{},m:[]};
 
 const autoR={hi:[&quot;\u0928\u092E\u0938\u094D\u0924\u0947!&quot;,&quot;\u0939\u093E\u0901 \u092C\u0924\u093E\u0913&quot;,&quot;\u0905\u091A\u094D\u091B\u093E&quot;,&quot;\u0920\u0940\u0915 \u0939\u0948&quot;,&quot;\u092C\u0939\u0941\u0924 \u0905\u091A\u094D\u091B\u093E!&quot;],ta:[&quot;\u0BB5\u0BA3\u0B95\u0BCD\u0B95\u0BAE\u0BCD!&quot;,&quot;\u0B86\u0BAE\u0BBE&quot;,&quot;\u0BA8\u0BB2\u0BCD\u0BB2\u0BA4\u0BC1&quot;,&quot;\u0B9A\u0BB0\u0BBF&quot;,&quot;\u0BA8\u0BA9\u0BCD\u0BB1\u0BC1!&quot;],te:[&quot;\u0C39\u0C32\u0C4B!&quot;,&quot;\u0C1A\u0C46\u0C2A\u0C4D\u0C2A\u0C02\u0C21\u0C3F&quot;,&quot;\u0C2E\u0C02\u0C1A\u0C3F\u0C26\u0C3F&quot;,&quot;\u0C38\u0C30\u0C47&quot;,&quot;\u0C2C\u0C3E\u0C17\u0C41\u0C02\u0C26\u0C3F!&quot;],kn:[&quot;\u0CA8\u0CAE\u0CB8\u0CCD\u0C95\u0CBE\u0CB0!&quot;,&quot;\u0CB9\u0CCC\u0CA6\u0CC1&quot;,&quot;\u0C92\u0CB3\u0CCD\u0CB3\u0CC6\u0CAF\u0CA6\u0CC1&quot;,&quot;\u0CB8\u0CB0\u0CBF&quot;,&quot;\u0C9A\u0CC6\u0CA8\u0CCD\u0CA8\u0CBE\u0C97\u0CBF\u0CA6\u0CC6!&quot;],mr:[&quot;\u0928\u092E\u0938\u094D\u0915\u093E\u0930!&quot;,&quot;\u0939\u094B&quot;,&quot;\u091B\u093E\u0928&quot;,&quot;\u0920\u0940\u0915 \u0906\u0939\u0947&quot;,&quot;\u0916\u0942\u092A \u091B\u093E\u0928!&quot;],en:[&quot;Hey!&quot;,&quot;Sure&quot;,&quot;Great&quot;,&quot;Okay&quot;,&quot;Nice!&quot;]};
 
-let S={user:null,screen:'login',tab:'chats',chatWith:null,showOrig:{},typing:false};
+let S={user:null,screen:'login',tab:'chats',chatWith:null,showOrig:{},typing:false,picker:false};
 let login={step:'phone',phone:'',otp:'',gen:'',err:'',loading:false};
 let onboard={step:'name',name:'',lang:'en'};
 let chatInp='',chatSending=false,searchQ='';
@@ -250,7 +275,22 @@ const ic={
   unchk:'&lt;div style=&quot;width:22px;height:22px;border-radius:11px;border:2px solid #D1D1D6&quot;>&lt;/div>',
   plus:'&lt;svg width=&quot;10&quot; height=&quot;10&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;#fff&quot; stroke-width=&quot;3&quot; stroke-linecap=&quot;round&quot;>&lt;path d=&quot;M12 5v14M5 12h14&quot;/>&lt;/svg>',
   more:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;>&lt;circle cx=&quot;12&quot; cy=&quot;5&quot; r=&quot;1.5&quot;/>&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;1.5&quot;/>&lt;circle cx=&quot;12&quot; cy=&quot;19&quot; r=&quot;1.5&quot;/>&lt;/svg>',
+  heart:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;>&lt;path d=&quot;M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z&quot;/>&lt;/svg>',
+  heartFill:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;>&lt;path d=&quot;M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z&quot;/>&lt;/svg>',
+  comment:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;>&lt;path d=&quot;M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z&quot;/>&lt;/svg>',
+  share:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;>&lt;path d=&quot;M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8&quot;/>&lt;polyline points=&quot;16 6 12 2 8 6&quot;/>&lt;line x1=&quot;12&quot; y1=&quot;2&quot; x2=&quot;12&quot; y2=&quot;15&quot;/>&lt;/svg>',
+  bell:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;>&lt;path d=&quot;M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9&quot;/>&lt;path d=&quot;M13.73 21a2 2 0 01-3.46 0&quot;/>&lt;/svg>',
+  search:'&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot;>&lt;circle cx=&quot;11&quot; cy=&quot;11&quot; r=&quot;8&quot;/>&lt;line x1=&quot;21&quot; y1=&quot;21&quot; x2=&quot;16.65&quot; y2=&quot;16.65&quot;/>&lt;/svg>',
 };
+
+// ============ POSTS DATA ============
+const posts=[
+  {id:'p1',uid:'d1',text:'Just tried translating a full conversation in Hindi with my English-speaking friend. Weench makes it feel so natural! \uD83C\uDF1F',ts:Date.now()-1200000,likes:24,comments:5,liked:false},
+  {id:'p2',uid:'d2',text:'Good morning from Chennai! The weather is absolutely beautiful today. Perfect day for filter coffee and coding \u2615\uD83D\uDCBB',bg:'linear-gradient(135deg,#FF9500,#FFCC00)',ts:Date.now()-3600000,likes:42,comments:8,liked:true},
+  {id:'p3',uid:'d4',text:'Just discovered you can tap &quot;original&quot; on any message to see what someone actually typed. Mind blown! \uD83E\uDD2F',ts:Date.now()-7200000,likes:18,comments:3,liked:false},
+  {id:'p4',uid:'d3',text:'Working on a new project. Building something exciting with multilingual support. Stay tuned! \uD83D\uDE80',bg:'linear-gradient(135deg,#34C759,#007AFF)',ts:Date.now()-14400000,likes:31,comments:12,liked:false},
+  {id:'p5',uid:'d5',text:'Marathi to English translation is so smooth on Weench. Finally no more awkward Google Translate screenshots \uD83D\uDE02',ts:Date.now()-28800000,likes:56,comments:15,liked:true},
+];
 
 function R(){
   if(call.on){renderCall();return}
@@ -330,9 +370,10 @@ function rObL(){
 
 // ============ MAIN ============
 function rMain(){
+  if(S.picker)return`&lt;div class=&quot;screen screen-slide&quot;>${rPicker()}&lt;/div>`;
   let c='';
   if(S.tab==='chats')c=rChatList();
-  else if(S.tab==='contacts')c=rContacts();
+  else if(S.tab==='contacts')c=rPeopleFeed();
   else if(S.tab==='stories')c=rStories();
   else if(S.tab==='profile')c=rProfile();
   return`&lt;div class=&quot;screen screen-scale&quot;>${c}${rTabs()}&lt;/div>`;
@@ -352,7 +393,7 @@ function rChatList(){
   return`&lt;div style=&quot;padding:0 20px&quot;>
       &lt;div style=&quot;display:flex;justify-content:space-between;align-items:center;margin-bottom:4px&quot;>
         &lt;h1 style=&quot;font-size:32px;font-weight:800;letter-spacing:-.03em&quot;>Messages&lt;/h1>
-        &lt;button class=&quot;hdr-b&quot; onclick=&quot;S.tab='contacts';R()&quot; style=&quot;width:40px;height:40px;background:var(--card);border-radius:20px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center&quot;>${ic.compose}&lt;/button>
+        &lt;button class=&quot;hdr-b&quot; onclick=&quot;S.picker=true;R()&quot; style=&quot;width:40px;height:40px;background:var(--card);border-radius:20px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center&quot;>${ic.compose}&lt;/button>
       &lt;/div>
     &lt;/div>
     &lt;div style=&quot;padding:4px 20px 8px;position:relative&quot;>&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;var(--tx3)&quot; style=&quot;width:16px;height:16px;position:absolute;left:32px;top:50%;transform:translateY(-50%)&quot;>&lt;path d=&quot;M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z&quot;/>&lt;/svg>&lt;input class=&quot;inp-search&quot; style=&quot;width:100%&quot; placeholder=&quot;Search...&quot; value=&quot;${esc(searchQ)}&quot; oninput=&quot;searchQ=this.value;R()&quot;>&lt;/div>
@@ -362,7 +403,7 @@ function rChatList(){
           &lt;div style=&quot;width:64px;height:64px;border-radius:20px;background:var(--card);box-shadow:var(--shadow2);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:28px&quot;>\uD83D\uDCAC&lt;/div>
           &lt;h2 style=&quot;font-size:22px;font-weight:700;margin-bottom:8px;letter-spacing:-.02em&quot;>Start a conversation&lt;/h2>
           &lt;p style=&quot;color:var(--tx2);font-size:14px;line-height:1.5;margin-bottom:24px&quot;>Send messages in your language.&lt;br>They read in theirs.&lt;/p>
-          &lt;button class=&quot;btn btn-primary&quot; onclick=&quot;S.tab='contacts';R()&quot; style=&quot;width:auto;padding:14px 32px;display:inline-block;border-radius:24px;font-size:15px&quot;>Write a message&lt;/button>
+          &lt;button class=&quot;btn btn-primary&quot; onclick=&quot;S.picker=true;R()&quot; style=&quot;width:auto;padding:14px 32px;display:inline-block;border-radius:24px;font-size:15px&quot;>Write a message&lt;/button>
         &lt;/div>
       `:cv.filter(c=>!searchQ||(c.u.name||'').toLowerCase().includes(searchQ.toLowerCase())).map((c,i)=>`
         &lt;button class=&quot;li&quot; onclick='openChat(${JSON.stringify(c.u).replace(/'/g,&quot;&amp;#39;&quot;)})' style=&quot;animation:fadeIn .3s ${i*.04}s both;border-radius:16px;margin-bottom:2px&quot;>
@@ -381,10 +422,10 @@ function rChatList(){
     &lt;/div>`;
 }
 
-function rContacts(){
+function rPicker(){
   const all=Object.values(db.u).filter(u=>u.id!==S.user?.id&amp;&amp;u.name);
   const f=all.filter(u=>(u.name||'').toLowerCase().includes(searchQ.toLowerCase()));
-  return`&lt;div class=&quot;hdr&quot;>&lt;button class=&quot;hdr-b&quot; onclick=&quot;S.tab='chats';R()&quot;>${ic.back}&lt;/button>&lt;h1 style=&quot;flex:1&quot;>New message&lt;/h1>&lt;/div>
+  return`&lt;div class=&quot;hdr&quot;>&lt;button class=&quot;hdr-b&quot; onclick=&quot;S.picker=false;R()&quot;>${ic.back}&lt;/button>&lt;h1 style=&quot;flex:1&quot;>New message&lt;/h1>&lt;/div>
     &lt;div style=&quot;padding:4px 20px 8px;position:relative&quot;>&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;var(--tx3)&quot; style=&quot;width:16px;height:16px;position:absolute;left:32px;top:50%;transform:translateY(-50%)&quot;>&lt;path d=&quot;M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z&quot;/>&lt;/svg>&lt;input class=&quot;inp-search&quot; style=&quot;width:100%&quot; placeholder=&quot;Search people&quot; value=&quot;${esc(searchQ)}&quot; oninput=&quot;searchQ=this.value;R()&quot; data-af>&lt;/div>
     &lt;div style=&quot;flex:1;overflow-y:auto;padding:0 8px&quot;>
       ${f.map((u,i)=>`&lt;button class=&quot;li&quot; onclick='openChat(${JSON.stringify(u).replace(/'/g,&quot;&amp;#39;&quot;)})' style=&quot;animation:fadeIn .3s ${i*.04}s both;border-radius:16px&quot;>
@@ -396,7 +437,73 @@ function rContacts(){
       &lt;/button>`).join('')}
     &lt;/div>`;
 }
-function openChat(u){S.chatWith=u;S.showOrig={};S.typing=false;chatInp='';db.m.forEach(m=>{if(m.s===u.id&amp;&amp;m.r===S.user.id)m.st='read'});R();scrl()}
+
+function rPeopleFeed(){
+  const all=Object.values(db.u).filter(u=>u.id!==S.user?.id&amp;&amp;u.name);
+  const storyUsers=stories.filter(s=>s.uid!==S.user?.id).map(s=>({s,u:db.u[s.uid]})).filter(x=>x.u);
+  const otherStories=stories.filter(s=>s.uid!==S.user?.id);
+  return`&lt;div style=&quot;padding:0 20px&quot;>
+      &lt;div style=&quot;display:flex;justify-content:space-between;align-items:center;margin-bottom:12px&quot;>
+        &lt;h1 style=&quot;font-size:32px;font-weight:800;letter-spacing:-.03em&quot;>People&lt;/h1>
+        &lt;div style=&quot;display:flex;gap:6px&quot;>
+          &lt;button class=&quot;hdr-b&quot; style=&quot;width:38px;height:38px;background:var(--card);border-radius:19px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center&quot;>${ic.bell}&lt;/button>
+          &lt;button class=&quot;hdr-b&quot; style=&quot;width:38px;height:38px;background:var(--card);border-radius:19px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center&quot;>${ic.search}&lt;/button>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+    &lt;div class=&quot;story-row&quot;>
+      &lt;div class=&quot;story-item&quot; onclick=&quot;addMyStory()&quot;>
+        &lt;div class=&quot;story-av story-av-add&quot;>
+          ${avHTML(S.user?.name)}
+          &lt;div style=&quot;position:absolute;bottom:0;right:0;width:20px;height:20px;border-radius:10px;background:var(--blue);border:2.5px solid var(--card);display:flex;align-items:center;justify-content:center;z-index:2&quot;>${ic.plus}&lt;/div>
+        &lt;/div>
+        &lt;span>You&lt;/span>
+      &lt;/div>
+      ${storyUsers.map((x,i)=>`&lt;div class=&quot;story-item&quot; onclick=&quot;openStory(${i})&quot;>
+        &lt;div class=&quot;story-av&quot;>${avHTML(x.u.name)}&lt;/div>
+        &lt;span>${esc(x.u.name)}&lt;/span>
+      &lt;/div>`).join('')}
+      ${all.filter(u=>!storyUsers.find(x=>x.u.id===u.id)).map(u=>`&lt;div class=&quot;story-item&quot; onclick='openChat(${JSON.stringify(u).replace(/&amp;#39;/g,&quot;&amp;#39;&quot;).replace(/'/g,&quot;&amp;#39;&quot;)})'>
+        &lt;div style=&quot;width:60px;height:60px;border-radius:30px;padding:2.5px;background:var(--bg4);display:flex;align-items:center;justify-content:center&quot;>
+          ${avHTML(u.name)}
+        &lt;/div>
+        &lt;span>${esc(u.name)}&lt;/span>
+      &lt;/div>`).join('')}
+    &lt;/div>
+    &lt;div style=&quot;height:.5px;background:var(--sep);margin:0 20px 14px&quot;>&lt;/div>
+    &lt;div style=&quot;flex:1;overflow-y:auto;padding-bottom:8px&quot;>
+      ${posts.map((p,i)=>{const u=db.u[p.uid];if(!u)return'';
+        return`&lt;div class=&quot;post-card&quot; style=&quot;animation-delay:${i*.06}s&quot;>
+          &lt;div class=&quot;post-head&quot;>
+            &lt;div style=&quot;position:relative&quot;>${avHTML(u.name)}&lt;/div>
+            &lt;div style=&quot;flex:1&quot;>
+              &lt;div class=&quot;post-name&quot;>${esc(u.name)}&lt;/div>
+              &lt;div class=&quot;post-time&quot;>${ago(p.ts)}&lt;/div>
+            &lt;/div>
+            &lt;button class=&quot;hdr-b&quot; style=&quot;padding:4px;color:var(--tx3)&quot;>${ic.more}&lt;/button>
+          &lt;/div>
+          ${p.bg?`&lt;div style=&quot;margin:0 16px 12px;padding:28px 20px;border-radius:16px;background:${p.bg}&quot;>&lt;p style=&quot;font-size:15px;font-weight:600;color:#fff;line-height:1.5;text-shadow:0 1px 4px rgba(0,0,0,.15)&quot;>${esc(p.text)}&lt;/p>&lt;/div>`
+          :`&lt;div class=&quot;post-body&quot;>${esc(p.text)}&lt;/div>`}
+          &lt;div class=&quot;post-actions&quot;>
+            &lt;button class=&quot;post-action ${p.liked?'liked':''}&quot; onclick=&quot;toggleLike('${p.id}')&quot;>
+              ${p.liked?ic.heartFill:ic.heart}
+              &lt;span>${p.likes}&lt;/span>
+            &lt;/button>
+            &lt;button class=&quot;post-action&quot;>
+              ${ic.comment}
+              &lt;span>${p.comments}&lt;/span>
+            &lt;/button>
+            &lt;button class=&quot;post-action post-share&quot;>
+              ${ic.share}
+              &lt;span>Share&lt;/span>
+            &lt;/button>
+          &lt;/div>
+        &lt;/div>`}).join('')}
+    &lt;/div>`;
+}
+function toggleLike(pid){const p=posts.find(x=>x.id===pid);if(!p)return;p.liked=!p.liked;p.likes+=p.liked?1:-1;R()}
+
+function openChat(u){S.chatWith=u;S.picker=false;S.showOrig={};S.typing=false;chatInp='';db.m.forEach(m=>{if(m.s===u.id&amp;&amp;m.r===S.user.id)m.st='read'});R();scrl()}
 
 function rStories(){
   const other=stories.filter(s=>s.uid!==S.user?.id);
